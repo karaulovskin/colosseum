@@ -1,22 +1,22 @@
 /* -------------- common colors -------------- */
 /* --------- normalize --------- */
 /* -------- fonts ---------*/
-/* font-family: 'robotolight'; */
 @font-face {
-  font-family: 'Robotolight';
-  src: url("../fonts/roboto-light-webfont.eot");
-  src: url("../fonts/roboto-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff"), url("../fonts/roboto-light-webfont.svg#robotolight") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Robotomedium';
-  src: url("../fonts/roboto-medium-webfont.woff2") format("woff2"), url("../fonts/roboto-medium-webfont.woff") format("woff");
+  font-family: 'gilroylight';
+  src: url("../fonts/10177-webfont.woff2") format("woff2"), url("../fonts/10177-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
+.container:before, .training__body:before, .container:after, .training__body:after {
+  content: "";
+  display: table;
+}
+.container:after, .training__body:after {
+  clear: both;
+}
+
 /* --------- centered --------- */
 /* --------- compass sprites --------- */
 /* --------- responsive --------- */
@@ -30,16 +30,6 @@ html {
   width: 100%;
   font-size: 100%;
 }
-@media screen and (max-width: 1224px) {
-  html {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-}
 @media screen and (max-width: 480px) {
   html {
     font-size: 12px;
@@ -47,12 +37,13 @@ html {
 }
 
 body {
-  font: 16px/1.41 "Robotolight", "Open Sans", sans-serif;
+  font: 18px/1.41 "gilroylight", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   width: 100%;
   height: 100% !important;
   margin: 0;
-  color: #252525;
+  color: #fff;
+  background: #2c2c2c;
 }
 
 table {
@@ -81,8 +72,8 @@ a {
 
 footer {
   position: relative;
-  height: 684px;
-  margin-top: -684px;
+  height: 0;
+  margin-top: 0;
 }
 
 .wrapper {
@@ -95,7 +86,19 @@ footer {
 .wrapper:after {
   content: "";
   display: block;
-  height: 684px;
+  height: 0;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .img-cover {
@@ -167,4 +170,321 @@ footer {
 
 /* -------------- misc icons sprite -------------- */
 /* --------- sections --------- */
-/* No files to import found in _sections/**\/* */
+.user {
+  text-align: center;
+}
+
+.user__avatar {
+  margin-bottom: 28px;
+}
+
+.user__avatar-img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-position: 50% 0%;
+}
+@media screen and (max-width: 480px) {
+  .user__avatar-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.user__name {
+  margin-bottom: 6px;
+  font-size: 34px;
+}
+@media screen and (max-width: 480px) {
+  .user__name {
+    font-size: 22px;
+  }
+}
+
+.user__club {
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 480px) {
+  .user__club {
+    font-size: 12px;
+  }
+}
+
+.user__club-link {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.user__club-point {
+  opacity: .5;
+}
+
+.user__list {
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.user__item {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+  text-align: right;
+  font-size: 18px;
+  border-right: 1px solid #fff;
+}
+.user__item:last-child {
+  text-align: left;
+  border-right: none;
+}
+
+.user__link {
+  position: relative;
+  display: block;
+  padding: 36px 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+.user__link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.user__link--tickets {
+  padding-right: 60px;
+}
+.user__link--tickets:before {
+  left: 15%;
+  left: 44px;
+  width: 46px;
+  height: 61px;
+  background: url(../img/decor/tickets.png) no-repeat;
+}
+
+.user__link__parameter {
+  padding-left: 100px;
+}
+.user__link__parameter:before {
+  left: 23%;
+  left: 46px;
+  width: 34px;
+  height: 61px;
+  background: url(../img/decor/parameter.png) no-repeat;
+}
+
+.user__btns {
+  margin-bottom: 36px;
+}
+
+.user__btn {
+  display: block;
+  padding: 20px 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #eac731;
+  border: 1px solid #eac731;
+}
+@media screen and (max-width: 480px) {
+  .user__btn {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+
+.training__list {
+  margin: 0 -30px;
+}
+
+.training__item {
+  padding: 25px 30px 0 30px;
+  background: #686868;
+}
+.training__item:last-child {
+  padding: 25px 30px;
+}
+
+.training__header {
+  padding: 16px 30px;
+  position: relative;
+  background: #2c2c2c;
+}
+
+.training__title {
+  position: relative;
+  padding-left: 44px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.training__title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 4px solid #1fcb69;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.training__title--pink:before {
+  border: 4px solid #f2a2d2;
+}
+
+.training__close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.training__close:before, .training__close:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 24px;
+  height: 1px;
+  background: #acacac;
+}
+.training__close:before {
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.training__close:after {
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.training__body {
+  padding: 22px 30px;
+  background: #373737;
+}
+
+.training__left {
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.training__right {
+  float: left;
+  width: 50%;
+  padding-left: 10px;
+}
+
+.training__calendar,
+.training__date {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.training__calendar {
+  position: relative;
+  width: 48px;
+  height: 50px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 28px;
+}
+.training__calendar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 50px;
+  background: url(../img/decor/calendar.png) no-repeat;
+  background-size: contain;
+}
+
+.training__date {
+  margin-left: 20px;
+}
+
+.training__date-title {
+  text-transform: uppercase;
+}
+
+.training__date-value {
+  font-size: 28px;
+}
+
+.training__time {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 32px;
+}
+.training__time:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(../img/decor/time.png) no-repeat;
+}
+
+.training__point {
+  position: relative;
+  padding-left: 36px;
+}
+.training__point:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 22px;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(../img/decor/point.png) no-repeat;
+}

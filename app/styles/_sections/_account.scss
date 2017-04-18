@@ -1,0 +1,288 @@
+.user {
+	text-align: center;
+}
+
+.user__avatar {
+	margin-bottom: 28px;
+}
+
+.user__avatar-img {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	@include border-radius(50%);
+	background-position: 50% 0%;
+
+	@include phones {
+		width: 160px;
+		height: 160px;
+	}
+}
+
+.user__name {
+	margin-bottom: 6px;
+	font-size: 34px;
+
+	@include phones {
+		font-size: 22px;
+	}
+}
+
+.user__club {
+	margin-bottom: 28px;
+	// font-size: 18px;
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
+.user__club-link {
+	display: inline-block;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.user__club-point {
+    opacity: .5;
+}
+
+.user__list {
+	margin-bottom: 30px;
+	font-size: 0;
+}
+
+.user__item {
+	@include inline-block(top);
+	width: 50%;
+	text-align: right;
+	font-size: 18px;
+	border-right: 1px solid #fff;
+
+	&:last-child {
+		text-align: left;
+		border-right: none;
+	}
+}
+
+.user__link {
+	position: relative;
+	display: block;
+	padding: 36px 0;
+	// font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+}
+
+.user__link--tickets {
+	padding-right: 60px;
+	&:before {
+		left: 15%;
+		left: 44px;
+		width: 46px;
+		height: 61px;
+		background: url(../img/decor/tickets.png)no-repeat;
+	}
+}
+
+.user__link__parameter {
+	padding-left: 100px;
+	&:before {
+		left: 23%;
+		left: 46px;
+		width: 34px;
+		height: 61px;
+		background: url(../img/decor/parameter.png)no-repeat;
+	}
+}
+
+.user__btns {
+	margin-bottom: 36px;
+}
+
+.user__btn {
+	display: block;
+	padding: 20px 0;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: $gold;
+	border: 1px solid $gold;
+
+	@include phones {
+		padding: 10px 0;
+		font-size: 16px;
+	}
+}
+
+.training__list {
+    margin: 0 -30px;
+}
+
+.training__item {
+    padding: 25px 30px 0 30px;
+	background: $grey;
+
+	&:last-child {
+		padding: 25px 30px;
+	}
+}
+
+.training__header {
+	padding: 16px 30px;
+	position: relative;
+	background: $dark;
+}
+
+.training__title {
+	position: relative;
+	padding-left: 44px;
+	font-size: 24px;
+	text-transform: uppercase;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		@include transform(translateY(-50%));
+		border: 4px solid $green;
+		@include border-radius(50%);
+	}
+}
+
+.training__title--pink {
+	&:before {
+		border: 4px solid $pink;
+
+	}
+}
+
+.training__close {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	display: block;
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+	@include transform(translateY(-50%));
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		top: 9px;
+		right: 0;
+		width: 24px;
+		height: 1px;
+		background: $laighGrey;
+	}
+
+	&:before {
+		@include transform(rotate(45deg));
+	}
+
+	&:after {
+		@include transform(rotate(-45deg));
+	}
+}
+
+.training__body {
+	padding: 22px 30px;
+	background: $light;
+	@extend %clearfix;
+}
+
+.training__left {
+	float: left;
+	width: 50%;
+	padding-right: 10px;
+}
+
+.training__right {
+	float: left;
+	width: 50%;
+	padding-left: 10px;
+
+}
+
+.training__calendar,
+.training__date {
+	@include inline-block(top);
+}
+
+.training__calendar {
+	position: relative;
+    width: 48px;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+	font-size: 28px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 48px;
+		height: 50px;
+		background: url(../img/decor/calendar.png)no-repeat;
+		background-size: contain;
+	}
+}
+
+.training__date {
+	margin-left: 20px;
+}
+
+.training__date-title {
+	// font-size: 18px;
+	text-transform: uppercase;
+}
+
+.training__date-value {
+	font-size: 28px;
+}
+
+.training__time {
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 32px;
+
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		@include transform(translateY(-50%));
+		background: url(../img/decor/time.png)no-repeat;
+	}
+}
+
+.training__point {
+	position: relative;
+	padding-left: 36px;
+
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 16px;
+		height: 22px;
+		@include transform(translateY(-50%));
+		background: url(../img/decor/point.png)no-repeat;
+	}
+}
