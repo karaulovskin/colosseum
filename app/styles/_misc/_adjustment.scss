@@ -86,8 +86,18 @@ footer {
 
 	@include phones {
 		width: 100%;
-		padding: 0 20px;
+		padding: 0 15px;
 	}
+}
+
+.page {
+	padding-top: 34px;
+	text-align: center;
+}
+
+.title {
+	margin-bottom: 26px;
+	font-size: 36px;
 }
 
 .img-cover {
@@ -117,13 +127,13 @@ footer {
 }
 
 .overlay {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	display: none;
-	background: rgba(37, 37, 37, .35);
+	background: rgba(0, 0, 0, .64);
 }
 
 

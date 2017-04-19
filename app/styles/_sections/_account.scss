@@ -1,3 +1,13 @@
+.account__edit {
+	position: absolute;
+	top: 40px;
+	right: 32px;
+	width: 33px;
+	height: 34px;
+	font-size: 0;
+	background: url(../img/decor/edit.png)no-repeat;
+}
+
 .user {
 	text-align: center;
 }
@@ -69,7 +79,7 @@
 	position: relative;
 	display: block;
 	padding: 36px 0;
-	// font-size: 18px;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: #fff;
 
@@ -78,6 +88,10 @@
 		position: absolute;
 		top: 50%;
 		@include transform(translateY(-50%));
+	}
+
+	@include phones {
+		font-size: 12px;
 	}
 }
 
@@ -89,6 +103,7 @@
 		width: 46px;
 		height: 61px;
 		background: url(../img/decor/tickets.png)no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -100,6 +115,7 @@
 		width: 34px;
 		height: 61px;
 		background: url(../img/decor/parameter.png)no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -121,8 +137,16 @@
 	}
 }
 
+.training {
+	text-align: left;
+}
+
 .training__list {
     margin: 0 -30px;
+
+    @include phones {
+		margin: 0 -15px;
+	}
 }
 
 .training__item {
@@ -132,12 +156,24 @@
 	&:last-child {
 		padding: 25px 30px;
 	}
+
+	@include phones {
+		padding: 10px 15px 0 15px;
+
+		&:last-child {
+			padding: 10px 15px;
+		}
+	}
 }
 
 .training__header {
 	padding: 16px 30px;
 	position: relative;
 	background: $dark;
+
+	@include phones {
+		padding: 8px 14px;
+	}
 }
 
 .training__title {
@@ -156,6 +192,17 @@
 		@include transform(translateY(-50%));
 		border: 4px solid $green;
 		@include border-radius(50%);
+	}
+
+	@include phones {
+		padding-left: 28px;
+		font-size: 16px;
+
+		&:before {
+			width: 12px;
+			height: 12px;
+			border: 3px solid $green;
+		}
 	}
 }
 
@@ -199,6 +246,10 @@
 	padding: 22px 30px;
 	background: $light;
 	@extend %clearfix;
+
+	@include phones {
+		padding: 10px 14px;
+	}
 }
 
 .training__left {
@@ -237,6 +288,17 @@
 		background: url(../img/decor/calendar.png)no-repeat;
 		background-size: contain;
 	}
+
+	@include phones {
+		width: 24px;
+    	height: 25px;
+		font-size: 18px;
+
+		&:after {
+			width: 24px;
+			height: 25px;
+		}
+	}
 }
 
 .training__date {
@@ -246,10 +308,18 @@
 .training__date-title {
 	// font-size: 18px;
 	text-transform: uppercase;
+
+	@include phones {
+		font-size: 12px;
+	}
 }
 
 .training__date-value {
 	font-size: 28px;
+
+	@include phones {
+		font-size: 18px;
+	}
 }
 
 .training__time {
@@ -267,6 +337,17 @@
 		height: 20px;
 		@include transform(translateY(-50%));
 		background: url(../img/decor/time.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		padding-left: 22px;
+		font-size: 12px;
+
+		&:before {
+			width: 14px;
+			height: 14px;
+		}
 	}
 }
 
@@ -284,5 +365,16 @@
 		height: 22px;
 		@include transform(translateY(-50%));
 		background: url(../img/decor/point.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		padding-left: 22px;
+		font-size: 12px;
+
+		&:before {
+			width: 12px;
+			height: 16px;
+		}
 	}
 }

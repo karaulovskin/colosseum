@@ -1,11 +1,21 @@
 
-
+// Gilroy Light
 @font-face {
     font-family: 'gilroylight';
     src: url('../fonts/10177-webfont.woff2') format('woff2'),
          url('../fonts/10177-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+// SF UI Text Light
+@font-face {
+    font-family: 'sf_ui__textlight';
+    src: url('../fonts/9485-webfont.woff2') format('woff2'),
+         url('../fonts/9485-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 

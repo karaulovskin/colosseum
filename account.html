@@ -17,67 +17,115 @@
 		<![endif]-->
 		<div class="wrapper">
 			<div class="maincontent">
-				<div class="container">
-					<div class="account">
-						<div class="user">
-							<div class="user__avatar">
-								<div style="background-image: url(/img/avatar.jpg);" class="user__avatar-img img-cover"><img src="/img/avatar.jpg" class="user__avatar-img-pic img-fake"></div>
-							</div>
-							<div class="user__name">Катерина Воронина</div>
-							<div class="user__club"><a href="#" class="user__club-link">Любимый клуб</a>
-								<div class="user__club-point">Молодогвардейцев, 38А</div>
-							</div>
-							<ul class="user__list">
-								<li class="user__item"><a href="#" class="user__link user__link--tickets">Абонементы</a></li>
-								<li class="user__item"><a href="#" class="user__link user__link__parameter">Параметры</a></li>
+				<header class="header">
+					<div class="container">
+						<div class="header__burger"><a href="#" class="burger__toggle">
+								<div class="burger__notice"></div></a></div>
+						<div class="burger"><a href="#" class="burger__close">закрыть</a>
+							<ul class="burger__list">
+								<li class="burger__item"><a href="#" class="burger__link">Главная</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Личный кабинет</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Акции</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Купить абонемент</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Расписание</a></li>
 							</ul>
-							<div class="user__btns"><a href="#" class="user__btn">Купить абонемент</a></div>
-						</div>
-						<div class="training">
-							<ul class="training__list">
-								<li class="training__item">
-									<div class="training__header">
-										<div class="training__title">Step-Dance</div><a href="#" class="training__close">Закрыть</a>
-									</div>
-									<div class="training__body">
-										<div class="training__left">
-											<div class="training__calendar"><span>12</span></div>
-											<div class="training__date">
-												<div class="training__date-title">Дата занятия</div>
-												<div class="training__date-value">12.14.2017</div>
-											</div>
-										</div>
-										<div class="training__right">
-											<div class="training__time">19:00</div>
-											<div class="training__point">Молодогвардейцев, 38А</div>
-										</div>
-									</div>
-								</li>
-								<li class="training__item">
-									<div class="training__header">
-										<div class="training__title training__title--pink">Хатха йога</div><a href="#" class="training__close">Закрыть</a>
-									</div>
-									<div class="training__body">
-										<div class="training__left">
-											<div class="training__calendar"><span>15</span></div>
-											<div class="training__date">
-												<div class="training__date-title">Дата занятия</div>
-												<div class="training__date-value">15.14.2017</div>
-											</div>
-										</div>
-										<div class="training__right">
-											<div class="training__time">19:00</div>
-											<div class="training__point">Молодогвардейцев, 38А</div>
-										</div>
-									</div>
-								</li>
+							<ul class="burger__list">
+								<li class="burger__item"><a href="#" class="burger__link">Как похудеть</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Как оздоровиться</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Как набрать вес</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Как тренироваться</a></li>
+							</ul>
+							<ul class="burger__list">
+								<li class="burger__item"><a href="#" class="burger__link">О нас</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Наша команда</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Отзывы</a></li>
+								<li class="burger__item"><a href="#" class="burger__link">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
-				</div>
-				
-				
+				</header>
+				<main class="main">
+					<div class="container">
+						<div class="account page">
+							<div class="title">Личный кабинет</div><a href="#" class="account__edit">Редактировать</a>
+							<div class="user">
+								<div class="user__avatar">
+									<div style="background-image: url(/img/avatar.jpg);" class="user__avatar-img img-cover"><img src="/img/avatar.jpg" class="user__avatar-img-pic img-fake"></div>
+								</div>
+								<div class="user__name">Катерина Воронина</div>
+								<div class="user__club"><a href="#" class="user__club-link">Любимый клуб</a>
+									<div class="user__club-point">Молодогвардейцев, 38А</div>
+								</div>
+								<ul class="user__list">
+									<li class="user__item"><a href="#" class="user__link user__link--tickets">Абонементы</a></li>
+									<li class="user__item"><a href="#" class="user__link user__link__parameter">Параметры</a></li>
+								</ul>
+								<div class="user__btns"><a href="#" class="user__btn">Купить абонемент</a></div>
+							</div>
+							<div class="training">
+								<ul class="training__list">
+									<li class="training__item">
+										<div class="training__header">
+											<div class="training__title">Step-Dance</div><a href="#" class="training__close">Закрыть</a>
+										</div>
+										<div class="training__body">
+											<div class="training__left">
+												<div class="training__calendar"><span>12</span></div>
+												<div class="training__date">
+													<div class="training__date-title">Дата занятия</div>
+													<div class="training__date-value">12.14.2017</div>
+												</div>
+											</div>
+											<div class="training__right">
+												<div class="training__time">19:00</div>
+												<div class="training__point">Молодогвардейцев, 38А</div>
+											</div>
+										</div>
+									</li>
+									<li class="training__item">
+										<div class="training__header">
+											<div class="training__title training__title--pink">Хатха йога</div><a href="#" class="training__close">Закрыть</a>
+										</div>
+										<div class="training__body">
+											<div class="training__left">
+												<div class="training__calendar"><span>15</span></div>
+												<div class="training__date">
+													<div class="training__date-title">Дата занятия</div>
+													<div class="training__date-value">15.14.2017</div>
+												</div>
+											</div>
+											<div class="training__right">
+												<div class="training__time">19:00</div>
+												<div class="training__point">Молодогвардейцев, 38А</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="account-popup account-popup--attention">
+							<div class="account-popup__content">
+								<div class="account-popup__title">Вы уверены, что хотите отменить тренировку?</div>
+								<div class="account-popup__desc">Внимание!<br> При отмене тренировки<br> менее чем за 1 час до начала,<br> занятие автоматически сгорает.</div>
+							</div>
+							<div class="account-popup__btns"><a href="#" id="cancel-training-no" class="account-popup__btn account-popup__btn--cancel">Отмена</a><a href="#" id="cancel-training-ok" class="account-popup__btn">Ок</a></div>
+						</div>
+						<div class="account-popup account-popup--cancel">
+							<div class="account-popup__content">
+								<div class="account-popup__title">Запись отменена!</div>
+							</div>
+							<div class="account-popup__btns"><a href="#" id="cancel-ok" class="account-popup__btn">Ок</a></div>
+						</div>
+						<div class="account-popup account-popup--error">
+							<div class="account-popup__content">
+								<div class="account-popup__title">Упс! Произошла ошибка</div>
+							</div>
+							<div class="account-popup__btns"><a href="#" class="account-popup__btn">Повторить</a></div>
+						</div>
+					</div>
+				</main>
 			</div>
+			<div class="overlay"></div>
 		</div>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>

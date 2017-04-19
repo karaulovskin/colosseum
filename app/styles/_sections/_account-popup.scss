@@ -1,0 +1,60 @@
+.account-popup {
+	display: none;
+	top: 50%;
+	left: 0;
+	right: 0;
+	width: 580px;
+	margin: auto;
+	@include transform(translateY(-50%));
+	text-align: center;
+	background: $dark;
+	z-index: 10;
+}
+
+.account-popup--attention.open {
+	display: block;
+	position: fixed;
+
+	.account-popup__btn {
+		@include inline-block(top);
+		width: 50%;
+	}
+}
+
+.account-popup--cancel.open {
+	display: block;
+	position: fixed;
+}
+
+.account-popup--error.open {
+	display: block;
+	position: fixed;
+}
+
+.account-popup__content {
+	padding: 64px 64px;
+}
+
+.account-popup__title {
+	font-size: 34px;
+}
+
+.account-popup__desc {
+	margin-top: 60px;
+	font-size: 24px;
+	font-family: 'sf_ui__textlight';
+}
+
+.account-popup__btn {
+	display: block;
+    padding: 20px 0;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: $gold;
+	border-top: 1px solid $grey;
+}
+
+.account-popup__btn--cancel {
+	color: $grey;
+	border-right: 1px solid $grey;
+}
