@@ -2,14 +2,19 @@
 	position: absolute;
 	top: 0;
 	left: -9999px;
+	bottom: 0;
 	width: 480px;
-    padding-left: 88px;
+	width: 75%;
+    padding-top: 120px;
     background: $dark;
     z-index: 1;
+
+    @include phones {
+    	padding-top: 68px;
+    }
 }
 
 .burger.open {
-	position: fixed;
 	left: 0;
 }
 
@@ -19,6 +24,12 @@
 	width: 34px;
 	height: 32px;
 	background: url(../img/decor/burger.png)no-repeat;
+	background-size: contain;
+
+	@include phones {
+		width: 24px;
+		height: 22px;
+	}
 }
 
 .burger__notice {
@@ -29,11 +40,20 @@
 	height: 12px;
 	background: $gold;
 	@include border-radius(50%);
+
+	@include phones {
+		top: -3px;
+		right: -5px;
+		width: 8px;
+		height: 8px;
+	}
 }
 
 .burger__close {
-	position: relative;
 	display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 34px;
 	width: 30px;
 	height: 30px;
 	font-size: 0;
@@ -55,17 +75,91 @@
 	&:after {
 		@include transform(rotate(-45deg));
 	}
+
+	@include phones {
+		left: 12px;
+		width: 22px;
+		height: 22px;
+
+		&:before, &:after {
+			width: 22px;
+			height: 1px;
+		}
+	}
 }
 
 .burger__list {
+	position: relative;
 	margin-bottom: 72px;
+
+	&:last-child {
+		&:after {
+			content: none;
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -36px;
+		left: 88px;
+		right: 0;
+		height: 1px;
+		background: url(../img/decor/separator.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		margin-bottom: 50px;
+
+		&:after {
+			bottom: -26px;
+			left: 48px;
+		}
+	}
 }
 
 .burger__item {
+	position: relative;
 	margin-bottom: 12px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.curent {
+		.burger__link {
+			color: $gold;
+
+			&:before {
+			    content: "";
+			    position: absolute;
+			    width: 7px;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    background: $gold;
+
+			    @include phones {
+					width: 3px;
+				}
+			}
+		}
+	}
+
+	@include phones {
+		margin-bottom: 6px;
+	}
 }
 
 .burger__link {
+	margin-left: 88px;
 	font-size: 34px;
 	color: #fff;
+
+	@include phones {
+		margin-left: 48px;
+		font-size: 16px;
+	}
 }

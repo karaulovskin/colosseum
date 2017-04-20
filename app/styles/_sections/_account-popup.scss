@@ -9,6 +9,12 @@
 	text-align: center;
 	background: $dark;
 	z-index: 10;
+
+	@include phones {
+		left: 15px;
+		right: 15px;
+		width: auto;
+	}
 }
 
 .account-popup--attention.open {
@@ -33,16 +39,29 @@
 
 .account-popup__content {
 	padding: 64px 64px;
+
+	@include phones {
+		padding: 40px;
+	}
 }
 
 .account-popup__title {
 	font-size: 34px;
+
+	@include phones {
+		font-size: 18px;
+	}
 }
 
 .account-popup__desc {
 	margin-top: 60px;
 	font-size: 24px;
 	font-family: 'sf_ui__textlight';
+
+	@include phones {
+		margin-top: 30px;
+		font-size: 14px;
+	}
 }
 
 .account-popup__btn {
@@ -52,6 +71,12 @@
 	text-transform: uppercase;
 	color: $gold;
 	border-top: 1px solid $grey;
+
+	@include phones {
+		padding: 10px 0;
+		font-size: 18px;
+
+	}
 }
 
 .account-popup__btn--cancel {

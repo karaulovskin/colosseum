@@ -1,11 +1,17 @@
 .account__edit {
 	position: absolute;
-	top: 40px;
-	right: 32px;
+	top: 28px;
+	right: 0;
 	width: 33px;
 	height: 34px;
 	font-size: 0;
 	background: url(../img/decor/edit.png)no-repeat;
+	background-size: contain;
+
+	@include phones {
+		width: 23px;
+		height: 24px;
+	}
 }
 
 .user {
@@ -83,6 +89,10 @@
 	text-transform: uppercase;
 	color: #fff;
 
+	&:hover {
+		color: $gold;
+	}
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -119,23 +129,23 @@
 	}
 }
 
-.user__btns {
-	margin-bottom: 36px;
-}
+// .user__btns {
+// 	margin-bottom: 36px;
+// }
 
-.user__btn {
-	display: block;
-	padding: 20px 0;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: $gold;
-	border: 1px solid $gold;
+// .user__btn {
+// 	display: block;
+// 	padding: 20px 0;
+// 	font-size: 30px;
+// 	text-transform: uppercase;
+// 	color: $gold;
+// 	border: 1px solid $gold;
 
-	@include phones {
-		padding: 10px 0;
-		font-size: 16px;
-	}
-}
+// 	@include phones {
+// 		padding: 10px 0;
+// 		font-size: 16px;
+// 	}
+// }
 
 .training {
 	text-align: left;
@@ -172,7 +182,7 @@
 	background: $dark;
 
 	@include phones {
-		padding: 8px 14px;
+		padding: 8px 10px;
 	}
 }
 
@@ -240,15 +250,25 @@
 	&:after {
 		@include transform(rotate(-45deg));
 	}
+
+	@include phones {
+		right: 10px;
+		width: 16px;
+		height: 16px;
+
+			&:before, &:after {
+				width: 18px;
+		}
+	}
 }
 
 .training__body {
-	padding: 22px 30px;
+	padding: 22px 30px 14px;
 	background: $light;
 	@extend %clearfix;
 
 	@include phones {
-		padding: 10px 14px;
+		padding: 10px 10px;
 	}
 }
 
@@ -292,7 +312,8 @@
 	@include phones {
 		width: 24px;
     	height: 25px;
-		font-size: 18px;
+    	padding-top: 5px;
+		font-size: 16px;
 
 		&:after {
 			width: 24px;
@@ -310,7 +331,7 @@
 	text-transform: uppercase;
 
 	@include phones {
-		font-size: 12px;
+		font-size: 10px;
 	}
 }
 
@@ -318,7 +339,7 @@
 	font-size: 28px;
 
 	@include phones {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 

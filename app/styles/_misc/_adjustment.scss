@@ -53,6 +53,7 @@ p {
 
 a {
 	text-decoration: none;
+	@include transition(.3s);
 }
 
 footer {
@@ -91,13 +92,43 @@ footer {
 }
 
 .page {
-	padding-top: 34px;
+	position: relative;
+	padding-top: 22px;
 	text-align: center;
 }
 
+.page__btns {
+	margin-bottom: 36px;
+}
+
+.page__btn {
+	display: block;
+	padding: 20px 0;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: $grey;
+	border: 1px solid $grey;
+	@include transition(.3s);
+
+	&:hover {
+		color: $gold;
+		border: 1px solid $gold;
+	}
+
+	@include phones {
+		padding: 10px 0;
+		font-size: 16px;
+	}
+}
+
 .title {
-	margin-bottom: 26px;
+	display: inline-block;
+	margin-bottom: 36px;
 	font-size: 36px;
+
+	@include phones {
+		font-size: 24px;
+	}
 }
 
 .img-cover {
