@@ -62,40 +62,5 @@ $(document).ready(function(){
 		});
 	}());
 
-
-	// accordion
-	(function(){
-		$('.history__parameters-link').on('click', function(e){
-			e.preventDefault();
-
-			var
-				$this = $(this),
-				container = $this.closest('.history__parameters-list'),
-				item = $this.closest('.history__parameters-item'),
-				currentContent = item.find('.history__dropdown-list'),
-				duration = 500;
-
-				// currentContent.slideToggle(duration);
-
-
-			if(!item.hasClass('active')) {
-
-				item
-					.addClass('active')
-					.siblings()
-					.removeClass('active')
-					.find('.history__dropdown-list')
-					.stop(true, true)
-					.slideUp();
-
-				currentContent.stop(true, true).slideDown(duration);
-			} else {
-
-				item.removeClass('active');
-				currentContent.stop(true, true).slideUp();
-			}
-		});
-	}());
-
 });
 

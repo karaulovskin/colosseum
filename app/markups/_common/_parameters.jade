@@ -60,7 +60,7 @@
 							.data__value
 								span.data__value-number 93
 								span.data__value-text см.
-		a.data__history-link(href="#") История параметров
+		a.data__history-link(href="history.html") История параметров
 	.parameters__index
 		.index__round
 			.index__mass
@@ -68,21 +68,17 @@
 				.index__value 18,9
 	.parameters__advice
 		ul.advice__list
-			li.advice__item
-				a.advice__link.advice__link--little(href="#")
-					img.advice__img(src="/img/parameters/weight_little.png")
-					.advice__title Недостаток массы
-			li.advice__item
-				a.advice__link(href="#")
-					img.advice__img(src="/img/parameters/weight_normal-hover.png")
-					.advice__title Нормальный вес
-			li.advice__item
-				a.advice__link(href="#")
-					img.advice__img(src="/img/parameters/weight_excess.png")
-					.advice__title Избыточный вес
-			li.advice__item
-				a.advice__link(href="#")
-					img.advice__img(src="/img/parameters/weight_obesity.png")
-					.advice__title Ожирение
+			li.advice__item.advice__item--little
+				img.advice__img(src="./img/parameters/weight_little.png")
+				span.advice__title Недостаток массы
+			li.advice__item.advice__item--normal.current
+				img.advice__img(src="./img/parameters/weight_normal-hover.png")
+				span.advice__title Нормальный вес
+			li.advice__item.advice__item--excess
+				img.advice__img(src="./img/parameters/weight_excess.png")
+				span.advice__title Избыточный вес
+			li.advice__item.advice__item--obesity
+				img.advice__img(src="./img/parameters/weight_obesity.png")
+				span.advice__title Ожирение
 	.page__btns
 		a.page__btn(href="#") Рекомендации

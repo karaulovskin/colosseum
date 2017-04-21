@@ -192,24 +192,22 @@
 .advice__item {
 	@include inline-block(top);
 	width: 25%;
-	padding: 0 20px;
 	font-size: 18px;
+
+	&.current {
+		.advice__title {
+			color: $gold;
+		}
+	}
 
 	@include phones {
 		padding: 0 10px;
 		font-size: 10px;
 	}
-
 }
 
 .advice__link {
 	display: inline-block;
-
-	&:hover {
-		.advice__title {
-			color: $gold;
-		}
-	}
 
 	@include phones {
 		height: 120px;
@@ -223,6 +221,19 @@
 }
 
 .advice__title {
+	// position: relative;
+	// padding-top: 210px;
 	color: #fff;
-	@include transition(.3s);
+
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	bottom: 100%;
+	// 	left: 0;
+	// 	right: 0;
+	// 	width: 100px;
+	// 	height: 210px;
+	// 	background: url(../img/parameters/weight_little.png) no-repeat;
+	// 	background-size: contain;
+	// }
 }

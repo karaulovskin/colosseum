@@ -22,7 +22,10 @@ html
 
         .wrapper
             .maincontent
-                include _common/_header
+                header.header
+                    .container
+                        block header
+                        include _common/_burger
                 main.main
                     .container
                         block content
@@ -31,13 +34,8 @@ html
                 //- include _common/_breadcrumbs
             .overlay
 
-
-        //- include _common/_footer
-
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-        script.
-            window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
             
-        script(src='js/plugins.min.js')
+        script(src='js/_vendors/jquery.min.js')
+        //- script(src='js/main.js')
         script(src='js/main.min.js')
 
