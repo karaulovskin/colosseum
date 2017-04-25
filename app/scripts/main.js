@@ -97,5 +97,53 @@ $(document).ready(function(){
 		});
 	}());
 
+
+	// tabs
+	(function(){
+		$('.history__tabs-item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.history__content-item');
+				ndx = $this.index();
+
+			console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+		});
+	}());
+
+	// history popup
+	(function(){
+		var 
+			historyPopup  = $('.history-popup'),
+			historyCancel = $('.history-popup__btn--cancel');
+
+		$('.history__parameters-title').on('click', function(e){
+			e.preventDefault();
+
+			if(!historyPopup.hasClass('open')) {
+				historyPopup.addClass('open');
+			} else {
+				historyPopup.removeClass('open');
+			}
+		});
+
+		$('.history-popup__btn--cancel').on('click', function(e){
+			e.preventDefault();
+
+			historyPopup.removeClass('open');
+		});
+	}());
+
 });
 
