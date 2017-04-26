@@ -33,6 +33,13 @@
 		bottom: 0;
 		background: linear-gradient(bottom, rgba(55, 55, 55, 1) 25%, rgba(55, 55, 55, 0.5) 100%);
 	}
+
+	@include phones {
+
+		&:before, &:after {
+			height: 50px;
+		}
+	}
 }
 
 .histor-popup__date-item {
@@ -63,10 +70,41 @@
 			padding: 15px 108px;
 		}
 	}
+
+	@include phones {
+		padding: 8px 0px 10px 0;
+		font-size: 18px;
+
+		&:last-child {
+			padding: 8px 0px 8px 0;
+		}
+		
+		&.prev {
+		    padding: 8px 0px 12px 0;
+			font-size: 20px;
+
+			.histor-popup__date-month {
+				padding: 0 70px;
+			}
+		}
+
+		&.active {
+		    padding: 10px 0px 14px 0;
+			font-size: 22px;
+
+			.histor-popup__date-month {
+				padding: 0 70px;
+			}
+		}
+	}
 }
 
 .histor-popup__date-month {
 	padding: 15px 94px;
+
+	@include phones {
+		padding: 0 70px;
+	}
 }
 
 .history-popup__btns {

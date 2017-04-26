@@ -1,6 +1,10 @@
 
 .history__tabs {
 	margin-bottom: 50px;
+
+	@include phones {
+		margin-bottom: 30px;
+	}
 }
 
 .history__tabs-list {
@@ -27,10 +31,21 @@
 	text-transform: uppercase;
 	color: $grey;
 	border: 1px solid $grey;
+
+	@include phones {
+		width: 126px;
+    	padding: 4px 0;
+    	font-size: 12px;
+	}
 }
 
 .history__content {
 	text-align: left;
+	margin-bottom: 72px;
+
+	@include phones {
+		margin-bottom: 50px;
+	}
 }
 
 .history__content-item {
@@ -51,7 +66,8 @@
 
 .history__parameters-item {
 	position: relative;
-    padding: 15px 30px;
+    // padding: 15px 30px;
+    padding-bottom: 4px;
     text-align: left;
 	// border-bottom: 1px solid $grey;
 
@@ -84,6 +100,7 @@
 .history__parameters-link {
 	display: block;
 	position: relative;
+	padding: 15px 30px;
 	font-size: 30px;
 	color: #fff;
 
@@ -99,6 +116,15 @@
 		background-size: contain;
 		@include transition(.5s);
 	}
+
+	@include phones {
+		font-size: 16px;
+
+		&:after {
+			width: 18px;
+			height: 10px;
+		}
+	}
 }
 
 .history__dropdown-list {
@@ -110,6 +136,10 @@
 	margin-bottom: 15px;
 	font-size: 24px;
 	@extend %clearfix;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .history__dropdown-left {
@@ -150,25 +180,52 @@
 		background-size: contain;
 		@include transition(.5s);
 	}
+	
+	@include phones {
+		margin-bottom: 36px;
+		font-size: 16px;
+
+		&:after {
+			right: -26px;
+			width: 14px;
+			height: 8px;
+		}
+	}
 }
 
 .history__parameters-item--date {
 	margin-bottom: 30px;
 	@extend %clearfix;
+
+	@include phones {
+		margin-bottom: 20px;
+	}
 }
 
 .history__parameters-key {
 	float: left;
 	font-size: 30px;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .history__parameters-value {
 	float: right;
 	margin-right: 6px;
 	font-size: 30px;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .history__parameters-value_text {
 	margin-left: 6px;
 	font-size: 26px;
+
+	@include phones {
+		font-size: 14px;
+	}
 }
