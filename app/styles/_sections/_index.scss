@@ -1,0 +1,99 @@
+.index {
+	padding-bottom: 23px;
+}
+
+.index__logo {
+	margin: 92px 0 124px;
+}
+
+.logo__link {
+	display: inline-block;
+}
+
+.logo__img {
+	width: 334px;
+	height: 286px;
+}
+
+.logo__text {
+	font-size: 0;
+}
+
+.index__barcode {
+	position: relative;
+	width: 430px;
+	height: 232px;
+	margin: 0 auto 128px;
+	background: #fff;
+}
+
+.barcode {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 385px;
+	height: 187px;
+	margin: auto;
+}
+
+.index__footer {
+	position: relative;
+}
+
+.index__footer {
+	@extend %clearfix;
+}
+
+.footer-left {
+	float: left;
+}
+
+.footer-right {
+	float: right;
+}
+
+.footer-center {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 18%;
+	right: 18%;
+	bottom: 0;
+	margin: auto;
+}
+
+.footer-center__link {
+	display: inline-block;
+	margin-top: 30px;
+	font-size: 18px;
+	color: $grey;
+}
+
+.footer-left__link,
+.footer-right__link {
+	display: inline-block;
+	width: 88px;
+	height: 88px;
+	background: $gold;
+	@include border-radius(50%);
+}
+
+.footer-right__link {
+	display: inline-block;
+	width: 88px;
+	height: 88px;
+	background: $green;
+	@include border-radius(50%);
+}
+
+.footer-left__link {
+	background: url(../img/icons/share.png)no-repeat;
+	background-size: contain;
+}
+
+.footer-right__link {
+	background: url(../img/icons/call.png)no-repeat;
+	background-size: contain;
+}
