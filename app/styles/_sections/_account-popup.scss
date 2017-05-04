@@ -17,14 +17,18 @@
 	}
 }
 
-.account-popup--attention.open {
-	display: block;
-	position: fixed;
+.account-popup--attention,
+.account-popup--point {
 
 	.account-popup__btn {
 		@include inline-block(top);
 		width: 50%;
 	}
+}
+
+.account-popup--attention.open {
+	display: block;
+	position: fixed;
 }
 
 .account-popup--cancel.open {
@@ -64,6 +68,10 @@
 	}
 }
 
+.account-popup__btns {
+	text-align: center;
+}
+
 .account-popup__btn {
 	display: block;
     padding: 20px 0;
@@ -82,4 +90,12 @@
 .account-popup__btn--cancel {
 	color: $grey;
 	border-right: 1px solid $grey;
+}
+
+.account-popup--point {
+	z-index: 10;
+}
+
+.account-popup__point-link {
+	color: #fff;
 }

@@ -55,6 +55,14 @@
 	transform: $transform;
 }
 
+@mixin transform-origin($transform...) {
+	-webkit-transform-origin: $transform;
+	-moz-transform-origin: $transform;
+	-ms-transform-origin: $transform;
+	-o-transform-origin: $transform;
+	transform-origin: $transform;
+}
+
 // @mixin placecolor($color: #000000) {
 // 	&::-webkit-input-placeholder {
 // 		color: $color;

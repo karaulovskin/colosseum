@@ -1,18 +1,40 @@
+.wrapper--index {
+
+	&:after {
+		height: 150px;
+	}
+
+	@include phones {
+		&:after {
+			height: 77px;
+		}
+	}
+}
+
 .index {
 	padding-bottom: 23px;
 }
 
 .index__logo {
 	margin: 92px 0 124px;
+
+	@include phones {
+		margin: 30px 0 50px;
+	}
 }
 
 .logo__link {
 	display: inline-block;
+	width: 334px;
+	// height: 286px;
+
+	@include phones {
+		width: 56%;
+	}
 }
 
 .logo__img {
-	width: 334px;
-	height: 286px;
+	max-width: 100%;
 }
 
 .logo__text {
@@ -24,22 +46,35 @@
 	width: 430px;
 	height: 232px;
 	margin: 0 auto 128px;
+	padding: 23px;
 	background: #fff;
+
+	@include phones {
+		width: 64vw;
+    	height: 34vw;
+		margin: 0 auto 100px;
+		padding: 0 10px;
+	}
 }
 
 .barcode {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 385px;
-	height: 187px;
-	margin: auto;
+	position: relative;
+	top: 50%;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+	// margin: auto;
+	max-width: 100%;
+	@include transform(translateY(-50%));
 }
 
-.index__footer {
-	position: relative;
+.footer--index {
+	margin-top: -150px;
+	text-align: center;
+
+	@include phones {
+		margin-top: -77px;
+	}
 }
 
 .index__footer {
@@ -66,9 +101,14 @@
 
 .footer-center__link {
 	display: inline-block;
-	margin-top: 30px;
+	margin-top: 57px;
 	font-size: 18px;
 	color: $grey;
+
+	@include phones {
+		margin-top: 16px;
+		font-size: 12px;
+	}
 }
 
 .footer-left__link,
@@ -78,12 +118,15 @@
 	height: 88px;
 	background: $gold;
 	@include border-radius(50%);
+
+	@include phones {
+		width: 48px;
+		height: 48px;
+	}
 }
 
 .footer-right__link {
 	display: inline-block;
-	width: 88px;
-	height: 88px;
 	background: $green;
 	@include border-radius(50%);
 }

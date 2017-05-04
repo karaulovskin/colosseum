@@ -1,0 +1,170 @@
+.tickets__list {
+	margin: 0 -30px;
+}
+
+.tickets__item {
+	padding: 25px 30px 0 30px;
+    background: #686868;
+
+    &:last-child {
+	    padding: 25px 30px 150px;
+    }
+}
+
+.tickets__header {
+    padding: 16px 30px;
+    position: relative;
+    background: #2c2c2c;
+    @extend %clearfix;
+}
+
+.tickets__title {
+	float: left;
+	text-transform: uppercase;
+	font-size: 28px;
+	color: $gold;
+}
+
+.tickets__extend {
+	float: right;
+    margin-top: 12px;
+	color: #fff;
+}
+
+.tickets__body {
+    padding: 20px 30px 20px;
+    background: #373737;
+    @extend %clearfix;
+}
+
+.tickets__left,
+.tickets__right {
+	float: left;
+	width: 50%;
+	padding-left: 34px;
+	text-align: left;
+}
+
+.tickets__left {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -12px;
+		right: 0;
+		width: 1px;
+		height: 84px;
+		background: $grey;
+	}
+}
+
+.tickets__visit-value {
+	position: relative;
+	@include inline-block(middle);
+	text-align: center;
+}
+
+// .tickets__visit-round {
+// 	width: 60px;
+// 	height: 60px;
+// 	border-left: 1px solid $gold;
+// 	border-right: 1px solid $grey;
+// 	border-top: 1px solid $gold;
+// 	border-bottom: 1px solid $grey;
+// 	@include border-radius(50%);
+// }
+
+
+.tickets__visit-round {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	@include border-radius(50%);
+	background: $gold;
+	background-image: linear-gradient(to right, transparent 50%, $grey 0);
+
+	&:before {
+		content: "";
+		display: block;
+		margin-left: 50%;
+		height: 100%;
+		@include transform-origin(left);
+		@include border-radius(0 100% 100% 0 / 50%);
+		background: inherit;
+		background: $gold;
+		animation: spin 50s linear infinite,
+				   bg 100s step-end infinite;
+	   	animation-play-state: paused;
+		animation-delay: inherit;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 58px;
+		height: 58px;
+		margin: auto;
+		@include transform(translateY(-50%));
+		@include border-radius(50%);
+		background: $light;
+	}
+}
+
+@keyframes spin {
+	to { @include transform(rotate(.5turn)); }
+}
+
+@keyframes bg {
+	50% { background: $grey; }
+}
+
+.tickets__visit-number {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	font-size: 36px;
+	color: $gold;
+	@include transform(translateY(-50%));
+}
+
+.tickets__visit-title {
+	@include inline-block(middle);
+	width: 130px;
+	margin-left: 14px;
+	text-transform: uppercase;
+}
+
+.tickets__date {
+	position: relative;
+	margin-top: 4px;
+	padding: 0 0 0 68px;
+	text-transform: uppercase;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 48px;
+	    height: 50px;
+	    @include transform(translateY(-50%));
+	    background: url(../img/decor/calendar.png) no-repeat;
+	    background-size: contain; 
+	}
+}
+
+.tickets__btn {
+	display: block;
+	margin: 0 -30px;
+	padding: 22px 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: $light;
+	background: $gold;
+}

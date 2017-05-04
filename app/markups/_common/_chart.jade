@@ -1,0 +1,40 @@
+.chart.page
+	.title Рассписание
+	.chart__club-point
+		a.chart__club-point__link(href="#") Все клубы
+	.chart__tabs
+		ul.chart__tabs-list
+			li.chart__tabs-item
+				a.chart__tabs-link(href="#") Зал групповых занятий
+			li.chart__tabs-item
+				a.chart__tabs-link(href="#") Персональные тренировки
+			li.chart__tabs-item.active
+				a.chart__tabs-link(href="#") Массаж
+	.chart__content
+		ul.chart__content-list
+			li.chart__content-item.chart-training
+				ul.chart-training__list
+					li.chart-training__item
+						a.chart-training__link(href="#") 
+							.chart-training__title Тайский массаж
+							.chart-training__date 19:00
+					li.chart-training__item
+						a.chart-training__link(href="#") 
+							.chart-training__title Китайский массаж
+							.chart-training__date 19:00
+					li.chart-training__item.active
+						a.chart-training__link(href="#") 
+							.chart-training__title Stone-массаж
+							.chart-training__date 19:00
+						.chart-training__content
+							.chart-training__name Массаж горячими камнями
+							.chart-training__duration Продолжительность сеанса 90 мин.
+							.chart-training__desc Массаж горячими камнями это массаж с применением промытых и нагретых в воде базальтовых камней.
+							.chart-training__master.master
+								.master__left
+									.master__avatar.img-cover(style="background-image: url(./img/avatar.jpg);")
+										img.master__avatar-pic.img-fake(src="./img/avatar.jpg")
+								.master__right
+									.master__name Дарья Никонова
+									.master__desc Дипломированный массажист, специалист по оздоровительным технологиям и физической культуре Востока.
+									.master__skills Опыт более 12 лет.

@@ -60,6 +60,25 @@ $(document).ready(function(){
 			$('.account-popup--cancel').removeClass('open');
 			$('.overlay').fadeOut();
 		});
+
+		$('.user__club-point__link').on('click', function(e){
+			e.preventDefault();
+			$('.account-popup--point').addClass('open');
+			$('.overlay').fadeIn();
+		});
+
+		$('#account__point-no').on('click', function(e){
+			e.preventDefault();
+			$('.account-popup--point').removeClass('open');
+			$('.overlay').fadeOut();
+		});
+
+		$('.overlay').on('click', function(e){
+			e.preventDefault();
+			$('.account-popup').removeClass('open');
+			$('.account-popup--point').removeClass('open');
+			$('.overlay').fadeOut();
+		});
 	}());
 
 

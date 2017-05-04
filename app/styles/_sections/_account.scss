@@ -60,7 +60,13 @@
 }
 
 .user__club-point {
-    opacity: .5;
+	
+}
+
+.user__club-point__link {
+	display: inline-block;
+	color: #fff;
+	opacity: .5;
 }
 
 .user__list {

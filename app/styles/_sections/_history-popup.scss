@@ -1,4 +1,5 @@
-.history-popup {
+.history-popup,
+.account-popup--point {
 	display: none;
 	top: 50%;
 	left: 0;
@@ -14,8 +15,10 @@
 	}
 }
 
-.histor-popup__date-list {
+.histor-popup__date-list,
+.account-popup__point-list {
 	position: relative;
+	margin-bottom: 40px;
 
 	&:before, &:after {
 		content: "";
@@ -42,7 +45,8 @@
 	}
 }
 
-.histor-popup__date-item {
+.histor-popup__date-item,
+.account-popup__point-item {
 	padding: 14px 0px 20px 0;
 	text-align: center;
 	font-size: 32px;
@@ -92,7 +96,7 @@
 		    padding: 10px 0px 14px 0;
 			font-size: 22px;
 
-			.histor-popup__date-month {
+			.histor-popup__date-month{
 				padding: 0 70px;
 			}
 		}
