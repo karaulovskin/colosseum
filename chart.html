@@ -9,6 +9,7 @@
 		<title>Рассписание</title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
+		<link rel="stylesheet" type="text/css" href="css/vendor/slick.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
 	</head>
 	<body>
@@ -58,34 +59,21 @@
 							</div>
 							<div class="chart__content">
 								<ul class="chart__content-list">
-									<li class="chart__content-item chart-training">
-										<ul class="chart-training__list">
-											<li class="chart-training__item"><a href="#" class="chart-training__link"> 
-													<div class="chart-training__title">Тайский массаж</div>
-													<div class="chart-training__date">19:00</div></a></li>
-											<li class="chart-training__item"><a href="#" class="chart-training__link"> 
-													<div class="chart-training__title">Китайский массаж</div>
-													<div class="chart-training__date">19:00</div></a></li>
-											<li class="chart-training__item active"><a href="#" class="chart-training__link"> 
-													<div class="chart-training__title">Stone-массаж</div>
-													<div class="chart-training__date">19:00</div></a>
-												<div class="chart-training__content">
-													<div class="chart-training__name">Массаж горячими камнями</div>
-													<div class="chart-training__duration">Продолжительность сеанса 90 мин.</div>
-													<div class="chart-training__desc">Массаж горячими камнями это массаж с применением промытых и нагретых в воде базальтовых камней.</div>
-													<div class="chart-training__master master">
-														<div class="master__left">
-															<div style="background-image: url(./img/avatar.jpg);" class="master__avatar img-cover"><img src="./img/avatar.jpg" class="master__avatar-pic img-fake"></div>
-														</div>
-														<div class="master__right">
-															<div class="master__name">Дарья Никонова</div>
-															<div class="master__desc">Дипломированный массажист, специалист по оздоровительным технологиям и физической культуре Востока.</div>
-															<div class="master__skills">Опыт более 12 лет.</div>
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
+									<li class="chart__content-item">
+										<div class="chart-date">
+											<ul class="chart-date__list">
+												<li class="chart-date__item"><a href="#" class="chart-date__link">Воскресенье 01 мая, 2017</a></li>
+												<li class="chart-date__item active"><a href="#" class="chart-date__link">Понедельник 02 мая, 2017</a></li>
+												<li class="chart-date__item"><a href="#" class="chart-date__link">Вторник 03 мая, 2017</a></li>
+												<li class="chart-date__item"><a href="#" class="chart-date__link">Среда 04 мая, 2017</a></li>
+											</ul>
+											<ul class="chart-date-content__list">
+												<li class="chart-date-content__item">1</li>
+												<li class="chart-date-content__item">2</li>
+												<li class="chart-date-content__item">3</li>
+												<li class="chart-date-content__item">4</li>
+											</ul>
+										</div>
 									</li>
 								</ul>
 							</div>
@@ -96,6 +84,7 @@
 			<div class="overlay"></div>
 		</div>
 		<script src="js/_vendors/jquery.min.js"></script>
+		<script src="js/_vendors/slick.min.js"></script>
 		<script src="js/main.min.js"></script>
 	</body>
 </html>

@@ -3,12 +3,42 @@
 }
 
 .chart__club-point {
+	position: relative;
 	margin-bottom: 38px;
 }
 
 .chart__club-point__link {
+	position: relative;
 	font-size: 30px;
 	color: #fff;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -50px;
+		width: 29px;
+		height: 16px;
+		@include transform(translateY(-50%));
+		background: url(../img/decor/history_title-toggle.png)no-repeat;
+		background-size: contain;
+		@include transition(.5s);
+	}
+	
+	@include phones {
+		margin-bottom: 36px;
+		font-size: 16px;
+
+		&:after {
+			right: -26px;
+			width: 14px;
+			height: 8px;
+		}
+	}
+}
+
+.chart__tabs {
+	margin-bottom: 40px;
 }
 
 .chart__tabs-list {
@@ -41,19 +71,99 @@
 	border: 1px solid $grey;
 }
 
+.chart__content-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.chart-date {
+	margin-bottom: 20px;
+}
+
+.chart-date__list {
+	// margin: 0 -250px;
+	font-size: 0;
+    // text-align: justify;
+    // line-height: 0;
+
+	// .nav__list:after {
+	//     content: "";
+	//     display: inline-block;
+	//     width: 100%;
+	//     height: 0;
+	// }
+}
+
+.chart-date__item {
+	@include inline-block(middle);
+	font-size: 18px;
+
+	&.slick-current {
+
+		.chart-date__link {
+			color: $gold;
+		}
+	}
+}
+
+.chart-date__link {
+	font-size: 28px;
+	color: $grey;
+}
+
 .chart-training__item {
+
+	&:last-child {
+		.chart-training__link {
+			border-bottom: none;
+		}
+	}
 
 	&.active {
 		margin: 0 -30px;
 		background: $light;
+
+		.chart-training__link {
+			padding: 14px 30px;
+
+			&:after {
+				right: 30px;
+			}
+		}
 	}
 }
 
 .chart-training__link {
+	position: relative;
 	display: block;
     padding: 14px 0;
 	text-align: left;
 	border-bottom: 1px solid $grey;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 32%;
+		right: 0;
+		width: 29px;
+		height: 16px;
+		@include transform(translateY(-50%));
+		background: url(../img/decor/history-toggle.png)no-repeat;
+		background-size: contain;
+		@include transition(.5s);
+	}
+
+	@include phones {
+		font-size: 16px;
+
+		&:after {
+			width: 18px;
+			height: 10px;
+		}
+	}
 }
 
 .chart-training__title {
@@ -63,13 +173,40 @@
 }
 
 .chart-training__date {
-	padding-left: 34px;
+	position: relative;
+	padding-left: 32px;
 	font-size: 24px;
 	color: #fff;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		@include transform(translateY(-50%));
+		background: url(../img/decor/time.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		padding-left: 22px;
+		font-size: 12px;
+
+		&:before {
+			width: 14px;
+			height: 14px;
+		}
+	}
+}
+
+.chart-training__wrapp {
+	display: none;
 }
 
 .chart-training__content {
-	padding: 15px 36px 0 42px;;
+	padding: 18px 36px 0 74px;
 	text-align: left;
 }
 
@@ -95,12 +232,12 @@
 
 .master__left {
 	float: left;
-	width: 28%;
+	width: 25%;
 }
 
 .master__right {
 	float: right;
-	width: 72%;
+	width: 75%;
 	text-align: left;
 }
 
@@ -108,7 +245,7 @@
 	width: 100px;
 	height: 100px;
 	@include border-radius(50%);
-	background: $grey;
+	background-color: $grey;
 }
 
 .master__name {

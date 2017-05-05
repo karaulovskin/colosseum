@@ -117,6 +117,41 @@ $(document).ready(function(){
 	}());
 
 
+	// accordion-chart
+	(function(){
+		$('.chart-training__link').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this),
+				container = $this.closest('.chart-training__list'),
+				item = $this.closest('.chart-training__item'),
+				currentContent = item.find('.chart-training__wrapp'),
+				duration = 500;
+
+				// currentContent.slideToggle(duration);
+
+
+			if(!item.hasClass('active')) {
+
+				item
+					.addClass('active')
+					.siblings()
+					.removeClass('active')
+					.find('.chart-training__wrapp')
+					.stop(true, true)
+					.slideUp();
+
+				currentContent.stop(true, true).slideDown(duration);
+			} else {
+
+				item.removeClass('active');
+				currentContent.stop(true, true).slideUp();
+			}
+		});
+	}());
+
+
 	// tabs
 	(function(){
 		$('.history__tabs-item').on('click', function(e){
@@ -140,6 +175,55 @@ $(document).ready(function(){
 				.removeClass('active');
 		});
 	}());
+
+	// tabs-chart
+	(function(){
+		$('.chart__tabs-item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.chart__content-item');
+				ndx = $this.index();
+
+			console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+		});
+	}());
+
+	// slick-chart
+	(function(){
+		// $('.center').slick({
+		//     centerMode: true,
+		//     centerPadding: '60px',
+		//     slidesToShow: 1,
+		// });
+
+		 $('.chart-date-content__list').slick({
+	  		slidesToShow: 1,
+	  		slidesToScroll: 1,
+	  		arrows: false,
+	  		fade: true,
+	  		asNavFor: '.chart-date__list'
+		});
+		$('.chart-date__list').slick({
+	  		slidesToShow: 1,
+	  		slidesToScroll: 1,
+	  		asNavFor: '.chart-date-content__list',
+	  		centerMode: true,
+	  		focusOnSelect: true
+		});
+	}());
+
 
 	// history popup
 	(function(){
