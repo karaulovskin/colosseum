@@ -57,6 +57,10 @@
 	display: inline-block;
 	text-transform: uppercase;
 	color: #fff;
+
+	@include phones {
+		margin-bottom: 4px;
+	}
 }
 
 .user__club-point {
@@ -89,7 +93,7 @@
 
 .user__link {
 	position: relative;
-	display: block;
+	display: inline-block;
 	padding: 36px 0;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -121,6 +125,16 @@
 		background: url(../img/decor/tickets.png)no-repeat;
 		background-size: contain;
 	}
+
+	@include phones {
+		margin: 0 12% 0 0;
+		padding: 22px 0 22px 40px;
+
+		&:before {
+			left: 0;
+			height: 40px;
+		}
+	}
 }
 
 .user__link__parameter {
@@ -132,6 +146,16 @@
 		height: 61px;
 		background: url(../img/decor/parameter.png)no-repeat;
 		background-size: contain;
+	}
+
+	@include phones {
+		margin: 0 0 0 12%;
+		padding: 22px 0 22px 30px;
+
+		&:before {
+			left: 0;
+			height: 40px;
+		}
 	}
 }
 

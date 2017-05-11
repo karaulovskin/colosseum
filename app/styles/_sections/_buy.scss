@@ -1,0 +1,108 @@
+
+
+.buy__item {
+	text-align: left;
+	margin-bottom: 40px
+}
+
+.buy__checkbox {
+	position: relative;
+	display: block;
+	padding: 14px 32px 14px 70px;
+	@include box-shadow((0 0 16px) rgba(0, 0, 0, .4));
+    overflow: hidden;
+
+    @include phones {
+	    padding: 12px 20px 12px 50px;
+    }
+}
+
+.buy__checkbox-fake {
+	position: absolute;
+	top: 23px;
+	left: 28px;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #fff;
+	@include border-radius(50%);
+	background: inherit;
+
+	&:before {
+	    content: "";
+	    display: none;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	   	margin: auto;
+	   	width: 14px;
+	   	height: 10px;
+	   	background: url(../img/decor/che.png)no-repeat;
+	}
+
+	@include phones {
+		top: 17px;
+		left: 15px;
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.checkbox__input:checked + .buy__checkbox-fake {
+	background: $gold;
+	border: $gold;
+
+	&:before {
+	    display: block;
+	}
+
+	.buy__checkbox {
+		border: 1px solid $gold;
+	}
+}
+
+.buy__checkbox-title {
+	font-size: 28px;
+
+	@include phones {
+		font-size: 16px;
+	}
+}
+
+.buy__desc {
+	// display: none;
+	padding: 20px 32px;
+	font-size: 24px;
+	background: $light;
+	@include box-shadow((0 0 16px) rgba(0, 0, 0, .4));
+
+	@include phones {
+		padding: 14px 20px;
+		font-size: 14px;
+	}
+}
+
+.buy__btns {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.buy__total {
+	padding: 22px 0;
+	font-size: 34px;
+	color: #fff;
+	background: $grey;
+
+	@include phones {
+		padding: 10px 0;
+		font-size: 20px;
+	}
+}
+
+.buy__total-text,
+.buy__total-price {
+	margin-left: 8px;
+}

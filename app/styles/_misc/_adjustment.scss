@@ -212,17 +212,10 @@ footer {
 
 .checkbox__input:checked + .checkbox__fake {
 
-	&::before {
-	    display: block;
-	}
 }
 
 .checkbox__input:checked + .checkbox__fake--radio {
-	background: #a5d2fb;
-
-	&::before {
-	    display: block;
-	}
+	
 }
 
 .checkbox__fake--radio {

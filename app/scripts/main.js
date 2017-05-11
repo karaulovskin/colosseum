@@ -254,5 +254,35 @@ $(document).ready(function(){
 		});
 	}());
 
+	// SECTION BUY
+	(function(){
+		// function buyCheck() {
+		// 	var checkbox = document.querySelectorAll('.buy__checkbox-input');
+		// 	if(checkbox.checked) {
+		// 		checkbox.parent('.buy__item').addClass('selected');
+
+		// 	}
+		// }
+
+		$('.buy__checkbox').on('click', function(e){
+			// e.preventDefault();
+			// console.log('!!!');
+
+			var 
+				$this = $(this),
+				checkbox = $('.buy__checkbox-input');
+				// checked = $('.buy__checkbox-input input:checked');
+
+			// if($(checked)) {
+			// 	checked.parents($('.buy__item')).addClass('selected');
+			// 	console.log(checked);
+			// }
+
+			// $('.buy__checkbox-input').prop("checked").('.buy__item');
+			$('.buy__checkbox-input:checked').closest('.buy__item');
+
+		});
+	}());
+
 });
 

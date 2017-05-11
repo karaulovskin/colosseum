@@ -27,7 +27,7 @@
 								<li class="burger__item"><a href="/" class="burger__link">Главная</a></li>
 								<li class="burger__item curent"><a href="account.html" class="burger__link">Личный кабинет</a></li>
 								<li class="burger__item"><a href="#" class="burger__link">Акции</a></li>
-								<li class="burger__item"><a href="#" class="burger__link">Купить абонемент</a></li>
+								<li class="burger__item"><a href="buy.html" class="burger__link">Купить абонемент</a></li>
 								<li class="burger__item"><a href="chart.html" class="burger__link">Расписание</a></li>
 							</ul>
 							<ul class="burger__list">
@@ -55,35 +55,53 @@
 										<ul class="data__list">
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Грудь</div>
-													<div class="data__value"><span class="data__value-number">92</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="CHEST" value="120" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Бедра</div>
-													<div class="data__value"><span class="data__value-number">93</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="HAUNCH" value="45" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Ягодицы</div>
-													<div class="data__value"><span class="data__value-number">90</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="BREECH" value="90" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Рост</div>
-													<div class="data__value"><span class="data__value-number">184</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="GROUTH" value="160" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 										</ul>
 									</div>
 									<div class="data__right">
 										<ul class="data__list">
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Шея</div>
-													<div class="data__value"><span class="data__value-number">20</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="NECK" value="23" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Бицепс</div>
-													<div class="data__value"><span class="data__value-number">20</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="BICEPS" value="12" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Талия</div>
-													<div class="data__value"><span class="data__value-number">62</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="WAIST" value="56" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Икры</div>
-													<div class="data__value"><span class="data__value-number">20</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="CALF" value="34" size="3" class="data__value-number"><span class="data__value-text">см.</span>
+													</div></a></li>
 											<li class="data__item"><a href="#" class="data__link">
 													<div class="data__key">Вес</div>
-													<div class="data__value"><span class="data__value-number">93</span><span class="data__value-text">см.</span></div></a></li>
+													<div class="data__value">
+														<input name="WEIGHT" value="56" size="3" class="data__value-number"><span class="data__value-text">кг.</span>
+													</div></a></li>
 										</ul>
 									</div>
 								</div><a href="history.html" class="data__history-link">История параметров</a>
@@ -121,6 +139,6 @@
 		</div>
 		<script src="js/_vendors/jquery.min.js"></script>
 		<script src="js/_vendors/slick.min.js"></script>
-		<script src="js/main.min.js"></script>
+		<script src="app/scripts/main.js"></script>
 	</body>
 </html>

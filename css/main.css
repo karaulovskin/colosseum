@@ -15,11 +15,11 @@
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
-.container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .tickets__header:after, .tickets__body:after {
+.container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   content: "";
   display: table;
 }
-.container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .tickets__header:after, .tickets__body:after {
+.container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   clear: both;
 }
 
@@ -234,17 +234,6 @@ footer {
   left: -40px;
 }
 
-.checkbox__input:checked + .checkbox__fake::before {
-  display: block;
-}
-
-.checkbox__input:checked + .checkbox__fake--radio {
-  background: #a5d2fb;
-}
-.checkbox__input:checked + .checkbox__fake--radio::before {
-  display: block;
-}
-
 .checkbox__fake--radio:before {
   content: "";
   display: none;
@@ -432,6 +421,11 @@ footer {
   text-transform: uppercase;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .user__club-link {
+    margin-bottom: 4px;
+  }
+}
 
 .user__club-point__link {
   display: inline-block;
@@ -462,7 +456,7 @@ footer {
 
 .user__link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding: 36px 0;
   font-size: 18px;
   text-transform: uppercase;
@@ -498,6 +492,16 @@ footer {
   background: url(../img/decor/tickets.png) no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 480px) {
+  .user__link--tickets {
+    margin: 0 12% 0 0;
+    padding: 22px 0 22px 40px;
+  }
+  .user__link--tickets:before {
+    left: 0;
+    height: 40px;
+  }
+}
 
 .user__link__parameter {
   padding-left: 100px;
@@ -509,6 +513,16 @@ footer {
   height: 61px;
   background: url(../img/decor/parameter.png) no-repeat;
   background-size: contain;
+}
+@media screen and (max-width: 480px) {
+  .user__link__parameter {
+    margin: 0 0 0 12%;
+    padding: 22px 0 22px 30px;
+  }
+  .user__link__parameter:before {
+    left: 0;
+    height: 40px;
+  }
 }
 
 .training {
@@ -919,6 +933,123 @@ footer {
     margin-left: 48px;
     font-size: 16px;
   }
+}
+
+.buy__item {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.buy__checkbox {
+  position: relative;
+  display: block;
+  padding: 14px 32px 14px 70px;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .buy__checkbox {
+    padding: 12px 20px 12px 50px;
+  }
+}
+
+.buy__checkbox-fake {
+  position: absolute;
+  top: 23px;
+  left: 28px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: inherit;
+}
+.buy__checkbox-fake:before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 14px;
+  height: 10px;
+  background: url(../img/decor/che.png) no-repeat;
+}
+@media screen and (max-width: 480px) {
+  .buy__checkbox-fake {
+    top: 17px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.checkbox__input:checked + .buy__checkbox-fake {
+  background: #eac731;
+  border: #eac731;
+}
+.checkbox__input:checked + .buy__checkbox-fake:before {
+  display: block;
+}
+.checkbox__input:checked + .buy__checkbox-fake .buy__checkbox {
+  border: 1px solid #eac731;
+}
+
+.buy__checkbox-title {
+  font-size: 28px;
+}
+@media screen and (max-width: 480px) {
+  .buy__checkbox-title {
+    font-size: 16px;
+  }
+}
+
+.buy__desc {
+  padding: 20px 32px;
+  font-size: 24px;
+  background: #373737;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 480px) {
+  .buy__desc {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+.buy__btns {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.buy__total {
+  padding: 22px 0;
+  font-size: 34px;
+  color: #fff;
+  background: #686868;
+}
+@media screen and (max-width: 480px) {
+  .buy__total {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+}
+
+.buy__total-text,
+.buy__total-price {
+  margin-left: 8px;
 }
 
 .chart__club-point {
@@ -1972,6 +2103,17 @@ footer {
     padding-right: 86px;
   }
 }
+.data__left .data__value-number {
+  direction: rtl;
+}
+.data__left .data__value-text {
+  margin-left: 24px;
+}
+@media screen and (max-width: 480px) {
+  .data__left .data__value-text {
+    margin-left: 2px;
+  }
+}
 
 .data__right {
   float: right;
@@ -2018,24 +2160,34 @@ footer {
 }
 
 .data__value {
+  display: inline-block;
   color: #eac731;
 }
 
 .data__value-number {
+  float: left;
+  width: 64px;
   font-size: 36px;
+  color: #eac731;
+  background: transparent;
+  border: none;
+  font-family: 'gilroylight';
 }
 @media screen and (max-width: 480px) {
   .data__value-number {
+    width: 36px;
     font-size: 22px;
   }
 }
 
 .data__value-text {
-  margin-left: 8px;
+  float: right;
+  margin-top: 9px;
   font-size: 24px;
 }
 @media screen and (max-width: 480px) {
   .data__value-text {
+    margin-top: 7px;
     font-size: 14px;
   }
 }
