@@ -69,6 +69,10 @@
 	text-transform: uppercase;
 	color: $grey;
 	border: 1px solid $grey;
+
+	@include phones {
+		font-size: 12px;
+	}
 }
 
 .chart__content-item {
@@ -112,6 +116,10 @@
 .chart-date__link {
 	font-size: 28px;
 	color: $grey;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .chart-training__item {
@@ -142,6 +150,7 @@
     padding: 14px 0;
 	text-align: left;
 	border-bottom: 1px solid $grey;
+	outline: none;
 
 	&:after {
 		content: "";
@@ -160,7 +169,8 @@
 		font-size: 16px;
 
 		&:after {
-			width: 18px;
+			top: 38%;
+			width: 14px;
 			height: 10px;
 		}
 	}
@@ -170,6 +180,10 @@
 	margin-bottom: 4px;
 	font-size: 30px;
 	color: #fff;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .chart-training__date {
@@ -208,21 +222,37 @@
 .chart-training__content {
 	padding: 18px 36px 0 74px;
 	text-align: left;
+
+	@include phones {
+		padding: 18px 36px 0 50px;
+	}
 }
 
 .chart-training__name {
 	text-transform: uppercase;
 	font-size: 24px;
 	color: #fff;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .chart-training__duration {
     margin-bottom: 16px;
+
+    @include phones {
+		font-size: 12px;
+	}
 }
 
 .chart-training__desc {
 	margin-bottom: 26px;
 	font-size: 24px;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .chart-training__master {
@@ -233,12 +263,20 @@
 .master__left {
 	float: left;
 	width: 25%;
+
+	@include phones {
+		width: 30%;
+	}
 }
 
 .master__right {
 	float: right;
 	width: 75%;
 	text-align: left;
+
+	@include phones {
+		width: 70%;
+	}
 }
 
 .master__avatar {
@@ -246,14 +284,33 @@
 	height: 100px;
 	@include border-radius(50%);
 	background-color: $grey;
+
+	@include phones {
+		width: 60px;
+		height: 60px;
+	}
 }
 
 .master__name {
 	margin-bottom: 16px;
 	text-transform: uppercase;
 	font-size: 24px;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .master__desc {
 	margin-bottom: 18px;
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
+.master__skills {
+	@include phones {
+		font-size: 12px;
+	}
 }

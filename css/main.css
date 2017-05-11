@@ -203,6 +203,12 @@ footer {
   border: none;
   cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+  .btn-input {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
 
 .overlay {
   display: none;
@@ -990,6 +996,11 @@ footer {
   color: #686868;
   border: 1px solid #686868;
 }
+@media screen and (max-width: 480px) {
+  .chart__tabs-link {
+    font-size: 12px;
+  }
+}
 
 .chart__content-item {
   display: none;
@@ -1022,6 +1033,11 @@ footer {
   font-size: 28px;
   color: #686868;
 }
+@media screen and (max-width: 480px) {
+  .chart-date__link {
+    font-size: 16px;
+  }
+}
 
 .chart-training__item:last-child .chart-training__link {
   border-bottom: none;
@@ -1043,6 +1059,7 @@ footer {
   padding: 14px 0;
   text-align: left;
   border-bottom: 1px solid #686868;
+  outline: none;
 }
 .chart-training__link:after {
   content: "";
@@ -1069,7 +1086,8 @@ footer {
     font-size: 16px;
   }
   .chart-training__link:after {
-    width: 18px;
+    top: 38%;
+    width: 14px;
     height: 10px;
   }
 }
@@ -1078,6 +1096,11 @@ footer {
   margin-bottom: 4px;
   font-size: 30px;
   color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .chart-training__title {
+    font-size: 16px;
+  }
 }
 
 .chart-training__date {
@@ -1120,20 +1143,40 @@ footer {
   padding: 18px 36px 0 74px;
   text-align: left;
 }
+@media screen and (max-width: 480px) {
+  .chart-training__content {
+    padding: 18px 36px 0 50px;
+  }
+}
 
 .chart-training__name {
   text-transform: uppercase;
   font-size: 24px;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .chart-training__name {
+    font-size: 16px;
+  }
+}
 
 .chart-training__duration {
   margin-bottom: 16px;
+}
+@media screen and (max-width: 480px) {
+  .chart-training__duration {
+    font-size: 12px;
+  }
 }
 
 .chart-training__desc {
   margin-bottom: 26px;
   font-size: 24px;
+}
+@media screen and (max-width: 480px) {
+  .chart-training__desc {
+    font-size: 16px;
+  }
 }
 
 .chart-training__master {
@@ -1144,11 +1187,21 @@ footer {
   float: left;
   width: 25%;
 }
+@media screen and (max-width: 480px) {
+  .master__left {
+    width: 30%;
+  }
+}
 
 .master__right {
   float: right;
   width: 75%;
   text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .master__right {
+    width: 70%;
+  }
 }
 
 .master__avatar {
@@ -1162,15 +1215,37 @@ footer {
   background-clip: padding-box;
   background-color: #686868;
 }
+@media screen and (max-width: 480px) {
+  .master__avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .master__name {
   margin-bottom: 16px;
   text-transform: uppercase;
   font-size: 24px;
 }
+@media screen and (max-width: 480px) {
+  .master__name {
+    font-size: 16px;
+  }
+}
 
 .master__desc {
   margin-bottom: 18px;
+}
+@media screen and (max-width: 480px) {
+  .master__desc {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .master__skills {
+    font-size: 12px;
+  }
 }
 
 .confirm__desc {
@@ -2115,6 +2190,10 @@ footer {
   color: #fff;
 }
 
+.slick-list {
+  overflow: visible !important;
+}
+
 .tickets__list {
   margin: 0 -30px;
 }
@@ -2214,7 +2293,6 @@ footer {
   background: inherit;
   background: #eac731;
   animation: spin 50s linear infinite, bg 100s step-end infinite;
-  animation-play-state: paused;
   animation-delay: inherit;
 }
 .tickets__visit-round:after {

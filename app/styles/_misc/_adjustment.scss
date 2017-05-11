@@ -177,6 +177,11 @@ footer {
     background: #eac731;
     border: none;
     cursor: pointer;
+
+    @include phones {
+    	padding: 10px 0;
+    	font-size: 16px;
+    }
 }
 
 .overlay {

@@ -82,6 +82,16 @@ $(document).ready(function(){
 	}());
 
 
+	// chart-popup
+	(function(){
+		$('.chart__club-point__link').on('click', function(e){
+			e.preventDefault();
+			$('.account-popup--point').addClass('open');
+			$('.overlay').fadeIn();
+		});
+	}());
+
+
 	// accordion
 	(function(){
 		$('.history__parameters-link').on('click', function(e){
@@ -202,12 +212,6 @@ $(document).ready(function(){
 
 	// slick-chart
 	(function(){
-		// $('.center').slick({
-		//     centerMode: true,
-		//     centerPadding: '60px',
-		//     slidesToShow: 1,
-		// });
-
 		 $('.chart-date-content__list').slick({
 	  		slidesToShow: 1,
 	  		slidesToScroll: 1,
@@ -218,9 +222,11 @@ $(document).ready(function(){
 		$('.chart-date__list').slick({
 	  		slidesToShow: 1,
 	  		slidesToScroll: 1,
-	  		asNavFor: '.chart-date-content__list',
+	  		swipeToSlide: true,
 	  		centerMode: true,
-	  		focusOnSelect: true
+	  		focusOnSelect: true,
+	  		arrows: false,
+	  		asNavFor: '.chart-date-content__list'
 		});
 	}());
 
