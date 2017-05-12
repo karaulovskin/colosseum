@@ -485,8 +485,7 @@ footer {
   padding-right: 60px;
 }
 .user__link--tickets:before {
-  left: 15%;
-  left: 44px;
+  left: -66px;
   width: 46px;
   height: 61px;
   background: url(../img/decor/tickets.png) no-repeat;
@@ -507,7 +506,6 @@ footer {
   padding-left: 100px;
 }
 .user__link__parameter:before {
-  left: 23%;
   left: 46px;
   width: 34px;
   height: 61px;
@@ -2349,6 +2347,11 @@ footer {
 .tickets__list {
   margin: 0 -30px;
 }
+@media screen and (max-width: 480px) {
+  .tickets__list {
+    margin: 0 -15px;
+  }
+}
 
 .tickets__item {
   padding: 25px 30px 0 30px;
@@ -2357,11 +2360,24 @@ footer {
 .tickets__item:last-child {
   padding: 25px 30px 150px;
 }
+@media screen and (max-width: 480px) {
+  .tickets__item {
+    padding: 10px 15px 0 15px;
+  }
+  .tickets__item:last-child {
+    padding: 10px 15px;
+  }
+}
 
 .tickets__header {
   padding: 16px 30px;
   position: relative;
   background: #2c2c2c;
+}
+@media screen and (max-width: 480px) {
+  .tickets__header {
+    padding: 8px 10px;
+  }
 }
 
 .tickets__title {
@@ -2370,16 +2386,32 @@ footer {
   font-size: 28px;
   color: #eac731;
 }
+@media screen and (max-width: 480px) {
+  .tickets__title {
+    font-size: 16px;
+  }
+}
 
 .tickets__extend {
   float: right;
   margin-top: 12px;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .tickets__extend {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+}
 
 .tickets__body {
   padding: 20px 30px 20px;
   background: #373737;
+}
+@media screen and (max-width: 480px) {
+  .tickets__body {
+    padding: 10px 10px;
+  }
 }
 
 .tickets__left,
@@ -2388,6 +2420,12 @@ footer {
   width: 50%;
   padding-left: 34px;
   text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .tickets__left,
+  .tickets__right {
+    padding-left: 0;
+  }
 }
 
 .tickets__left {
@@ -2401,6 +2439,12 @@ footer {
   width: 1px;
   height: 84px;
   background: #686868;
+}
+@media screen and (max-width: 480px) {
+  .tickets__left:after {
+    top: -5px;
+    height: 50px;
+  }
 }
 
 .tickets__visit-value {
@@ -2445,6 +2489,7 @@ footer {
   background: inherit;
   background: #eac731;
   animation: spin 50s linear infinite, bg 100s step-end infinite;
+  animation-play-state: paused;
   animation-delay: inherit;
 }
 .tickets__visit-round:after {
@@ -2469,6 +2514,16 @@ footer {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background: #373737;
+}
+@media screen and (max-width: 480px) {
+  .tickets__visit-round {
+    width: 40px;
+    height: 40px;
+  }
+  .tickets__visit-round:after {
+    width: 38px;
+    height: 38px;
+  }
 }
 
 @keyframes spin {
@@ -2498,6 +2553,11 @@ footer {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media screen and (max-width: 480px) {
+  .tickets__visit-number {
+    font-size: 24px;
+  }
+}
 
 .tickets__visit-title {
   display: inline-block;
@@ -2508,6 +2568,13 @@ footer {
   width: 130px;
   margin-left: 14px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .tickets__visit-title {
+    width: 80px;
+    margin-left: 0;
+    font-size: 12px;
+  }
 }
 
 .tickets__date {
@@ -2531,7 +2598,20 @@ footer {
   background: url(../img/decor/calendar.png) no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 480px) {
+  .tickets__date {
+    font-size: 12px;
+    padding: 0 0 0 48px;
+  }
+  .tickets__date:before {
+    width: 24px;
+    height: 25px;
+  }
+}
 
 .tickets__btns {
-  margin: 0 -30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

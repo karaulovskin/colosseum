@@ -1,5 +1,9 @@
 .tickets__list {
 	margin: 0 -30px;
+
+	@include phones {
+		margin: 0 -15px;
+	}
 }
 
 .tickets__item {
@@ -9,6 +13,14 @@
     &:last-child {
 	    padding: 25px 30px 150px;
     }
+
+    @include phones {
+    	padding: 10px 15px 0 15px;
+
+    	&:last-child {
+   		    padding: 10px 15px;
+	    }
+    }
 }
 
 .tickets__header {
@@ -16,6 +28,10 @@
     position: relative;
     background: #2c2c2c;
     @extend %clearfix;
+
+    @include phones {
+	    padding: 8px 10px;
+    }
 }
 
 .tickets__title {
@@ -23,18 +39,31 @@
 	text-transform: uppercase;
 	font-size: 28px;
 	color: $gold;
+
+	@include phones {
+		font-size: 16px;
+	}
 }
 
 .tickets__extend {
 	float: right;
     margin-top: 12px;
 	color: #fff;
+
+	@include phones {
+		margin-top: 2px;
+		font-size: 12px;
+	}
 }
 
 .tickets__body {
     padding: 20px 30px 20px;
     background: #373737;
     @extend %clearfix;
+
+    @include phones {
+	    padding: 10px 10px;
+    }
 }
 
 .tickets__left,
@@ -43,6 +72,11 @@
 	width: 50%;
 	padding-left: 34px;
 	text-align: left;
+
+	@include phones {
+	    padding-left: 0;
+	    // text-align: center;
+    }
 }
 
 .tickets__left {
@@ -56,6 +90,13 @@
 		width: 1px;
 		height: 84px;
 		background: $grey;
+	}
+
+	@include phones {
+		&:after {
+			top: -5px;
+			height: 50px;
+		}
 	}
 }
 
@@ -95,7 +136,7 @@
 		background: $gold;
 		animation: spin 50s linear infinite,
 				   bg 100s step-end infinite;
-	   	// animation-play-state: paused;
+	   	animation-play-state: paused;
 		animation-delay: inherit;
 	}
 
@@ -112,6 +153,16 @@
 		@include transform(translateY(-50%));
 		@include border-radius(50%);
 		background: $light;
+	}
+
+	@include phones {
+		width: 40px;
+		height: 40px;
+
+		&:after {
+			width: 38px;
+			height: 38px;
+		}
 	}
 }
 
@@ -131,6 +182,10 @@
 	font-size: 36px;
 	color: $gold;
 	@include transform(translateY(-50%));
+
+	@include phones {
+		font-size: 24px;
+	}
 }
 
 .tickets__visit-title {
@@ -138,6 +193,16 @@
 	width: 130px;
 	margin-left: 14px;
 	text-transform: uppercase;
+
+	@include phones {
+		width: 80px;
+		margin-left: 0;
+		font-size: 12px;
+	}
+}
+
+.tickets__calendar {
+
 }
 
 .tickets__date {
@@ -157,8 +222,23 @@
 	    background: url(../img/decor/calendar.png) no-repeat;
 	    background-size: contain; 
 	}
+
+	@include phones {
+		// display: inline-block;
+		font-size: 12px;
+		padding: 0 0 0 48px;
+
+		&:before {
+			width: 24px;
+		    height: 25px;
+		}
+	}
 }
 
 .tickets__btns {
-	margin: 0 -30px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// margin: 0 -30px;
 }

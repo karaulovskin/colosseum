@@ -118,8 +118,7 @@
 .user__link--tickets {
 	padding-right: 60px;
 	&:before {
-		left: 15%;
-		left: 44px;
+		left: -66px;
 		width: 46px;
 		height: 61px;
 		background: url(../img/decor/tickets.png)no-repeat;
@@ -140,7 +139,6 @@
 .user__link__parameter {
 	padding-left: 100px;
 	&:before {
-		left: 23%;
 		left: 46px;
 		width: 34px;
 		height: 61px;
