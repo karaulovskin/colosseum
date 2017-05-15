@@ -1,9 +1,24 @@
+.confirm {
+	position: relative;
+    min-height: 855px;
+	height: 100vh;
 
+	@include phones {
+		min-height: auto;
+	}
+}
 
 
 .confirm__desc {
+	display: inline-block;
 	margin-bottom: 78px;
 	font-size: 24px;
+
+	@include phones {
+		width: 265px;
+		margin-bottom: 30px;
+		font-size: 12px;
+	}
 }
 
 .confirm__code {
@@ -20,13 +35,24 @@
 	@include inline-block(top);
 	padding: 0 8px;
 	font-size: 18px;
+
+	@include phones {
+		padding: 0 2px;
+	}
 }
 
 .confirm__code-link {
 	display: block;
 	width: 60px;
 	height: 88px;
+	line-height: 88px;
 	background: $grey;
+
+	@include phones {
+		width: 32px;
+		height: 46px;
+		line-height: 46px;
+	}
 }
 
 .confirm__code-value {
@@ -38,12 +64,21 @@
 	margin: auto;
 	font-size: 60px;
 	color: $gold;
+
+	@include phones {
+		font-size: 30px;
+	}
 }
 
 .confirm__code-desc {
 	margin-bottom: 58px;
 	font-size: 18px;
 	color: $grey;
+
+	@include phones {
+		margin-bottom: 30px;
+		font-size: 10px;
+	}
 }
 
 .confirm__code-again {
@@ -52,9 +87,22 @@
 }
 
 .confirm__keyboard {
+	display: none;
+	position: absolute;
 	margin: 0 -30px;
     padding: 28px 48px;
 	background: $light;
+
+	&.active {
+		display: block;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	@include phones {
+		padding: 12px 70px;
+	}
 }
 
 .confirm__keyboard-list {
@@ -64,8 +112,13 @@
 .confirm__keyboard-item {
 	@include inline-block(top);
 	width: 33.3%;
+	height: 100px;
 	padding: 8px;
 	font-size: 18px;
+
+	@include phones {
+		height: 58px;
+	}
 }
 
 .confirm__keyboard-link {
@@ -76,29 +129,40 @@
 	&:hover {
 		color: $gold;
 	}
+
+	@include phones {
+		font-size: 30px;
+	}
 }
 
 .confirm__keyboard-link--remove {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	width: 44px;
-	height: 32px;
-	margin: auto;
-	background: url(../img/decor/remove.png)no-repeat;
-	background-size: contain;
+	// width: 44px;
+	// height: 32px;
+	// margin: auto;
+	// background: url(../img/decor/remove.png)no-repeat;
+	// background-size: contain;
 
-	// &:after {
-	// 	content: ""; 
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	margin: auto;
-	// 	width: 44px;
-	// 	height: 32px;
-	// 	background: url(../img/decor/remove.png)no-repeat;
-	// 	background-size: contain;
-	// }
+	&:after {
+		content: ""; 
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		@include transform(translateY(-50%));
+		width: 44px;
+		height: 32px;
+		background: url(../img/decor/remove.png)no-repeat;
+		background-size: contain;
+	}
+
+	@include phones {
+		&:after {
+			width: 28px;
+			height: 21px;
+		}
+	}
 }

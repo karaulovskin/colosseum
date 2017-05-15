@@ -284,5 +284,85 @@ $(document).ready(function(){
 		});
 	}());
 
+
+	// SECTION LOGIN
+	(function(){
+
+		$('.logo__enter-value').focus(function(){
+
+			var
+				keyboard = $('.confirm__keyboard'),
+				enter = $('.logo__enter'),
+				logo = $('.login__logo');
+
+		  	if(!keyboard.hasClass('active')) {
+	  			logo.hide();
+	  			enter.addClass('active');
+		  		keyboard.addClass('active');
+		  	} else {
+		  		logo.show();
+		  		enter.removeClass('active');
+		  		keyboard.removeClass('active');
+		  	}
+		});
+
+		// $('.login-bg').on('click', function(){
+
+		// 	var
+		// 		keyboard = $('.confirm__keyboard'),
+		// 		enter = $('.logo__enter'),
+		// 		logo = $('.login__logo');
+
+		//   	if(!keyboard.hasClass('active')) {
+	 //  			logo.hide();
+	 //  			enter.addClass('active');
+		//   		keyboard.addClass('active');
+		//   	} else {
+		//   		logo.show();
+		//   		enter.removeClass('active');
+		//   		keyboard.removeClass('active');
+		//   	}
+		// });
+
+	}());
+
+
+	// CONFIRM LOGIN
+	(function(){
+
+		$('.confirm__code-link').focus(function(){
+
+			var
+				keyboard = $('.confirm__keyboard'),
+				enter = $('.logo__enter'),
+				logo = $('.login__logo');
+
+		  	if(!keyboard.hasClass('active')) {
+		  		keyboard.addClass('active');
+		  	} else {
+		  		keyboard.removeClass('active');
+		  	}
+		});
+
+		// $('.login-bg').on('click', function(){
+
+		// 	var
+		// 		keyboard = $('.confirm__keyboard'),
+		// 		enter = $('.logo__enter'),
+		// 		logo = $('.login__logo');
+
+		//   	if(!keyboard.hasClass('active')) {
+	 //  			logo.hide();
+	 //  			enter.addClass('active');
+		//   		keyboard.addClass('active');
+		//   	} else {
+		//   		logo.show();
+		//   		enter.removeClass('active');
+		//   		keyboard.removeClass('active');
+		//   	}
+		// });
+
+	}());
+
 });
 
