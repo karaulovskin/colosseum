@@ -364,5 +364,20 @@ $(document).ready(function(){
 
 	}());
 
+
+	// SLICK PARAMETRS
+	(function(){
+		$('.parameters-popup__list').slick({
+			vertical: true,
+			verticalSwiping: true,
+	  		slidesToShow: 5,
+	  		slidesToScroll: 1,
+	  		// swipeToSlide: true,
+	  		// centerMode: true,
+	  		// focusOnSelect: true,
+	  		arrows: false
+		});
+	}());
+
 });
 

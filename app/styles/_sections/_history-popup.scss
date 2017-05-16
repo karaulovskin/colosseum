@@ -111,11 +111,13 @@
 	}
 }
 
-.history-popup__btns {
+.history-popup__btns,
+.parameters-popup__btns {
 	@extend %clearfix;
 }
 
-.history-popup__btn {
+.history-popup__btn,
+.parameters-popup__btn {
 	@include inline-block(top);
 	width: 50%;
     padding: 20px 0;
@@ -132,7 +134,8 @@
 	}
 }
 
-.history-popup__btn--cancel {
+.history-popup__btn--cancel,
+.parameters-popup__btn--cancel {
 	color: $grey;
 	border-right: 1px solid $grey;
 }

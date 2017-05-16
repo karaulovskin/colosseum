@@ -15,11 +15,14 @@
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
-.container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
+.container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before,
+.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   content: "";
   display: table;
 }
-.container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
+.container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   clear: both;
 }
 
@@ -243,7 +246,6 @@ footer {
 /* -------------- misc icons sprite -------------- */
 /* --------- sections --------- */
 .account-popup {
-  display: none;
   top: 50%;
   left: 0;
   right: 0;
@@ -1145,6 +1147,9 @@ footer {
 .chart-date__list {
   font-size: 0;
 }
+.chart-date__list .slick-list {
+  overflow: visible !important;
+}
 
 .chart-date__item {
   display: inline-block;
@@ -1739,7 +1744,8 @@ footer {
   }
 }
 
-.history-popup__btn {
+.history-popup__btn,
+.parameters-popup__btn {
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
@@ -1754,13 +1760,15 @@ footer {
   border-top: 1px solid #686868;
 }
 @media screen and (max-width: 480px) {
-  .history-popup__btn {
+  .history-popup__btn,
+  .parameters-popup__btn {
     padding: 10px 0;
     font-size: 18px;
   }
 }
 
-.history-popup__btn--cancel {
+.history-popup__btn--cancel,
+.parameters-popup__btn--cancel {
   color: #686868;
   border-right: 1px solid #686868;
 }
@@ -2233,6 +2241,52 @@ footer {
   }
 }
 
+.parameters-popup {
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 580px;
+  margin: auto;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  background: #2c2c2c;
+  z-index: 10;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 480px) {
+  .parameters-popup {
+    width: auto;
+  }
+}
+
+.parameters-popup.open {
+  display: block;
+  position: fixed;
+}
+
+.parameters-popup__title {
+  font-size: 30px;
+}
+
+.parameters-popup__link {
+  font-size: 34px;
+  color: #fff;
+}
+
+.parameters-popup__btns .account-popup__btn {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
 .parameters__data {
   margin-bottom: 46px;
 }
@@ -2494,10 +2548,6 @@ footer {
 
 .advice__title {
   color: #fff;
-}
-
-.slick-list {
-  overflow: visible !important;
 }
 
 .tickets__list {

@@ -1,0 +1,36 @@
+.parameters-popup {
+	top: 50%;
+	left: 0;
+	right: 0;
+	width: 580px;
+	margin: auto;
+	@include transform(translateY(-50%));
+	text-align: center;
+	background: $dark;
+	z-index: 10;
+	@include box-shadow(0 1px 10px rgba(0,0,0, .25));
+
+	@include phones {
+		width: auto;
+	}
+}
+
+.parameters-popup.open {
+	display: block;
+	position: fixed;
+}
+
+.parameters-popup__title {
+	font-size: 30px;
+}
+
+.parameters-popup__link {
+	font-size: 34px;
+	color: #fff;
+}
+
+.parameters-popup__btns {
+	.account-popup__btn {
+		@include inline-block(top);
+	}
+}
