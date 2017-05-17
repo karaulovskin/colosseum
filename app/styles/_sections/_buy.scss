@@ -2,7 +2,17 @@
 
 .buy__item {
 	text-align: left;
-	margin-bottom: 40px
+	margin-bottom: 40px;
+
+	&.selected {
+		.buy__checkbox {
+			border: 1px solid $gold;
+		}
+
+		.buy__desc {
+			display: block;
+		}
+	}
 }
 
 .buy__checkbox {
@@ -71,7 +81,7 @@
 }
 
 .buy__desc {
-	// display: none;
+	display: none;
 	padding: 20px 32px;
 	font-size: 24px;
 	background: $light;
