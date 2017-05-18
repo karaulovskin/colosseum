@@ -19,7 +19,7 @@
 	margin: 92px 0 124px;
 
 	@include phones {
-		margin: 30px 0 50px;
+		margin: 70px 0 20px;
 	}
 }
 
@@ -29,7 +29,7 @@
 	// height: 286px;
 
 	@include phones {
-		width: 56%;
+		width: 70%;
 	}
 }
 
@@ -45,14 +45,14 @@
 	position: relative;
 	width: 430px;
 	height: 232px;
-	margin: 0 auto 128px;
+	margin: 0 auto;
 	padding: 23px;
-	background: #fff;
+	// background: #fff;
 
 	@include phones {
 		width: 64vw;
     	height: 34vw;
-		margin: 0 auto 100px;
+		margin: 0 auto;
 		padding: 0 10px;
 	}
 }
@@ -78,6 +78,11 @@
 }
 
 .index__footer {
+	position: fixed;
+	left: 30px;
+	right: 30px;
+	bottom: 0;
+	padding-bottom: 16px;
 	@extend %clearfix;
 }
 

@@ -8,7 +8,7 @@
 
 .data {
 	margin-bottom: 30px;
-	background: url(../img/parameters/parameters-bg.png)no-repeat 50% 8%;
+	background: url(../img/parameters/parameters-bg_new.png)no-repeat 50% 8%;
 	background-size: contain;
 	@extend %clearfix;
 }
@@ -20,24 +20,25 @@
 	text-align: right;
 	
 	.data__item {
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
+		margin-bottom: 16px;
 	}
 
 	@include phones {
 		padding-right: 86px;
 	}
 
-	.data__value-number {
-		direction: rtl;
-	}
+	// .data__value-number {
+	// 	direction: rtl;
+	// }
 
-	.data__value-text {
-		margin-left: 24px;
+	// .data__value-text {
+	// 	margin-left: 24px;
 
-		@include phones {
-			margin-left: 2px;
-		}
-	}
+	// 	@include phones {
+	// 		margin-left: 2px;
+	// 	}
+	// }
 
 }
 
@@ -48,10 +49,11 @@
 	text-align: left;
 
 	.data__item {
-		margin-bottom: 2px;
-
+		// margin-bottom: 2px;
+		margin-bottom: 0;
+	
 		@include phones {
-			margin-bottom: 10px;
+			// margin-bottom: 10px;
 		}
 	}
 
@@ -91,32 +93,34 @@
 .data__value {
 	display: inline-block;
 	color: $gold;
-	@extend %clearfix;
+	// @extend %clearfix;
 }
 
 .data__value-number {
-	float: left;
-	width: 64px;
+	// float: left;
+	// width: 64px;
 	// @include inline-block(middle);
 	font-size: 36px;
 	color: $gold;
-	background: transparent;
-	border: none;
+	// background: transparent;
+	// border: none;
 	font-family: 'gilroylight';
 
 	@include phones {
-		width: 36px;
+		// width: 36px;
 		font-size: 22px;
 	}
 }
 
 .data__value-text {
-	float: right;
-	margin-top: 9px;
+	// float: right;
+	// margin-top: 9px;
+	margin: 0 0 0 6px;
 	font-size: 24px;
 
 	@include phones {
-		margin-top: 7px;
+		// margin-top: 7px;
+		margin: 0;
 		font-size: 14px;
 	}
 }
@@ -219,6 +223,11 @@
 	font-size: 18px;
 
 	&.current {
+		.advice__img-wrapp {
+			height: 120px;
+			margin-top: -10px;
+		}
+
 		.advice__title {
 			color: $gold;
 		}
@@ -227,6 +236,13 @@
 	@include phones {
 		padding: 0 10px;
 		font-size: 10px;
+
+		&.current {
+			.advice__img-wrapp {
+				height: 120px;
+				margin-top: -10px;
+			}
+		}
 	}
 }
 
