@@ -84,6 +84,12 @@
 	bottom: 0;
 	padding-bottom: 16px;
 	@extend %clearfix;
+
+	@include phones {
+		left: 15px;
+		right: 15px;
+		padding-bottom: 8px;
+	}
 }
 
 .footer-left {

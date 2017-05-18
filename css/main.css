@@ -246,6 +246,7 @@ footer {
 /* -------------- misc icons sprite -------------- */
 /* --------- sections --------- */
 .account-popup {
+  display: none;
   top: 50%;
   left: 0;
   right: 0;
@@ -2110,6 +2111,13 @@ footer {
   bottom: 0;
   padding-bottom: 16px;
 }
+@media screen and (max-width: 480px) {
+  .index__footer {
+    left: 15px;
+    right: 15px;
+    padding-bottom: 8px;
+  }
+}
 
 .footer-left {
   float: left;
@@ -2505,10 +2513,6 @@ footer {
   *display: inline;
   width: 25%;
   font-size: 18px;
-}
-.advice__item.current .advice__img-wrapp {
-  height: 120px;
-  margin-top: -10px;
 }
 .advice__item.current .advice__title {
   color: #eac731;
