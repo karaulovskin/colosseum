@@ -371,5 +371,19 @@ $(document).ready(function(){
 		});
 	}());
 
+	// SLICK PARAMETRS-DATE
+	(function(){
+		$('.histor-popup__date-list').slick({
+			vertical: true,
+			verticalSwiping: true,
+	  		slidesToShow: 5,
+	  		slidesToScroll: 1,
+	  		// swipeToSlide: true,
+	  		// centerMode: true,
+	  		// focusOnSelect: true,
+	  		arrows: false
+		});
+	}());
+
 });
 

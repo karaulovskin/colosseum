@@ -1711,7 +1711,9 @@ footer {
 .histor-popup__date-list,
 .account-popup__point-list {
   position: relative;
+  height: 400px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 .histor-popup__date-list:before, .histor-popup__date-list:after,
 .account-popup__point-list:before,
@@ -1720,6 +1722,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 86px;
+  z-index: 1;
 }
 .histor-popup__date-list:before,
 .account-popup__point-list:before {
@@ -1732,6 +1735,10 @@ footer {
   background: linear-gradient(to top, #373737 25%, rgba(55, 55, 55, 0.5) 100%);
 }
 @media screen and (max-width: 480px) {
+  .histor-popup__date-list,
+  .account-popup__point-list {
+    height: auto;
+  }
   .histor-popup__date-list:before, .histor-popup__date-list:after,
   .account-popup__point-list:before,
   .account-popup__point-list:after {
@@ -2367,7 +2374,7 @@ footer {
 }
 
 .parameters__data {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 46px;
 }
 
