@@ -163,6 +163,11 @@ footer {
   margin-bottom: 36px;
   font-size: 36px;
 }
+@media screen and (max-width: 568px) {
+  .title {
+    font-size: 30px;
+  }
+}
 @media screen and (max-width: 480px) {
   .title {
     font-size: 24px;
@@ -193,6 +198,21 @@ footer {
 
 .img-width {
   max-width: 100%;
+}
+
+.btn {
+  display: block;
+  padding: 27px 38px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #373737;
+  background: #eac731;
+}
+@media screen and (max-width: 480px) {
+  .btn {
+    padding: 10px 0;
+    font-size: 16px;
+  }
 }
 
 .btn-input {
@@ -393,6 +413,12 @@ footer {
   background-clip: padding-box;
   background-position: 50% 0%;
 }
+@media screen and (max-width: 568px) {
+  .user__avatar-img {
+    width: 200px;
+    height: 200px;
+  }
+}
 @media screen and (max-width: 480px) {
   .user__avatar-img {
     width: 160px;
@@ -403,6 +429,11 @@ footer {
 .user__name {
   margin-bottom: 6px;
   font-size: 34px;
+}
+@media screen and (max-width: 568px) {
+  .user__name {
+    font-size: 28px;
+  }
 }
 @media screen and (max-width: 480px) {
   .user__name {
@@ -478,6 +509,11 @@ footer {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media screen and (max-width: 568px) {
+  .user__link {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 480px) {
   .user__link {
     font-size: 12px;
@@ -493,6 +529,16 @@ footer {
   height: 61px;
   background: url(../img/decor/tickets.png) no-repeat;
   background-size: contain;
+}
+@media screen and (max-width: 568px) {
+  .user__link--tickets {
+    margin: 0 12% 0 0;
+    padding: 22px 0 22px 40px;
+  }
+  .user__link--tickets:before {
+    left: 0;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 480px) {
   .user__link--tickets {
@@ -514,6 +560,16 @@ footer {
   height: 61px;
   background: url(../img/decor/parameter.png) no-repeat;
   background-size: contain;
+}
+@media screen and (max-width: 568px) {
+  .user__link__parameter {
+    margin: 0 0 0 12%;
+    padding: 22px 0 22px 32px;
+  }
+  .user__link__parameter:before {
+    left: 0;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 480px) {
   .user__link__parameter {
@@ -2311,6 +2367,7 @@ footer {
 }
 
 .parameters__data {
+  margin-top: 40px;
   margin-bottom: 46px;
 }
 
@@ -2815,6 +2872,7 @@ footer {
     padding: 0 0 0 48px;
   }
   .tickets__date:before {
+    left: 8%;
     width: 24px;
     height: 25px;
   }

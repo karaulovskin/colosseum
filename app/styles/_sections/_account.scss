@@ -29,6 +29,11 @@
 	@include border-radius(50%);
 	background-position: 50% 0%;
 
+	@include mid {
+		width: 200px;
+		height: 200px;
+	}
+
 	@include phones {
 		width: 160px;
 		height: 160px;
@@ -38,6 +43,10 @@
 .user__name {
 	margin-bottom: 6px;
 	font-size: 34px;
+
+	@include mid {
+		font-size: 28px;
+	}
 
 	@include phones {
 		font-size: 22px;
@@ -110,6 +119,10 @@
 		@include transform(translateY(-50%));
 	}
 
+	@include mid {
+		font-size: 14px;
+	}
+
 	@include phones {
 		font-size: 12px;
 	}
@@ -123,6 +136,16 @@
 		height: 61px;
 		background: url(../img/decor/tickets.png)no-repeat;
 		background-size: contain;
+	}
+
+	@include mid {
+		margin: 0 12% 0 0;
+		padding: 22px 0 22px 40px;
+
+		&:before {
+			left: 0;
+			height: 40px;
+		}
 	}
 
 	@include phones {
@@ -144,6 +167,16 @@
 		height: 61px;
 		background: url(../img/decor/parameter.png)no-repeat;
 		background-size: contain;
+	}
+
+	@include mid {
+		margin: 0 0 0 12%;
+		padding: 22px 0 22px 32px;
+
+		&:before {
+			left: 0;
+			height: 40px;
+		}
 	}
 
 	@include phones {

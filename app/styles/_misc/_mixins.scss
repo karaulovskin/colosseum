@@ -158,7 +158,7 @@
 	}
 }
 
-@mixin middle {
+@mixin mid {
 	@media screen and (max-width: 568px) {
 		@content;
 	}
