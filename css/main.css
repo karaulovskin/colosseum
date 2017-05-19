@@ -16,13 +16,13 @@
 /* --------- mixins --------- */
 /* --------- mixins --------- */
 .container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before,
-.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
-.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .tickets__header:after, .tickets__body:after {
+.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   content: "";
   display: table;
 }
 .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
-.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .tickets__header:after, .tickets__body:after {
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .tickets__header:after, .tickets__body:after {
   clear: both;
 }
 
@@ -394,6 +394,7 @@ footer {
 }
 
 .user {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -1845,6 +1846,7 @@ footer {
 }
 
 .history__tabs {
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 480px) {
@@ -2444,22 +2446,35 @@ footer {
 }
 
 .data__value-number {
+  float: left;
+  width: 64px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
   font-size: 36px;
   color: #eac731;
+  background: transparent;
+  border: none;
   font-family: 'gilroylight';
 }
 @media screen and (max-width: 480px) {
   .data__value-number {
+    width: 36px;
     font-size: 22px;
   }
 }
 
 .data__value-text {
+  float: right;
+  margin-top: 9px;
   margin: 0 0 0 6px;
   font-size: 24px;
 }
 @media screen and (max-width: 480px) {
   .data__value-text {
+    margin-top: 7px;
     margin: 0;
     font-size: 14px;
   }
