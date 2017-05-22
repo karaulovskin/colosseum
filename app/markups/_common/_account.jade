@@ -5,6 +5,15 @@
 		.user__avatar
 			.user__avatar-img.img-cover(style="background-image: url(./img/avatar.jpg);")
 				img.user__avatar-img-pic.img-fake(src="./img/avatar.jpg")
+				.user__avatar-select.avatar-select
+					input.avatar-select__input(type="file")
+					.avatar-select__fake
+			.user__avatar-popup.avatar-popup
+				.user__avatar-img.img-cover.avatar-popup__img(style="background-image: url(./img/avatar.jpg);")
+					img.user__avatar-img-pic.img-fake(src="./img/avatar.jpg")
+				.avatar-popup__btns.popup__btns
+					a.popup__btn.popup__btn--cancel(href="#" id="") Отмена
+					a.popup__btn(href="#" id="") Ок
 		.user__name Катерина Воронина
 		.user__club
 			a.user__club-link(href="#") Любимый клуб

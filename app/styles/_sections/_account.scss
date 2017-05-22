@@ -29,6 +29,7 @@
 	margin: 0 auto;
 	@include border-radius(50%);
 	background-position: 50% 0%;
+	background-color: $grey;
 
 	@include mid {
 		width: 200px;
@@ -38,6 +39,100 @@
 	@include phones {
 		width: 160px;
 		height: 160px;
+	}
+}
+
+.avatar-select {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 250px;
+	@include transform(translate(-50%,-50%));
+	@include border-radius(50%);
+	overflow: hidden;
+}
+
+.avatar-select__input {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.avatar-select__fake {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 90px;
+	height: 90px;
+	@include transform(translate(-50%,-50%));
+	
+ 	&:before, &:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background: $gold;
+	}
+
+	&:before {
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		@include transform(translateY(-50%));
+	}
+
+	&:after {
+		top: 0;
+		left: 50%;
+		width: 2px;
+		height: 100%;
+		@include transform(translateX(-50%));
+	}
+
+	@include mid {
+		width: 80px;
+		height: 80px;;
+	}
+
+	@include phones {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.avatar-popup {
+	display: none;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	right: 0;
+	background: $light;
+	z-index: 1;
+}
+
+.avatar-popup__img {
+	margin-top: 80px; 
+	margin-bottom: 80px;
+
+	@include mid {
+		margin-top: 72px; 
+		margin-bottom: 72px;
+	}
+
+	@include phones {
+		margin-top: 63px; 
+		margin-bottom: 63px;
+	}
+}
+
+.avatar-popup__btns {
+	font-size: 0;
+
+	.popup__btn {
+		@include inline-block(top);
+		width: 50%;
 	}
 }
 
