@@ -2108,9 +2108,14 @@ footer {
 .index__logo {
   margin: 92px 0 124px;
 }
+@media screen and (max-width: 568px) {
+  .index__logo {
+    margin: 92px 0 100px;
+  }
+}
 @media screen and (max-width: 480px) {
   .index__logo {
-    margin: 70px 0 20px;
+    margin: 70px 0 46px;
   }
 }
 
@@ -2133,18 +2138,36 @@ footer {
 }
 
 .index__barcode {
+  display: none;
   position: relative;
   width: 430px;
   height: 232px;
   margin: 0 auto;
   padding: 23px;
 }
+@media screen and (max-width: 568px) {
+  .index__barcode {
+    width: 340px;
+    height: 184px;
+  }
+}
 @media screen and (max-width: 480px) {
   .index__barcode {
-    width: 64vw;
-    height: 34vw;
-    margin: 0 auto;
+    width: 206px;
+    height: 112px;
     padding: 0 10px;
+  }
+}
+
+.index__barcode--buy {
+  display: block;
+  padding: 23px 0;
+  background: url(../img/decor/barcode.png) no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 480px) {
+  .index__barcode--buy {
+    padding: 18px 0;
   }
 }
 
@@ -2157,6 +2180,43 @@ footer {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.index__barcode-title {
+  margin-top: 8px;
+  font-size: 36px;
+}
+@media screen and (max-width: 568px) {
+  .index__barcode-title {
+    margin-top: 2px;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .index__barcode-title {
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
+
+.index__barcode-link {
+  display: inline-block;
+  margin-top: 26px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #eac731;
+}
+@media screen and (max-width: 568px) {
+  .index__barcode-link {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .index__barcode-link {
+    margin-top: 12px;
+    font-size: 14px;
+  }
 }
 
 .footer--index {
@@ -2227,6 +2287,13 @@ footer {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+@media screen and (max-width: 568px) {
+  .footer-left__link,
+  .footer-right__link {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media screen and (max-width: 480px) {
   .footer-left__link,
@@ -2376,7 +2443,7 @@ footer {
 }
 
 .parameters__data {
-  margin-top: 60px;
+  margin-top: 85px;
   margin-bottom: 46px;
 }
 

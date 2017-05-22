@@ -18,8 +18,12 @@
 .index__logo {
 	margin: 92px 0 124px;
 
+	@include mid {
+		margin: 92px 0 100px;
+	}
+
 	@include phones {
-		margin: 70px 0 20px;
+		margin: 70px 0 46px;
 	}
 }
 
@@ -42,6 +46,7 @@
 }
 
 .index__barcode {
+	display: none;
 	position: relative;
 	width: 430px;
 	height: 232px;
@@ -49,11 +54,26 @@
 	padding: 23px;
 	// background: #fff;
 
+	@include mid {
+		width: 340px;
+		height: 184px;
+	}
+
 	@include phones {
-		width: 64vw;
-    	height: 34vw;
-		margin: 0 auto;
+		width: 206px;
+    	height: 112px;
 		padding: 0 10px;
+	}
+}
+
+.index__barcode--buy {
+	display: block;
+	padding: 23px 0;
+	background: url(../img/decor/barcode.png)no-repeat;
+	background-size: contain;
+
+	@include phones {
+		padding: 18px 0;
 	}
 }
 
@@ -66,6 +86,39 @@
 	// margin: auto;
 	max-width: 100%;
 	@include transform(translateY(-50%));
+}
+
+.index__barcode-title {
+	margin-top: 8px;
+	font-size: 36px;
+
+	@include mid {
+		margin-top: 2px;
+		font-size: 26px;
+	}
+
+	@include phones {
+		margin-top: 0;
+		font-size: 16px;
+	}
+}
+
+.index__barcode-link {
+	display: inline-block;
+	margin-top: 26px;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: $gold;
+
+	@include mid {
+		margin-top: 20px;
+		font-size: 22px;
+	}
+
+	@include phones {
+		margin-top: 12px;
+		font-size: 14px;
+	}
 }
 
 .footer--index {
@@ -129,6 +182,11 @@
 	height: 88px;
 	background: $gold;
 	@include border-radius(50%);
+
+	@include mid {
+		width: 60px;
+		height: 60px;
+	}
 
 	@include phones {
 		width: 48px;
