@@ -172,7 +172,7 @@ $(document).ready(function(){
 				member = $('.history__content-item');
 				ndx = $this.index();
 
-			console.log(ndx);
+			// console.log(ndx);
 
 			$this
 				.addClass('active')
@@ -196,7 +196,7 @@ $(document).ready(function(){
 				member = $('.chart__content-item');
 				ndx = $this.index();
 
-			console.log(ndx);
+			// console.log(ndx);
 
 			$this
 				.addClass('active')
@@ -253,6 +253,33 @@ $(document).ready(function(){
 			historyPopup.removeClass('open');
 		});
 	}());
+
+
+	// parametrs select popup
+	(function(){
+		var 
+			ParPopup  = $('.parameters-popup'),
+			historyCancel = $('.parameters-popup__btn--cancel');
+
+		$('.data__link').on('click', function(e){
+			e.preventDefault();
+			console.log("!!!");
+
+			if(!ParPopup.hasClass('open')) {
+				ParPopup.addClass('open');
+				console.log("+");
+			} else {
+				ParPopup.removeClass('open');
+			}
+		});
+
+		$('.parameters-popup__btn--cancel').on('click', function(e){
+			e.preventDefault();
+
+			ParPopup.removeClass('open');
+		});
+	}());
+
 
 	// SECTION BUY
 	(function(){
@@ -358,30 +385,39 @@ $(document).ready(function(){
 
 
 	// SLICK PARAMETRS
+
 	(function(){
-		$('.parameters-popup__list').slick({
-			vertical: true,
-			verticalSwiping: true,
-	  		slidesToShow: 5,
-	  		slidesToScroll: 1,
-	  		// swipeToSlide: true,
-	  		// centerMode: true,
-	  		// focusOnSelect: true,
-	  		arrows: false
+		$('.data__link').on('click', function(e){
+			e.preventDefault();
+
+			$('.parameters-popup__list').slick({
+				vertical: true,
+				verticalSwiping: true,
+		  		slidesToShow: 5,
+		  		slidesToScroll: 1,
+		  		// swipeToSlide: true,
+		  		centerMode: true,
+		  		// focusOnSelect: true,
+		  		arrows: false
+			});
 		});
 	}());
 
 	// SLICK PARAMETRS-DATE
 	(function(){
-		$('.histor-popup__date-list').slick({
-			vertical: true,
-			verticalSwiping: true,
-	  		slidesToShow: 5,
-	  		slidesToScroll: 1,
-	  		// swipeToSlide: true,
-	  		// centerMode: true,
-	  		// focusOnSelect: true,
-	  		arrows: false
+		$('.history__parameters-title').on('click', function(e){
+			e.preventDefault();
+			
+			$('.histor-popup__date-list').slick({
+				vertical: true,
+				verticalSwiping: true,
+		  		slidesToShow: 5,
+		  		slidesToScroll: 1,
+		  		swipeToSlide: true,
+		  		centerMode: true,
+		  		focusOnSelect: true,
+		  		arrows: false
+			});
 		});
 	}());
 

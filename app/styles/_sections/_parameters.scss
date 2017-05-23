@@ -23,25 +23,29 @@
 	text-align: right;
 	
 	.data__item {
-		// margin-bottom: 30px;
-		margin-bottom: 16px;
+		margin-bottom: 28px;
+		// margin-bottom: 16px;
+	}
+
+	.data__value-number {
+		direction: rtl;
+	}
+
+	.data__value-text {
+		// margin-left: 24px;
 	}
 
 	@include phones {
 		padding-right: 86px;
+
+		.data__item {
+			margin-bottom: 16px;
+		}
+
+		.data__value-text {
+			margin-left: 2px;
+		}
 	}
-
-	// .data__value-number {
-	// 	direction: rtl;
-	// }
-
-	// .data__value-text {
-	// 	margin-left: 24px;
-
-	// 	@include phones {
-	// 		margin-left: 2px;
-	// 	}
-	// }
 
 }
 
@@ -80,7 +84,7 @@
 }
 
 .data__link {
-	// display: inline-block;
+	display: inline-block;
 }
 
 .data__key {
@@ -99,54 +103,54 @@
 	@extend %clearfix;
 }
 
-// .data__value-number {
-// 	font-size: 36px;
-// 	color: $gold;
-// 	font-family: 'gilroylight';
-
-// 	@include phones {
-// 		font-size: 22px;
-// 	}
-// }
-
 .data__value-number {
-	float: left;
-	width: 64px;
-	@include inline-block(middle);
 	font-size: 36px;
 	color: $gold;
-	background: transparent;
-	border: none;
 	font-family: 'gilroylight';
 
 	@include phones {
-		width: 36px;
 		font-size: 22px;
 	}
 }
 
-// .data__value-text {
-// 	margin: 0 0 0 6px;
-// 	font-size: 24px;
+// .data__value-number {
+// 	float: left;
+// 	width: 64px;
+// 	@include inline-block(middle);
+// 	font-size: 36px;
+// 	color: $gold;
+// 	background: transparent;
+// 	border: none;
+// 	font-family: 'gilroylight';
 
 // 	@include phones {
-// 		margin: 0;
-// 		font-size: 14px;
+// 		width: 36px;
+// 		font-size: 22px;
 // 	}
 // }
 
 .data__value-text {
-	float: right;
-	margin-top: 9px;
 	margin: 0 0 0 6px;
 	font-size: 24px;
 
 	@include phones {
-		margin-top: 7px;
 		margin: 0;
 		font-size: 14px;
 	}
 }
+
+// .data__value-text {
+// 	float: right;
+// 	margin-top: 9px;
+// 	margin: 0 0 0 6px;
+// 	font-size: 24px;
+
+// 	@include phones {
+// 		margin-top: 7px;
+// 		margin: 0;
+// 		font-size: 14px;
+// 	}
+// }
 
 .data__history-link {
 	font-size: 30px;

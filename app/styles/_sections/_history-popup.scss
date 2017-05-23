@@ -19,11 +19,11 @@
 .account-popup__point-list {
 	position: relative;
 	height: 400px;
-	margin-bottom: 40px;
+	// margin-bottom: 40px;
 	overflow: hidden;
 
 	&:before, &:after {
-		content: "";
+		// content: "";
 		position: absolute;
 		width: 100%;
 		height: 86px;
@@ -41,7 +41,7 @@
 	}
 
 	@include phones {
-		height: auto;
+		height: 245px;
 
 		&:before, &:after {
 			height: 50px;
@@ -69,7 +69,7 @@
 		}
 	}
 
-	&.active {
+	&.slick-current {
 		padding: 14px 0px 20px 0;
 		font-size: 36px;
 		background: $dark;
@@ -96,7 +96,7 @@
 			}
 		}
 
-		&.active {
+		&.slick-current {
 		    padding: 10px 0px 14px 0;
 			font-size: 22px;
 

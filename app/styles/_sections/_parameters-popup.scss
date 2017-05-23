@@ -22,12 +22,53 @@
 }
 
 .parameters-popup__title {
+	padding: 20px 0;
 	font-size: 30px;
+
+	@include phones {
+		padding: 12px 0;
+		font-size: 18px;
+	}
+}
+
+.parameters-popup__list {
+	height: 400px;
+	overflow: hidden;
+
+	@include phones {
+		height: 230px;
+	}
+}
+
+.parameters-popup__item {
+	padding: 14px 0;
+
+	&.slick-current {
+		background: $dark;
+		.parameters-popup__link {
+			font-size: 36px;
+		}
+	}
+
+	@include phones {
+		padding: 8px 0;
+
+		&.slick-current {
+
+			.parameters-popup__link {
+				font-size: 22px;
+			}
+		}
+	} 
 }
 
 .parameters-popup__link {
 	font-size: 34px;
 	color: #fff;
+
+	@include phones {
+		font-size: 18px;
+	} 
 }
 
 .parameters-popup__btns {

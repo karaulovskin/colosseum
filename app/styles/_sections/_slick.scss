@@ -1,3 +1,12 @@
 // .slick-list {
 // 	overflow: visible!important;
 // }
+
+.slick-list.draggable {
+	// padding: 75px 0!important;
+
+	@include phones {
+		// height: 325px!important;
+		// padding: 42px 0!important;
+	}
+}
