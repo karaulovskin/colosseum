@@ -236,6 +236,51 @@ footer {
 	border-right: 1px solid $grey;
 }
 
+/*---------- placeholder  -----------*/
+
+::-webkit-input-placeholder {
+	color: #fff; 
+	font-size: 30px; 
+	text-transform: uppercase; 
+	font-family: 'gilroylight';
+
+	@include phones {
+		font-size: 16px;
+	}
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+	color: #fff; 
+	font-size: 30px; 
+	text-transform: uppercase; 
+	font-family: 'gilroylight';
+
+	@include phones {
+		font-size: 16px;
+	}
+}
+/* Firefox 18- */
+:-moz-placeholder {
+	color: #fff; 
+	font-size: 30px; 
+	text-transform: uppercase; 
+	font-family: 'gilroylight';
+
+	@include phones {
+		font-size: 16px;
+	}
+}
+:-ms-input-placeholder {
+	color: #fff; 
+	font-size: 30px; 
+	text-transform: uppercase; 
+	font-family: 'gilroylight';
+
+	@include phones {
+		font-size: 16px;
+	}
+}
+
 
 /*---------- checkbox -----------*/
 

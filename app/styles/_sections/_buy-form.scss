@@ -1,0 +1,35 @@
+
+
+.buy-form__desc {
+	width: 85%;
+	margin: 0 auto 80px;
+	font-size: 24px;
+
+	@include phones {
+		margin: 0 auto 40px;
+		font-size: 12px;
+	}
+}
+
+.buy-form__wrapp {
+	margin-bottom: 25px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.buy-form__input {
+	width: 100%;
+	padding: 10px 10px;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #fff;
+	border: 1px solid #fff;
+	background: transparent;
+	outline-color: $gold;
+
+	@include phones {
+		font-size: 16px;
+	}
+}
