@@ -324,6 +324,14 @@
 		padding: 25px 30px;
 	}
 
+	@include mid {
+    	padding: 20px 25px 0 25px;
+
+    	&:last-child {
+   		    padding: 20px 25px;
+	    }
+    }
+
 	@include phones {
 		padding: 10px 15px 0 15px;
 

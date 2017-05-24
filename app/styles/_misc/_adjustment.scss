@@ -132,9 +132,11 @@ footer {
 }
 
 .title {
+	position: relative;
 	display: inline-block;
 	margin-bottom: 36px;
 	font-size: 36px;
+	z-index: 1;
 
 	@include mid {
 		font-size: 30px;
