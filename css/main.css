@@ -208,6 +208,12 @@ footer {
   color: #373737;
   background: #eac731;
 }
+@media screen and (max-width: 568px) {
+  .btn {
+    padding: 22px 30px;
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   .btn {
     padding: 10px 0;
@@ -274,6 +280,11 @@ footer {
   text-transform: uppercase;
   font-family: 'gilroylight';
 }
+@media screen and (max-width: 568px) {
+  ::-webkit-input-placeholder {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   ::-webkit-input-placeholder {
     font-size: 16px;
@@ -286,6 +297,11 @@ footer {
   font-size: 30px;
   text-transform: uppercase;
   font-family: 'gilroylight';
+}
+@media screen and (max-width: 568px) {
+  ::-moz-placeholder {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 480px) {
   ::-moz-placeholder {
@@ -300,6 +316,11 @@ footer {
   text-transform: uppercase;
   font-family: 'gilroylight';
 }
+@media screen and (max-width: 568px) {
+  :-moz-placeholder {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   :-moz-placeholder {
     font-size: 16px;
@@ -311,6 +332,11 @@ footer {
   font-size: 30px;
   text-transform: uppercase;
   font-family: 'gilroylight';
+}
+@media screen and (max-width: 568px) {
+  :-ms-input-placeholder {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 480px) {
   :-ms-input-placeholder {
@@ -1188,10 +1214,30 @@ footer {
   }
 }
 
+.buy-form {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 568px) {
+  .buy-form {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .buy-form {
+    margin-bottom: 40px;
+  }
+}
+
 .buy-form__desc {
   width: 85%;
-  margin: 0 auto 80px;
+  margin: 32px auto 74px;
   font-size: 24px;
+}
+@media screen and (max-width: 568px) {
+  .buy-form__desc {
+    margin: 26px auto 66px;
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 480px) {
   .buy-form__desc {
@@ -1209,7 +1255,7 @@ footer {
 
 .buy-form__input {
   width: 100%;
-  padding: 10px 10px;
+  padding: 26px 36px;
   text-transform: uppercase;
   font-size: 30px;
   color: #fff;
@@ -1217,9 +1263,33 @@ footer {
   background: transparent;
   outline-color: #eac731;
 }
+@media screen and (max-width: 568px) {
+  .buy-form__input {
+    padding: 22px 32px;
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   .buy-form__input {
+    padding: 18px 28px;
     font-size: 16px;
+  }
+}
+
+.buy:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 187px;
+}
+@media screen and (max-width: 568px) {
+  .buy:after {
+    height: 149px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .buy:after {
+    height: 87px;
   }
 }
 
@@ -1335,10 +1405,16 @@ footer {
   color: #fff;
   background: #686868;
 }
+@media screen and (max-width: 568px) {
+  .buy__total {
+    padding: 18px 0;
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 480px) {
   .buy__total {
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

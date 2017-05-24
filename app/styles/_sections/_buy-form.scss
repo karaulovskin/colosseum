@@ -1,9 +1,26 @@
 
 
+.buy-form {
+	margin-bottom: 60px;
+
+	@include mid {
+		margin-bottom: 50px;
+	}
+
+	@include phones {
+		margin-bottom: 40px;
+	}
+}
+
 .buy-form__desc {
 	width: 85%;
-	margin: 0 auto 80px;
+	margin: 32px auto 74px;
 	font-size: 24px;
+
+	@include mid {
+		margin: 26px auto 66px;
+		font-size: 20px;
+	}
 
 	@include phones {
 		margin: 0 auto 40px;
@@ -21,7 +38,7 @@
 
 .buy-form__input {
 	width: 100%;
-	padding: 10px 10px;
+	padding: 26px 36px;
 	text-transform: uppercase;
 	font-size: 30px;
 	color: #fff;
@@ -29,7 +46,13 @@
 	background: transparent;
 	outline-color: $gold;
 
+	@include mid {
+		padding: 22px 32px;
+		font-size: 24px;
+	}
+
 	@include phones {
+		padding: 18px 28px;
 		font-size: 16px;
 	}
 }
