@@ -1,0 +1,117 @@
+
+
+.team__item {
+	padding: 34px 0;
+	border-bottom: 1px solid $grey;
+
+	@include mid {
+		padding: 30px 0;
+	}
+
+	@include phones {
+		padding: 26px 0;
+	}
+}
+
+.team__avatar {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto 30px;
+	@include border-radius(50%);
+	background-position: 50% 0%;
+	background-color: $grey;
+
+	@include mid {
+		margin: 0 auto 24px;
+		width: 200px;
+		height: 200px;
+	}
+
+	@include phones {
+		margin: 0 auto 22px;
+		width: 160px;
+		height: 160px;
+	}
+}
+
+.team__name {
+	margin-bottom: 6px;
+	font-size: 34px;
+
+	@include mid {
+		margin-bottom: 4px;
+		font-size: 28px;
+	}
+
+	@include phones {
+		margin-bottom: 2px;
+		font-size: 22px;
+	}
+}
+
+.team__rating {
+	margin-bottom: 24px;
+	font-size: 24px;
+
+	@include mid {
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+
+	@include phones {
+		margin-bottom: 16px;
+		font-size: 14px;
+	}
+}
+
+.team__desc {
+	padding: 0 30px;
+	font-size: 20px;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	@include mid {
+		padding: 0;
+		font-size: 16px;
+
+		p {
+			margin-bottom: 16px;
+		}
+	}
+
+	@include phones {
+		font-size: 14px;
+
+		p {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.team__stars-list {
+	font-size: 0;
+}
+
+.team__stars-item {
+	@include inline-block(middle);
+	width: 28px;
+	height: 28px;
+	margin: 0 4px;
+	font-size: 18px;
+
+	@include mid {
+		width: 24px;
+		height: 24px;
+	}
+
+	@include phones {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.team__stars-img {
+	max-width: 100%;
+}

@@ -47,18 +47,18 @@
 
 .stock-detail__desc {
 	margin-top: 422px;
-	padding-top: 42px;
+	padding: 42px 16px;
 	font-size: 24px;
 
 	@include mid {
 		margin-top: 340px;
-		padding-top: 34px;
+		padding: 34px 14px;
 		font-size: 18px;
 	}
 
 	@include phones {
 		margin-top: 250px;
-		padding-top: 20px;
+		padding: 20px 10px;
 		font-size: 14px;
 	}
 }

@@ -1,0 +1,78 @@
+
+
+.rewiews__item {
+	padding: 45px 0 45px;
+	border-bottom: 1px solid $grey;
+	@extend %clearfix;
+
+	@include mid {
+		padding: 40px 0 40px;
+	}
+
+	@include phones {
+		padding: 26px 0 26px;
+	}
+}
+
+.rewiews__left {
+	float: left;
+	width: 24%;
+}
+
+.rewiews__right {
+	float: left;
+	width: 76%;
+	padding-right: 20px;
+	text-align: left;
+
+	@include mid {
+		padding-right: 16px;
+	}
+
+	@include phones {
+		padding-right: 10px;
+	}
+}
+
+.rewiews__avatar {
+	width: 100px;
+	height: 100px;
+	@include border-radius(50%);
+	background-color: $grey; 
+
+	@include mid {
+		width: 80px;
+		height: 80px;
+	}
+
+	@include phones {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.rewiews__name {
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	font-size: 24px;
+
+	@include mid {
+		font-size: 18px;
+	}
+
+	@include phones {
+		font-size: 14px;
+	}
+}
+
+.rewiews__desc {
+	font-size: 18px;
+
+	@include mid {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 12px;
+	}
+}

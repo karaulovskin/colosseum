@@ -16,13 +16,13 @@
 /* --------- mixins --------- */
 /* --------- mixins --------- */
 .container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before,
-.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .stock__desc:before, .tickets__header:before, .tickets__body:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
-.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after {
+.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .stock__desc:before, .tickets__header:before, .tickets__body:before, .rewiews__item:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after, .rewiews__item:after {
   content: "";
   display: table;
 }
 .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
-.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after {
+.parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after, .rewiews__item:after {
   clear: both;
 }
 
@@ -3123,20 +3123,20 @@ footer {
 
 .stock-detail__desc {
   margin-top: 422px;
-  padding-top: 42px;
+  padding: 42px 16px;
   font-size: 24px;
 }
 @media screen and (max-width: 568px) {
   .stock-detail__desc {
     margin-top: 340px;
-    padding-top: 34px;
+    padding: 34px 14px;
     font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
   .stock-detail__desc {
     margin-top: 250px;
-    padding-top: 20px;
+    padding: 20px 10px;
     font-size: 14px;
   }
 }
@@ -3330,6 +3330,140 @@ footer {
   .stock__duration {
     font-size: 12px;
   }
+}
+
+.team__item {
+  padding: 34px 0;
+  border-bottom: 1px solid #686868;
+}
+@media screen and (max-width: 568px) {
+  .team__item {
+    padding: 30px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__item {
+    padding: 26px 0;
+  }
+}
+
+.team__avatar {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-position: 50% 0%;
+  background-color: #686868;
+}
+@media screen and (max-width: 568px) {
+  .team__avatar {
+    margin: 0 auto 24px;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__avatar {
+    margin: 0 auto 22px;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.team__name {
+  margin-bottom: 6px;
+  font-size: 34px;
+}
+@media screen and (max-width: 568px) {
+  .team__name {
+    margin-bottom: 4px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__name {
+    margin-bottom: 2px;
+    font-size: 22px;
+  }
+}
+
+.team__rating {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+@media screen and (max-width: 568px) {
+  .team__rating {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__rating {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+}
+
+.team__desc {
+  padding: 0 30px;
+  font-size: 20px;
+}
+.team__desc p {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 568px) {
+  .team__desc {
+    padding: 0;
+    font-size: 16px;
+  }
+  .team__desc p {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__desc {
+    font-size: 14px;
+  }
+  .team__desc p {
+    margin-bottom: 12px;
+  }
+}
+
+.team__stars-list {
+  font-size: 0;
+}
+
+.team__stars-item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 28px;
+  height: 28px;
+  margin: 0 4px;
+  font-size: 18px;
+}
+@media screen and (max-width: 568px) {
+  .team__stars-item {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__stars-item {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.team__stars-img {
+  max-width: 100%;
 }
 
 .tickets:after {
@@ -3638,4 +3772,95 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.rewiews__item {
+  padding: 45px 0 45px;
+  border-bottom: 1px solid #686868;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__item {
+    padding: 40px 0 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__item {
+    padding: 26px 0 26px;
+  }
+}
+
+.rewiews__left {
+  float: left;
+  width: 24%;
+}
+
+.rewiews__right {
+  float: left;
+  width: 76%;
+  padding-right: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__right {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__right {
+    padding-right: 10px;
+  }
+}
+
+.rewiews__avatar {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #686868;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.rewiews__name {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__name {
+    font-size: 14px;
+  }
+}
+
+.rewiews__desc {
+  font-size: 18px;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__desc {
+    font-size: 12px;
+  }
 }
