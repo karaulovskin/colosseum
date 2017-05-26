@@ -3190,17 +3190,6 @@ footer {
 
 .stock__img {
   width: 100%;
-  height: 250px;
-}
-@media screen and (max-width: 568px) {
-  .stock__img {
-    height: 220px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .stock__img {
-    height: 160px;
-  }
 }
 
 .stock__img-bg {
@@ -3210,21 +3199,16 @@ footer {
 }
 
 .stock__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 40px 0 0 0;
+  padding: 40px 0 16px 0;
 }
 @media screen and (max-width: 568px) {
   .stock__content {
-    padding: 34px 0 0 0;
+    padding: 34px 0 16px 0;
   }
 }
 @media screen and (max-width: 480px) {
   .stock__content {
-    padding: 20px 0 0 0;
+    padding: 20px 0 14px 0;
   }
 }
 
