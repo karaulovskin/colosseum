@@ -1507,7 +1507,7 @@ footer {
   width: 50%;
   font-size: 18px;
 }
-.chart__tabs-item:last-child {
+.chart__tabs-item:first-child {
   display: block;
   width: 100%;
 }
@@ -1516,6 +1516,33 @@ footer {
   background: #eac731;
 }
 
+@media screen and (max-width: 620px) {
+  .chart__tabs-item:first-child .chart__tabs-link {
+    height: auto;
+  }
+  .chart__tabs-item .chart__tabs-link {
+    height: 68px;
+    padding: 8px 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .chart__tabs-item:first-child .chart__tabs-link {
+    height: auto;
+  }
+  .chart__tabs-item .chart__tabs-link {
+    height: auto;
+    padding: 8px 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .chart__tabs-item:first-child .chart__tabs-link {
+    height: auto;
+  }
+  .chart__tabs-item .chart__tabs-link {
+    height: 50px;
+    padding: 8px 20px;
+  }
+}
 .chart__tabs-link {
   display: block;
   padding: 8px 0;

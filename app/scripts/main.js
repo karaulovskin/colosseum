@@ -211,8 +211,32 @@ $(document).ready(function(){
 	}());
 
 	// slick-chart
+	// (function(){
+	// 	$('.chart__tabs-link').on('click', function(e){
+	// 		e.preventDefault();
+
+	// 		$('.chart-date-content__list').slick({
+	// 	  		slidesToShow: 1,
+	// 	  		slidesToScroll: 1,
+	// 	  		arrows: false,
+	// 	  		fade: true,
+	// 	  		asNavFor: '.chart-date__list'
+	// 		});
+	// 		$('.chart-date__list').slick({
+	// 	  		slidesToShow: 1,
+	// 	  		slidesToScroll: 1,
+	// 	  		swipeToSlide: true,
+	// 	  		centerMode: true,
+	// 	  		focusOnSelect: true,
+	// 	  		arrows: false,
+	// 	  		asNavFor: '.chart-date-content__list'
+	// 		});
+	// 	});
+	// }());
+
+	// slick-chart
 	(function(){
-		 $('.chart-date-content__list').slick({
+		$('.chart-date-content__list').slick({
 	  		slidesToShow: 1,
 	  		slidesToScroll: 1,
 	  		arrows: false,
