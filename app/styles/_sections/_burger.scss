@@ -7,7 +7,11 @@
 	width: 75%;
     padding-top: 120px;
     background: $dark;
-    z-index: 1;
+    z-index: 2;
+
+    @include mid {
+    	padding-top: 100px;
+    }
 
     @include phones {
     	padding-top: 68px;
@@ -43,6 +47,17 @@
 
 	&:after {
 		@include transform(rotate(-45deg));
+	}
+
+	@include mid {
+		left: 12px;
+		width: 28px;
+		height: 28px;
+
+		&:before, &:after {
+			width: 28px;
+			height: 1px;
+		}
 	}
 
 	@include phones {
@@ -117,6 +132,10 @@
 		}
 	}
 
+	@include mid {
+		margin-bottom: 10px;
+	}
+
 	@include phones {
 		margin-bottom: 6px;
 	}
@@ -126,6 +145,11 @@
 	margin-left: 88px;
 	font-size: 34px;
 	color: #fff;
+
+	@include mid {
+		margin-left: 60px;
+		font-size: 24px;
+	}
 
 	@include phones {
 		margin-left: 48px;

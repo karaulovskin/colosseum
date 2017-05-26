@@ -88,7 +88,7 @@
 
 .confirm__keyboard {
 	display: none;
-	position: absolute;
+	position: fixed;
 	margin: 0 -30px;
     padding: 28px 48px;
 	background: $light;
@@ -98,6 +98,10 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
+	}
+
+	@include mid {
+		padding: 12px 70px;
 	}
 
 	@include phones {
@@ -116,6 +120,10 @@
 	padding: 8px;
 	font-size: 18px;
 
+	@include mid {
+		height: 58px;
+	}
+
 	@include phones {
 		height: 58px;
 	}
@@ -128,6 +136,10 @@
 
 	&:hover {
 		color: $gold;
+	}
+
+	@include mid {
+		font-size: 40px;
 	}
 
 	@include phones {
@@ -157,6 +169,13 @@
 		height: 32px;
 		background: url(../img/decor/remove.png)no-repeat;
 		background-size: contain;
+	}
+
+	@include mid {
+		&:after {
+			width: 28px;
+			height: 21px;
+		}
 	}
 
 	@include phones {

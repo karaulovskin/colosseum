@@ -1113,7 +1113,12 @@ footer {
   width: 75%;
   padding-top: 120px;
   background: #2c2c2c;
-  z-index: 1;
+  z-index: 2;
+}
+@media screen and (max-width: 568px) {
+  .burger {
+    padding-top: 100px;
+  }
 }
 @media screen and (max-width: 480px) {
   .burger {
@@ -1156,6 +1161,17 @@ footer {
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+@media screen and (max-width: 568px) {
+  .burger__close {
+    left: 12px;
+    width: 28px;
+    height: 28px;
+  }
+  .burger__close:before, .burger__close:after {
+    width: 28px;
+    height: 1px;
+  }
 }
 @media screen and (max-width: 480px) {
   .burger__close {
@@ -1221,6 +1237,11 @@ footer {
     width: 3px;
   }
 }
+@media screen and (max-width: 568px) {
+  .burger__item {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 480px) {
   .burger__item {
     margin-bottom: 6px;
@@ -1231,6 +1252,12 @@ footer {
   margin-left: 88px;
   font-size: 34px;
   color: #fff;
+}
+@media screen and (max-width: 568px) {
+  .burger__link {
+    margin-left: 60px;
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 480px) {
   .burger__link {
@@ -1904,7 +1931,7 @@ footer {
 
 .confirm__keyboard {
   display: none;
-  position: absolute;
+  position: fixed;
   margin: 0 -30px;
   padding: 28px 48px;
   background: #373737;
@@ -1914,6 +1941,11 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+@media screen and (max-width: 568px) {
+  .confirm__keyboard {
+    padding: 12px 70px;
+  }
 }
 @media screen and (max-width: 480px) {
   .confirm__keyboard {
@@ -1936,6 +1968,11 @@ footer {
   padding: 8px;
   font-size: 18px;
 }
+@media screen and (max-width: 568px) {
+  .confirm__keyboard-item {
+    height: 58px;
+  }
+}
 @media screen and (max-width: 480px) {
   .confirm__keyboard-item {
     height: 58px;
@@ -1949,6 +1986,11 @@ footer {
 }
 .confirm__keyboard-link:hover {
   color: #eac731;
+}
+@media screen and (max-width: 568px) {
+  .confirm__keyboard-link {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 480px) {
   .confirm__keyboard-link {
@@ -1978,11 +2020,65 @@ footer {
   background: url(../img/decor/remove.png) no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 568px) {
+  .confirm__keyboard-link--remove:after {
+    width: 28px;
+    height: 21px;
+  }
+}
 @media screen and (max-width: 480px) {
   .confirm__keyboard-link--remove:after {
     width: 28px;
     height: 21px;
   }
+}
+
+.contacts__adrress {
+  text-align: left;
+}
+
+.contacts__list--link {
+  margin-bottom: 30px;
+}
+
+.contacts__item {
+  margin-bottom: 6px;
+}
+
+.contacts__item--phone .contacts__link {
+  font-size: 36px;
+}
+.contacts__item--phone .contacts__link:before {
+  background: url(../img/icons/phone.png) no-repeat;
+  background-size: contain;
+}
+
+.contacts__item--mail .contacts__link:before {
+  background: url(../img/icons/mail.png) no-repeat;
+  background-size: contain;
+}
+
+.contacts__link {
+  position: relative;
+  display: inline-block;
+  padding-left: 52px;
+  font-size: 30px;
+  color: #fff;
+}
+.contacts__link:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(../img/icons/point.png) no-repeat;
+  background-size: contain;
 }
 
 .header__burger,
@@ -1999,6 +2095,12 @@ footer {
   height: 32px;
   background: url(../img/decor/burger.png) no-repeat;
   background-size: contain;
+}
+@media screen and (max-width: 568px) {
+  .burger__toggle {
+    width: 30px;
+    height: 28px;
+  }
 }
 @media screen and (max-width: 480px) {
   .burger__toggle {
