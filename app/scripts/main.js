@@ -30,56 +30,56 @@ $(document).ready(function(){
 
 
 	// account-popup
-	(function(){
-		$('.training__close').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--attention').addClass('open');
-			$('.overlay').fadeIn();
-		});
+	// (function(){
+	// 	$('.training__close').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--attention').addClass('open');
+	// 		$('.overlay').fadeIn();
+	// 	});
 
-		$('#cancel-training-ok').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--attention').removeClass('open');
-			$('.account-popup--cancel').addClass('open');
-		});
+	// 	$('#cancel-training-ok').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--attention').removeClass('open');
+	// 		$('.account-popup--cancel').addClass('open');
+	// 	});
 
-		$('#cancel-training-no').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--attention').removeClass('open');
-			$('.overlay').fadeOut();
-		});
+	// 	$('#cancel-training-no').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--attention').removeClass('open');
+	// 		$('.overlay').fadeOut();
+	// 	});
 
-		$('#cancel-ok').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--cancel').removeClass('open');
-			$('.overlay').fadeOut();
-		});
+	// 	$('#cancel-ok').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--cancel').removeClass('open');
+	// 		$('.overlay').fadeOut();
+	// 	});
 
-		$('#cancel-ok').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--cancel').removeClass('open');
-			$('.overlay').fadeOut();
-		});
+	// 	$('#cancel-ok').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--cancel').removeClass('open');
+	// 		$('.overlay').fadeOut();
+	// 	});
 
-		$('.user__club-point__link').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--point').addClass('open');
-			$('.overlay').fadeIn();
-		});
+	// 	$('.user__club-point__link').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--point').addClass('open');
+	// 		$('.overlay').fadeIn();
+	// 	});
 
-		$('#account__point-no').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup--point').removeClass('open');
-			$('.overlay').fadeOut();
-		});
+	// 	$('#account__point-no').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup--point').removeClass('open');
+	// 		$('.overlay').fadeOut();
+	// 	});
 
-		$('.overlay').on('click', function(e){
-			e.preventDefault();
-			$('.account-popup').removeClass('open');
-			$('.account-popup--point').removeClass('open');
-			$('.overlay').fadeOut();
-		});
-	}());
+	// 	$('.overlay').on('click', function(e){
+	// 		e.preventDefault();
+	// 		$('.account-popup').removeClass('open');
+	// 		$('.account-popup--point').removeClass('open');
+	// 		$('.overlay').fadeOut();
+	// 	});
+	// }());
 
 
 	// chart-popup
@@ -447,6 +447,30 @@ $(document).ready(function(){
 
 	(function(){
 		$('#phoneByForm').mask('+7 (000) 000 00 00');
+	}());
+
+
+	//карта
+	(function(){
+		ymaps.ready(init);
+
+		function init(){
+			var myMap = new ymaps.Map("map", {
+				center: [55.17500160978003,61.34543654224261],
+				zoom: 11,
+				controls : []
+			});
+
+			// var myPlacemark = new ymaps.GeoObject({
+	  //     			geometry: {
+		 //        		type: "Point",
+		 //        		coordinates: [55.17562681785095,61.30294223610421]
+		 //      		}
+	  //   		});
+			
+			// var myPlacemark = new ymaps.Placemark([55.17562681785095,61.30294223610421]);
+		}
+
 	}());
 
 });

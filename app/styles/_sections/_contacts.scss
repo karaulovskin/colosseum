@@ -1,15 +1,44 @@
 
 
 .contacts__adrress {
+	width: 90%;
+	margin: auto;
+	padding-top: 48px;
 	text-align: left;
+
+	@include mid {
+		width: 90%;
+		padding-top: 34px;
+	}
+
+	@include phones {
+		width: 82%;
+		padding-top: 20px;
+	}
+
+	@media screen and (max-width: 340px) {
+	    width: 100%;
+	}
 }
 
 .contacts__list--link {
 	margin-bottom: 30px;
+
+	@include mid {
+		margin-bottom: 26px;
+	}
+
+	@include phones {
+		margin-bottom: 22px;
+	}
 }
 
 .contacts__item {
 	margin-bottom: 6px;
+
+	@include phones {
+		margin-bottom: 4px;
+	}
 }
 
 .contacts__item--phone {
@@ -20,6 +49,18 @@
 		&:before {
 			background: url(../img/icons/phone.png) no-repeat;
 			background-size: contain;
+		}
+	}
+
+	@include mid {
+		.contacts__link {
+			font-size: 30px;
+		}
+	}
+
+	@include phones {
+		.contacts__link {
+			font-size: 24px;
 		}
 	}
 }
@@ -52,5 +93,46 @@
 		@include transform(translateY(-50%));
 		background: url(../img/icons/point.png) no-repeat;
 		background-size: contain;
+	}
+
+	@include mid {
+		padding-left: 46px;
+		font-size: 24px;
+
+		&:before {
+			width: 26px;
+			height: 26px;
+		}
+	}
+
+	@include phones {
+		padding-left: 34px;
+		font-size: 18px;
+
+		&:before {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.contacts__map-wrapp {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.contacts__map {
+	width: 100%;
+	height: 568px;
+	height: 45vh;
+
+	@include mid {
+
+	}
+
+	@include phones {
+		// height: 400px;
 	}
 }

@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/vendors/slick.css" media="screen, projection, print">
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=Map" type="text/javascript"></script>
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -49,7 +50,7 @@
 					<div class="container">
 						<div class="contacts page">
 							<div class="title">Контакты</div>
-							<adrress class="contacts__adrress">
+							<div class="contacts__adrress">
 								<ul class="contacts__list contacts__list--link">
 									<li class="contacts__item contacts__item--phone"><a href="tel:+73517501050" class="contacts__link">8 (351) 750-10-50</a></li>
 									<li class="contacts__item contacts__item--mail"><a href="mailto:sales@fk-kolizey.ru" class="contacts__link">sales@fk-kolizey.ru</a></li>
@@ -59,7 +60,10 @@
 									<li class="contacts__item"><a href="#" class="contacts__link">Пр. Свердловский, 35</a></li>
 									<li class="contacts__item"><a href="#" class="contacts__link">Ул. Чичерина, 37</a></li>
 								</ul>
-							</adrress>
+							</div>
+							<div class="contacts__map-wrapp">
+								<div id="map" class="contacts__map"></div>
+							</div>
 						</div>
 					</div>
 				</main>
