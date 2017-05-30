@@ -1,0 +1,40 @@
+.rule__list {
+	padding-top: 40px;
+
+	@include mid {
+		padding-top: 30px;
+	}
+
+	@include phones {
+		padding-top: 20px;
+	}
+}
+
+.rule__item {
+	margin-bottom: 26px;
+	text-align: left;
+	font-size: 24px;
+
+	@include mid {
+		margin-bottom: 22px;
+		font-size: 18px;
+	}
+
+	@include phones {
+		margin-bottom: 18px;
+		font-size: 14px;
+	}
+}
+
+.rule__title {
+	margin-bottom: 24px;
+	text-transform: uppercase;
+
+	@include mid {
+		margin-bottom: 20px;
+	}
+
+	@include phones {
+		margin-bottom: 16px;
+	}
+}

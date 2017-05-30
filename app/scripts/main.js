@@ -318,11 +318,12 @@ $(document).ready(function(){
 				checked  = $('.buy__checkbox-input:checkbox:checked');
 
 			if(checkbox.is(':checked')) {
-				item.addClass('selected');
-				// $this.parents('.buy__item').addClass('selected');
-			} else {
-				checkbox.parents('.buy__item').removeClass('selected');
-			};
+                $('.buy__item').removeClass('selected');
+                item.addClass('selected');
+                // $this.parents('.buy__item').addClass('selected');
+            } else {
+                //checkbox.parents('.buy__item').removeClass('selected');
+            };
 		});
 
 	}());
@@ -467,7 +468,7 @@ $(document).ready(function(){
 		 //        		coordinates: [55.17562681785095,61.30294223610421]
 		 //      		}
 	  //   		});
-			
+
 			// var myPlacemark = new ymaps.Placemark([55.17562681785095,61.30294223610421]);
 		}
 
