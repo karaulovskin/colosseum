@@ -210,6 +210,31 @@ $(document).ready(function(){
 		});
 	}());
 
+
+	// tabs-about
+	(function(){
+		$('.about__tabs-item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.about__content-item');
+				ndx = $this.index();
+
+			// console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+		});
+	}());
+
 	// slick-chart
 	// (function(){
 	// 	$('.chart__tabs-link').on('click', function(e){

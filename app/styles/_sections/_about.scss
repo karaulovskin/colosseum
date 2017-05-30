@@ -1,0 +1,62 @@
+
+
+
+.about__tabs-list {
+	font-size: 0;
+}
+
+.about__tabs-item {
+	@include inline-block(top);
+	width: 20%;
+	font-size: 18px;
+	border: 1px solid $grey;
+	border-right: none;
+
+	&:last-child {
+		border: 1px solid $grey;
+	}
+
+	&.active {
+		color: $dark;
+		background: $gold;
+		border: 1px solid $gold;
+	}
+}
+
+.about__tabs-link {
+	display: block;
+	padding: 8px 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: $grey;
+
+	@include mid {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
+.about__desc {
+
+	p {
+		margin-bottom: 30px;
+		font-size: 28px;
+	}
+
+	@include mid {
+		p {
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+	}
+
+	@include phones {
+		p {
+			margin-bottom: 30px;
+			font-size: 16px;
+		}
+	}
+}
