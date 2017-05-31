@@ -15,13 +15,13 @@
 }
 /* --------- mixins --------- */
 /* --------- mixins --------- */
-.container:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before,
-.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .stock__desc:before, .tickets__header:before, .tickets__body:before, .rewiews__item:before, .container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.container:before, .about__training-item:before, .about__training-item:nth-child(2n) .about__training-right:before, .training__body:before, .chart-training__master:before, .history-popup__btns:before,
+.parameters-popup__btns:before, .history__dropdown-item:before, .history__parameters-item--date:before, .index__footer:before, .data:before, .data__value:before, .stock__desc:before, .tickets__header:before, .tickets__body:before, .rewiews__item:before, .container:after, .about__training-item:after, .about__training-item:nth-child(2n) .about__training-right:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
 .parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after, .rewiews__item:after {
   content: "";
   display: table;
 }
-.container:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
+.container:after, .about__training-item:after, .about__training-item:nth-child(2n) .about__training-right:after, .training__body:after, .chart-training__master:after, .history-popup__btns:after,
 .parameters-popup__btns:after, .history__dropdown-item:after, .history__parameters-item--date:after, .index__footer:after, .data:after, .data__value:after, .stock__desc:after, .tickets__header:after, .tickets__body:after, .rewiews__item:after {
   clear: both;
 }
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  font: 18px/1.4 "gilroylight", "Open Sans", sans-serif;
+  font: 18px/1.2 "gilroylight", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   width: 100%;
   height: 100% !important;
@@ -368,6 +368,10 @@ footer {
 
 /* -------------- misc icons sprite -------------- */
 /* --------- sections --------- */
+.about__tabs {
+  margin-bottom: 55px;
+}
+
 .about__tabs-list {
   font-size: 0;
 }
@@ -410,20 +414,148 @@ footer {
   }
 }
 
+.about__content-item {
+  display: none;
+}
+.about__content-item.active {
+  display: block;
+}
+
+.about__logo {
+  margin-bottom: 112px;
+  padding-top: 72px;
+}
+@media screen and (max-width: 568px) {
+  .about__logo {
+    margin-bottom: 40px;
+    padding-top: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__logo {
+    margin-bottom: 20px;
+    padding-top: 16px;
+  }
+}
+
 .about__desc p {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-size: 28px;
 }
 @media screen and (max-width: 568px) {
   .about__desc p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .about__desc p {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 16px;
+  }
+}
+
+.about__training-item {
+  margin-bottom: 52px;
+}
+.about__training-item:nth-child(2n) .about__training-img {
+  float: right;
+}
+@media screen and (max-width: 568px) {
+  .about__training-item {
+    margin-bottom: 46px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .about__training-item {
+    margin-bottom: 40px;
+  }
+}
+
+.about__training-left {
+  float: left;
+  width: 50%;
+}
+
+.about__training-right {
+  float: left;
+  width: 50%;
+}
+
+.about__training-img {
+  width: 250px;
+  height: 250px;
+  background-color: #686868;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@media screen and (max-width: 568px) {
+  .about__training-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__training-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .about__training-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.about__training-wrapp {
+  padding-top: 28px;
+  text-align: left;
+}
+@media screen and (max-width: 568px) {
+  .about__training-wrapp {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__training-wrapp {
+    padding-top: 8px;
+  }
+}
+
+.about__training-title {
+  margin-bottom: 28px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 568px) {
+  .about__training-title {
+    margin-bottom: 22px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__training-title {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+}
+
+.about__training-desc {
+  font-size: 18px;
+}
+@media screen and (max-width: 568px) {
+  .about__training-desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__training-desc {
+    font-size: 12px;
   }
 }
 

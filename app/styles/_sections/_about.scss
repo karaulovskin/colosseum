@@ -1,5 +1,8 @@
 
 
+.about__tabs {
+	margin-bottom: 55px;
+}
 
 .about__tabs-list {
 	font-size: 0;
@@ -39,24 +42,143 @@
 	}
 }
 
+.about__content-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.about__logo {
+	margin-bottom: 112px;
+	padding-top: 72px;
+
+	@include mid {
+		margin-bottom: 40px;
+		padding-top: 32px;
+	}
+
+	@include phones {
+		margin-bottom: 20px;
+		padding-top: 16px;
+	}
+}
+
 .about__desc {
 
 	p {
-		margin-bottom: 30px;
+		margin-bottom: 28px;
 		font-size: 28px;
 	}
 
 	@include mid {
 		p {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 			font-size: 20px;
 		}
 	}
 
 	@include phones {
 		p {
-			margin-bottom: 30px;
+			margin-bottom: 16px;
 			font-size: 16px;
 		}
+	}
+}
+
+.about__training-item {
+	margin-bottom: 52px;
+	@extend %clearfix;
+
+	&:nth-child(2n) {
+		.about__training-right {
+			@extend %clearfix;
+		}
+
+		.about__training-img {
+			float: right;
+		}
+	}
+
+	@include mid {
+		margin-bottom: 46px;
+	}
+
+	@include mid {
+		margin-bottom: 40px;
+	}
+}
+
+.about__training-left {
+	float: left;
+	width: 50%;
+}
+
+.about__training-right {
+	float: left;
+	width: 50%;
+}
+
+.about__training-img {
+	width: 250px;
+	height: 250px;
+	background-color: $grey;
+	@include border-radius(50%);
+
+	@include mid {
+		width: 200px;
+		height: 200px;
+	}
+
+	@include phones {
+		width: 140px;
+		height: 140px;
+	}
+
+	@include mini {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+.about__training-wrapp {
+    padding-top: 28px;
+	text-align: left;
+
+	@include mid {
+		padding-top: 20px;
+	}
+
+	@include phones {
+		padding-top: 8px;
+	}
+}
+
+.about__training-title {
+	margin-bottom: 28px;
+	font-size: 24px;
+	text-transform: uppercase;
+
+	@include mid {
+		margin-bottom: 22px;
+		font-size: 18px;
+	}
+
+	@include phones {
+		margin-bottom: 16px;
+		font-size: 12px;
+	}
+}
+
+.about__training-desc {
+	font-size: 18px;
+
+	@include mid {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 12px;
 	}
 }
