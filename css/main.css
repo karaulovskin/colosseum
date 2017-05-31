@@ -4240,9 +4240,32 @@ footer {
   bottom: 0;
 }
 
+.rewiews {
+  padding-bottom: 122px;
+}
+.rewiews.pb {
+  padding-bottom: 528px;
+}
+@media screen and (max-width: 568px) {
+  .rewiews {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews {
+    padding-bottom: 56px;
+  }
+  .rewiews.pb {
+    padding-bottom: 278px;
+  }
+}
+
 .rewiews__item {
   padding: 45px 0 45px;
   border-bottom: 1px solid #686868;
+}
+.rewiews__item:last-child {
+  border-bottom: none;
 }
 @media screen and (max-width: 568px) {
   .rewiews__item {
@@ -4327,6 +4350,114 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .rewiews__desc {
+    font-size: 12px;
+  }
+}
+
+.rewiews__add {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 30px 30px 30px;
+  background: #2c2c2c;
+}
+@media screen and (max-width: 480px) {
+  .rewiews__add {
+    padding: 0 15px 15px 15px;
+  }
+  .rewiews__add.up {
+    bottom: 256px;
+  }
+}
+
+.rewiews__add-link,
+.rewiews__form-submit {
+  display: block;
+  padding: 27px 38px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  color: #eac731;
+  background: #2c2c2c;
+  border: 1px solid #eac731;
+  z-index: 1;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__add-link,
+  .rewiews__form-submit {
+    padding: 22px 30px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__add-link,
+  .rewiews__form-submit {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+
+.rewiews__form {
+  display: none;
+  padding-top: 35px;
+  text-align: left;
+  border-top: 1px solid #fff;
+}
+.rewiews__form.open {
+  display: block;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__form {
+    padding-top: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__form {
+    padding-top: 20px;
+  }
+}
+
+.rewiews__form-title {
+  margin-bottom: 38px;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__form-title {
+    margin-bottom: 26px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__form-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+.rewiews__form-textarea {
+  width: 100%;
+  height: 264px;
+  margin-bottom: 35px;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  background: transparent;
+  resize: none;
+}
+@media screen and (max-width: 568px) {
+  .rewiews__form-textarea {
+    height: 180px;
+    margin-bottom: 26px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .rewiews__form-textarea {
+    height: 140px;
+    margin-bottom: 20px;
     font-size: 12px;
   }
 }

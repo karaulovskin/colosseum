@@ -476,28 +476,83 @@ $(document).ready(function(){
 	}());
 
 
-	//карта
+	// SLICK PARAMETRS-DATE
 	(function(){
-		ymaps.ready(init);
+		$('.rewiews__add-link').on('click', function(e){
+			e.preventDefault();
 
-		function init(){
-			var myMap = new ymaps.Map("map", {
-				center: [55.17500160978003,61.34543654224261],
-				zoom: 11,
-				controls : []
-			});
+			var
+				form = $('.rewiews__form');
+			
+			if(!form.hasClass('open')) {
+				$('.rewiews__add-link').hide();
+				form.addClass('open');
+				$('.rewiews').addClass('pb');
+			} else {
+				$('.rewiews__add-link').show();
+				form.removeClass('open');
+				$('.rewiews').removeClass('pb');
+			}
+		});
 
-			// var myPlacemark = new ymaps.GeoObject({
-	  //     			geometry: {
-		 //        		type: "Point",
-		 //        		coordinates: [55.17562681785095,61.30294223610421]
-		 //      		}
-	  //   		});
+		$('.rewiews__form-submit').on('click', function(e){
+			e.preventDefault();
 
-			// var myPlacemark = new ymaps.Placemark([55.17562681785095,61.30294223610421]);
-		}
+			var
+				form = $('.rewiews__form');
+			
+			if(!form.hasClass('open')) {
+				$('.rewiews__add-link').hide();
+				form.addClass('open');
+				$('.rewiews').addClass('pb');
+			} else {
+				$('.rewiews__add-link').show();
+				form.removeClass('open');
+				$('.rewiews').removeClass('pb');
+				$('.rewiews__add').removeClass('up');
+				$('.confirm__keyboard').removeClass('active');
+			}
+		});
+
+
+		// клавиатура
+		$('.rewiews__form-textarea').focus(function(){
+
+			var
+				keyboard = $('.confirm__keyboard'),
+				add = $('.rewiews__add');
+
+		  	if(!keyboard.hasClass('active')) {
+	  			// logo.hide();
+	  			// enter.addClass('active');
+	  			add.addClass('up');
+		  		keyboard.addClass('active');
+		  	} else {
+		  		// logo.show();
+		  		// enter.removeClass('active');
+		  		add.removeClass('up');
+		  		keyboard.removeClass('active');
+		  	}
+		});
+
+
 
 	}());
+
+
+	//карта
+	// (function(){
+	// 	ymaps.ready(init);
+
+	// 	function init(){
+	// 		var myMap = new ymaps.Map("map", {
+	// 			center: [55.17500160978003,61.34543654224261],
+	// 			zoom: 11,
+	// 			controls : []
+	// 		});
+	// 	}
+
+	// }());
 
 });
 
