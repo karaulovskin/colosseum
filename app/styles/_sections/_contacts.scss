@@ -16,8 +16,15 @@
 		padding-top: 20px;
 	}
 
-	@media screen and (max-width: 340px) {
+	@include mini {
 	    width: 100%;
+	}
+}
+
+.contacts__adrress--about {
+
+	@include mini {
+	    padding-top: 0;
 	}
 }
 
@@ -134,5 +141,16 @@
 
 	@include phones {
 		// height: 400px;
+	}
+}
+
+.contacts__map--about {
+
+	@include phones {
+		height: 38vh;
+	}
+
+	@include mini {
+		height: 35vh;
 	}
 }
