@@ -218,7 +218,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .btn {
-    padding: 10px 0;
+    padding: 14px 0;
     font-size: 16px;
   }
 }
@@ -3503,6 +3503,117 @@ footer {
 
 .advice__title {
   color: #fff;
+}
+
+.registration-form__wrapp {
+  margin-bottom: 25px;
+}
+.registration-form__wrapp:last-child {
+  margin-bottom: 0;
+}
+
+.registration-form__input {
+  width: 100%;
+  padding: 26px 36px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+  outline-color: #eac731;
+}
+@media screen and (max-width: 568px) {
+  .registration-form__input {
+    padding: 22px 32px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .registration-form__input {
+    padding: 18px 28px;
+    font-size: 16px;
+  }
+}
+
+.registration-form__select-wrapp {
+  position: relative;
+  padding: 26px 36px;
+  text-align: left;
+  border: 1px solid #fff;
+  background: transparent;
+  outline-color: #eac731;
+}
+.registration-form__select-wrapp:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 36px;
+  width: 30px;
+  height: 16px;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(../img/decor/gender.png) no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 568px) {
+  .registration-form__select-wrapp {
+    padding: 22px 32px;
+  }
+  .registration-form__select-wrapp:after {
+    right: 32px;
+    width: 26px;
+    height: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .registration-form__select-wrapp {
+    padding: 18px 28px;
+  }
+  .registration-form__select-wrapp:after {
+    right: 28px;
+    width: 20px;
+    height: 10px;
+  }
+}
+
+.registration-form__text,
+.registration-form__value {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+}
+@media screen and (max-width: 568px) {
+  .registration-form__text,
+  .registration-form__value {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .registration-form__text,
+  .registration-form__value {
+    font-size: 16px;
+  }
+}
+
+.registration-form__select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.registration-form__btn {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .rule__list {

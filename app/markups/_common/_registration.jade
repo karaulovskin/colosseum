@@ -1,0 +1,20 @@
+.registration.page
+	.title Регистрация
+	form.registration-form
+		.registration-form__wrapp
+			input.registration-form__input(id="phoneByForm" type="text" placeholder="+7 (---) --- -- --")
+		.registration-form__wrapp
+			input.registration-form__input(type="text" placeholder="Имя")
+		.registration-form__wrapp
+			input.registration-form__input(type="text" placeholder="Фамилия")
+		.registration-form__wrapp
+			.registration-form__select-wrapp
+				//- span.registration-form__text 
+				span.registration-form__value
+				select.registration-form__select
+					option.registration-form__option Пол
+					option.registration-form__option Мужской
+					option.registration-form__option Женский
+		.registration-form__wrapp
+			input.registration-form__input(type="text" placeholder="Дата рождения")
+		a.registration-form__btn.btn(href="#") Отправить

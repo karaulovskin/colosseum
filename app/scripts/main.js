@@ -535,7 +535,20 @@ $(document).ready(function(){
 		  	}
 		});
 
+	}());
 
+	// Выбор пола на странице регистрация
+	(function(){
+
+		// начальная инициализация отображаемого текста при загрузке страницы
+		$('.registration-form__select').each(function(){
+		    $(this).parent().children('.registration-form__value').text( $(this).children('option:selected').text() );
+		});
+
+		// изменение текста при изменении select
+		$('.registration-form__select').change(function(){
+		    $(this).parent().children('.registration-form__value').text( $(this).children('option:selected').text() );
+		});
 
 	}());
 
