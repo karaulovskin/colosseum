@@ -516,24 +516,24 @@ $(document).ready(function(){
 
 
 		// клавиатура
-		$('.rewiews__form-textarea').focus(function(){
+		// $('.rewiews__form-textarea').focus(function(){
 
-			var
-				keyboard = $('.confirm__keyboard'),
-				add = $('.rewiews__add');
+		// 	var
+		// 		keyboard = $('.confirm__keyboard'),
+		// 		add = $('.rewiews__add');
 
-		  	if(!keyboard.hasClass('active')) {
-	  			// logo.hide();
-	  			// enter.addClass('active');
-	  			add.addClass('up');
-		  		keyboard.addClass('active');
-		  	} else {
-		  		// logo.show();
-		  		// enter.removeClass('active');
-		  		add.removeClass('up');
-		  		keyboard.removeClass('active');
-		  	}
-		});
+		//   	if(!keyboard.hasClass('active')) {
+	 //  			// logo.hide();
+	 //  			// enter.addClass('active');
+	 //  			add.addClass('up');
+		//   		keyboard.addClass('active');
+		//   	} else {
+		//   		// logo.show();
+		//   		// enter.removeClass('active');
+		//   		add.removeClass('up');
+		//   		keyboard.removeClass('active');
+		//   	}
+		// });
 
 	}());
 
@@ -550,6 +550,37 @@ $(document).ready(function(){
 		    $(this).parent().children('.registration-form__value').text( $(this).children('option:selected').text() );
 		});
 
+	}());
+
+
+	//Соц. иконки
+	(function(){
+		$('#socials').on('click', function(e){
+			e.preventDefault();
+			var
+				socials = $('.index__socials'),
+				button = $('#socials'),
+				overlay = $('.b24-widget-button-shadow');
+			
+			if(!socials.hasClass('open')) {
+				socials.animate(
+					{
+						opacity: 'show',
+						bottom: '70px'
+					}, 200).addClass('open');
+				button.addClass('open');
+				overlay.removeClass('b24-widget-button-hide');
+				overlay.addClass('b24-widget-button-show');
+			} else {
+				socials.animate(
+					{
+						opacity: 'hide',
+						bottom: '50px'
+					}, 0).removeClass('open')
+				button.removeClass('open');
+				overlay.removeClass('b24-widget-button-show');
+			}
+		});
 	}());
 
 

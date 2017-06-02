@@ -203,9 +203,105 @@
 .footer-left__link {
 	background: url(../img/icons/share.png)no-repeat;
 	background-size: contain;
+	// border: 4px solid rgba(234, 198, 49, .4);
+
+	&.open {
+		position: relative;
+		background: #d6d6d6;
+		@include transform(rotate(90deg));
+
+		&:before,&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			width: 4px;
+			height: 24px;
+			margin: -12px auto;
+			background: #fff;
+		}
+
+		&:before {
+			@include transform(rotate(-45deg));
+		}
+
+		&:after {
+			@include transform(rotate(45deg));
+		}
+	}
 }
 
 .footer-right__link {
 	background: url(../img/icons/call.png)no-repeat;
 	background-size: contain;
+}
+
+.index__socials {
+	display: none;
+	position: fixed;
+	bottom: 50px;
+	left: 30px;
+	width: 45px;
+
+	&.open {
+		display: block;
+	}
+
+	@include mid {
+
+	}
+
+	@include phones {
+		bottom: 50px;
+		left: 15px;
+		width: 48px;
+	}
+}
+
+.index__socials-item {
+	width: 45px;
+	height: 45px;
+	margin: 0 auto 10px;
+	@include border-radius(50%);
+
+	@include mid {
+
+	}
+
+	@include phones {
+		width: 44px;
+		height: 44px;
+	}
+}
+
+.index__socials-item--vk {
+	background-color: #48729e;
+
+	.index__socials-list {
+		
+	}
+}
+
+.index__socials-item--fb {
+	background-color: #3b5998;
+}
+
+.index__socials-item--od {
+	background-color: #eb722e;
+
+	.index__socials-link {
+
+	}
+}
+
+.index__socials-item--tw {
+	background-color: #00aced;
+}
+
+.index__socials-link {
+	display: block;
+	width: 45px;
+	height: 45px;
+	@include border-radius(50%);
 }

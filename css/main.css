@@ -3082,10 +3082,108 @@ footer {
   background: url(../img/icons/share.png) no-repeat;
   background-size: contain;
 }
+.footer-left__link.open {
+  position: relative;
+  background: #d6d6d6;
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.footer-left__link.open:before, .footer-left__link.open:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 4px;
+  height: 24px;
+  margin: -12px auto;
+  background: #fff;
+}
+.footer-left__link.open:before {
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.footer-left__link.open:after {
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 .footer-right__link {
   background: url(../img/icons/call.png) no-repeat;
   background-size: contain;
+}
+
+.index__socials {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 30px;
+  width: 45px;
+}
+.index__socials.open {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .index__socials {
+    bottom: 50px;
+    left: 15px;
+    width: 48px;
+  }
+}
+
+.index__socials-item {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@media screen and (max-width: 480px) {
+  .index__socials-item {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.index__socials-item--vk {
+  background-color: #48729e;
+}
+
+.index__socials-item--fb {
+  background-color: #3b5998;
+}
+
+.index__socials-item--od {
+  background-color: #eb722e;
+}
+
+.index__socials-item--tw {
+  background-color: #00aced;
+}
+
+.index__socials-link {
+  display: block;
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .login {
