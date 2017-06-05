@@ -1,0 +1,319 @@
+.mode {
+	padding-bottom: 60px;
+
+	@include mid {
+		padding-bottom: 50px;
+	}
+
+	@include phones {
+		padding-bottom: 40px;
+	}
+}
+
+.mode__tabs {
+	margin-bottom: 42px;
+
+	@include mid {
+		margin-bottom: 36px;
+	}
+
+	@include phones {
+		margin-bottom: 30px;
+	}
+}
+
+.mode__tabs-list {
+	font-size: 0;
+}
+
+.mode__tabs-item {
+	@include inline-block(top);
+	width: 33.3%;
+	font-size: 18px;
+
+	&:first-child {
+		width: 100%;
+	}
+
+	&.active {
+		.mode__tabs-link {
+			text-transform: uppercase;
+			color: $grey;
+			border: 1px solid $gold;
+			background: $gold;
+		}
+	}
+}
+
+.mode__tabs-link {
+	display: block;
+	padding: 8px 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: $grey;
+	border: 1px solid $grey;
+
+	@include mid {
+		font-size: 14px;
+	}
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
+.mode__content {
+	text-align: left;
+	font-size: 24px;
+
+	@include mid {
+		font-size: 18px;
+	}
+
+	@include phones {
+		font-size: 14px;
+	}
+}
+
+.mode__content-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.mode__content-title {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+
+	@include mid {
+		margin-bottom: 24px;
+	}
+
+	@include phones {
+		margin-bottom: 18px;
+	}
+}
+
+.mode__content-desc {
+	margin-bottom: 30px;
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include mid {
+		margin-bottom: 24px;
+
+		p {
+			margin-bottom: 24px;
+		}
+	}
+
+	@include phones {
+		margin-bottom: 18px;
+
+		p {
+			margin-bottom: 18px;
+		}
+	}
+}
+
+.mode__detail-header {
+    padding: 8px 18px;
+	font-size: 18px;
+	background: $light;
+
+	span {
+		text-transform: uppercase;
+	}
+
+	@include mid {
+		padding: 8px 18px;
+		font-size: 14px;
+	}
+
+	@include phones {
+		padding: 8px 18px;
+		font-size: 12px;
+	}
+}
+
+.mode__detail {
+	margin-bottom: 15px;
+	@extend %clearfix;
+
+	@include mid {
+		margin-bottom: 12px;
+	}
+
+	@include phones {
+		margin-bottom: 8px;
+	}
+}
+
+.mode__detail-left,
+.mode__detail-right {
+	float: left;
+	width: 50%;
+}
+
+.mode__detail-desc {
+	padding: 20px;
+	font-size: 18px;
+
+	p {
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@include mid {
+		padding: 16px;
+		font-size: 14px;
+
+		p {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include phones {
+		padding: 12;
+		font-size: 12px;
+
+		p {
+			margin-bottom: 16px;
+		}
+	}
+}
+
+.mode__detail-list {
+	margin-bottom: 30px;
+
+	@include mid {
+		margin-bottom: 24px;
+	}
+
+	@include phones {
+		margin-bottom: 18px;
+	}
+}
+
+.mode__canons-item {
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include mid {
+		margin-bottom: 24px;
+	}
+
+	@include phones {
+		margin-bottom: 18px;
+	}
+}
+
+.mode__table-head {
+	padding: 8px 18px;
+	text-transform: uppercase;
+	font-size: 18px;
+	background: $light;
+	@extend %clearfix;
+
+	.mode__table-carb {
+		text-align: right;
+	}
+
+	span {
+		text-transform: uppercase;
+	}
+
+	@include mid {
+		padding: 8px 18px;
+		font-size: 14px;
+	}
+
+	@include phones {
+		padding: 8px 6px;
+		font-size: 12px;
+	}
+}
+
+.mode__table-fruit {
+	width: 28%;
+
+	@include phones {
+		width: 28%;
+	}
+}
+
+.mode__table-kkal {
+	width: 17%;
+
+	@include phones {
+		width: 16%;
+	}
+}
+
+.mode__table-proteins {
+	width: 20%;
+
+	@include phones {
+		width: 16%;
+	}
+}
+
+.mode__table-fats {
+	width: 18%;
+
+	@include phones {
+		width: 16%;
+	}
+}
+
+.mode__table-carb {
+	width: 17%;
+
+	@include phones {
+		width: 24%;
+	}
+}
+
+
+
+.mode-table__col {
+	float: left;
+}
+
+.mode__table-list {
+	padding: 16px 18px;
+
+	@include phones {
+		padding: 16px 6px;
+	}
+}
+
+.mode__table-item {
+	margin-bottom: 22px;
+	font-size: 18px;
+	@extend %clearfix;
+
+	@include mid {
+		margin-bottom: 18px;
+		font-size: 14px;
+	}
+
+	@include phones {
+		margin-bottom: 14px;
+		font-size: 12px;
+	}
+}
