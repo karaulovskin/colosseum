@@ -309,50 +309,27 @@ $(document).ready(function(){
 				.removeClass('active');
 		});
 	}());
+	
 
 	// slick-chart
 	// (function(){
-	// 	$('.chart__tabs-link').on('click', function(e){
-	// 		e.preventDefault();
-
-	// 		$('.chart-date-content__list').slick({
-	// 	  		slidesToShow: 1,
-	// 	  		slidesToScroll: 1,
-	// 	  		arrows: false,
-	// 	  		fade: true,
-	// 	  		asNavFor: '.chart-date__list'
-	// 		});
-	// 		$('.chart-date__list').slick({
-	// 	  		slidesToShow: 1,
-	// 	  		slidesToScroll: 1,
-	// 	  		swipeToSlide: true,
-	// 	  		centerMode: true,
-	// 	  		focusOnSelect: true,
-	// 	  		arrows: false,
-	// 	  		asNavFor: '.chart-date-content__list'
-	// 		});
+	// 	$('.chart-date-content__list').slick({
+	//   		slidesToShow: 1,
+	//   		slidesToScroll: 1,
+	//   		arrows: false,
+	//   		fade: true,
+	//   		asNavFor: '.chart-date__list'
+	// 	});
+	// 	$('.chart-date__list').slick({
+	//   		slidesToShow: 1,
+	//   		slidesToScroll: 1,
+	//   		swipeToSlide: true,
+	//   		centerMode: true,
+	//   		focusOnSelect: true,
+	//   		arrows: false,
+	//   		asNavFor: '.chart-date-content__list'
 	// 	});
 	// }());
-
-	// slick-chart
-	(function(){
-		$('.chart-date-content__list').slick({
-	  		slidesToShow: 1,
-	  		slidesToScroll: 1,
-	  		arrows: false,
-	  		fade: true,
-	  		asNavFor: '.chart-date__list'
-		});
-		$('.chart-date__list').slick({
-	  		slidesToShow: 1,
-	  		slidesToScroll: 1,
-	  		swipeToSlide: true,
-	  		centerMode: true,
-	  		focusOnSelect: true,
-	  		arrows: false,
-	  		asNavFor: '.chart-date-content__list'
-		});
-	}());
 
 
 	// history popup
@@ -380,29 +357,29 @@ $(document).ready(function(){
 
 
 	// parametrs select popup
-	(function(){
-		var 
-			ParPopup  = $('.parameters-popup'),
-			historyCancel = $('.parameters-popup__btn--cancel');
+	// (function(){
+	// 	var 
+	// 		ParPopup  = $('.parameters-popup'),
+	// 		historyCancel = $('.parameters-popup__btn--cancel');
 
-		$('.data__link').on('click', function(e){
-			e.preventDefault();
-			console.log("!!!");
+	// 	$('.data__link').on('click', function(e){
+	// 		e.preventDefault();
+	// 		console.log("!!!");
 
-			if(!ParPopup.hasClass('open')) {
-				ParPopup.addClass('open');
-				console.log("+");
-			} else {
-				ParPopup.removeClass('open');
-			}
-		});
+	// 		if(!ParPopup.hasClass('open')) {
+	// 			ParPopup.addClass('open');
+	// 			console.log("+");
+	// 		} else {
+	// 			ParPopup.removeClass('open');
+	// 		}
+	// 	});
 
-		$('.parameters-popup__btn--cancel').on('click', function(e){
-			e.preventDefault();
+	// 	$('.parameters-popup__btn--cancel').on('click', function(e){
+	// 		e.preventDefault();
 
-			ParPopup.removeClass('open');
-		});
-	}());
+	// 		ParPopup.removeClass('open');
+	// 	});
+	// }());
 
 
 	// SECTION BUY
@@ -432,7 +409,7 @@ $(document).ready(function(){
 	// SECTION LOGIN
 	(function(){
 
-		$('.logo__enter-value').focus(function(){
+		$('.logo__enter-value').click(function(){
 
 			var
 				keyboard = $('.confirm__keyboard'),
@@ -511,22 +488,22 @@ $(document).ready(function(){
 
 	// SLICK PARAMETRS
 
-	(function(){
-		$('.data__link').on('click', function(e){
-			e.preventDefault();
+	// (function(){
+	// 	$('.data__link').on('click', function(e){
+	// 		e.preventDefault();
 
-			$('.parameters-popup__list').slick({
-				vertical: true,
-				verticalSwiping: true,
-		  		slidesToShow: 5,
-		  		slidesToScroll: 1,
-		  		// swipeToSlide: true,
-		  		centerMode: true,
-		  		// focusOnSelect: true,
-		  		arrows: false
-			});
-		});
-	}());
+	// 		$('.parameters-popup__list').slick({
+	// 			vertical: true,
+	// 			verticalSwiping: true,
+	// 	  		slidesToShow: 5,
+	// 	  		slidesToScroll: 1,
+	// 	  		// swipeToSlide: true,
+	// 	  		centerMode: true,
+	// 	  		// focusOnSelect: true,
+	// 	  		arrows: false
+	// 		});
+	// 	});
+	// }());
 
 	// SLICK PARAMETRS-DATE
 	(function(){
