@@ -4590,6 +4590,16 @@ footer {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+@media screen and (max-width: 568px) {
+  .chart__club-point__link {
+    font-size: 22px;
+  }
+  .chart__club-point__link:after {
+    right: -26px;
+    width: 14px;
+    height: 8px;
+  }
+}
 @media screen and (max-width: 480px) {
   .chart__club-point__link {
     margin-bottom: 36px;
@@ -6988,6 +6998,10 @@ footer {
   }
 }
 
+.slick-list {
+  overflow: visible !important;
+}
+
 .stock-detail:after {
   content: "";
   display: block;
@@ -7674,6 +7688,34 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.workout__item {
+  margin-bottom: 33px;
+  text-align: left;
+}
+
+.workout__left,
+.workout__right {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.workout__right {
+  margin-left: 38px;
+}
+
+.workout__img {
+  width: 78px;
+  height: 78px;
+  background: #686868;
+}
+
+.workout__desc {
+  font-size: 30px;
 }
 
 .rewiews {

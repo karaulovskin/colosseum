@@ -312,24 +312,24 @@ $(document).ready(function(){
 	
 
 	// slick-chart
-	// (function(){
-	// 	$('.chart-date-content__list').slick({
-	//   		slidesToShow: 1,
-	//   		slidesToScroll: 1,
-	//   		arrows: false,
-	//   		fade: true,
-	//   		asNavFor: '.chart-date__list'
-	// 	});
-	// 	$('.chart-date__list').slick({
-	//   		slidesToShow: 1,
-	//   		slidesToScroll: 1,
-	//   		swipeToSlide: true,
-	//   		centerMode: true,
-	//   		focusOnSelect: true,
-	//   		arrows: false,
-	//   		asNavFor: '.chart-date-content__list'
-	// 	});
-	// }());
+	(function(){
+		$('.chart-date-content__list').slick({
+	  		slidesToShow: 1,
+	  		slidesToScroll: 1,
+	  		arrows: false,
+	  		fade: true,
+	  		asNavFor: '.chart-date__list'
+		});
+		$('.chart-date__list').slick({
+	  		slidesToShow: 1,
+	  		slidesToScroll: 1,
+	  		swipeToSlide: true,
+	  		centerMode: true,
+	  		focusOnSelect: true,
+	  		arrows: false,
+	  		asNavFor: '.chart-date-content__list'
+		});
+	}());
 
 
 	// history popup
@@ -487,7 +487,6 @@ $(document).ready(function(){
 
 
 	// SLICK PARAMETRS
-
 	// (function(){
 	// 	$('.data__link').on('click', function(e){
 	// 		e.preventDefault();
@@ -647,7 +646,6 @@ $(document).ready(function(){
 	// 			controls : []
 	// 		});
 	// 	}
-
 	// }());
 
 });

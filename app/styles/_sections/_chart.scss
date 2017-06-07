@@ -24,6 +24,16 @@
 		background-size: contain;
 		@include transition(.5s);
 	}
+
+	@include mid {
+		font-size: 24px;
+
+		&:after {
+			right: -26px;
+			width: 14px;
+			height: 8px;
+		}
+	}
 	
 	@include phones {
 		margin-bottom: 36px;
