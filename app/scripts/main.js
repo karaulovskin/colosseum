@@ -427,6 +427,11 @@ $(document).ready(function(){
 		  	}
 		});
 
+		// маска
+		(function(){
+			$('#loginMask').mask('+7 (000) 000 00 00');
+		}());
+
 		// $('.login-bg').on('click', function(){
 
 		// 	var

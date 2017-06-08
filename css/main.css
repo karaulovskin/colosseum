@@ -4592,7 +4592,7 @@ footer {
 }
 @media screen and (max-width: 568px) {
   .chart__club-point__link {
-    font-size: 22px;
+    font-size: 24px;
   }
   .chart__club-point__link:after {
     right: -26px;
@@ -6132,6 +6132,16 @@ footer {
 .logo__enter.active {
   bottom: 286px;
 }
+@media screen and (max-width: 568px) {
+  .logo__enter {
+    left: 30px;
+    right: 30px;
+    bottom: 15px;
+  }
+  .logo__enter.active {
+    bottom: 308px;
+  }
+}
 @media screen and (max-width: 480px) {
   .logo__enter {
     left: 30px;
@@ -6152,11 +6162,18 @@ footer {
   background: transparent;
   border: 1px solid #fff;
 }
+@media screen and (max-width: 568px) {
+  .logo__enter-value {
+    margin-bottom: 20px;
+    padding: 21px 18px;
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 480px) {
   .logo__enter-value {
     margin-bottom: 15px;
     padding: 10px 18px;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
@@ -7716,6 +7733,7 @@ footer {
 
 .workout__desc {
   font-size: 30px;
+  color: #fff;
 }
 
 .rewiews {
