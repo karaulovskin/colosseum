@@ -129,7 +129,7 @@ $(document).ready(function(){
 
 	// accordion-chart
 	(function(){
-		$('.chart-training__link').on('click', function(e){
+		$('.chart-training__link').on('click','.chart-training__link', function(e){
 			e.preventDefault();
 
 			var
@@ -309,6 +309,30 @@ $(document).ready(function(){
 				.removeClass('active');
 		});
 	}());
+
+	// tabs exercise
+	(function(){
+		$('.exercise__tabs-item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.exercise__content-item');
+				ndx = $this.index();
+
+			// console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+		});
+	}());
 	
 
 	// slick-chart
@@ -429,7 +453,7 @@ $(document).ready(function(){
 
 		// маска
 		(function(){
-			$('#loginMask').mask('+7 (000) 000 00 00');
+			$('#loginMask').mask('+7 (999) 999 99 99');
 		}());
 
 		// $('.login-bg').on('click', function(){
@@ -528,7 +552,7 @@ $(document).ready(function(){
 	}());
 
 	(function(){
-		$('#phoneByForm').mask('+7 (000) 000 00 00');
+		$('#phoneByForm').mask('+7 (999) 999 99 99');
 	}());
 
 

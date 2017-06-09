@@ -5271,6 +5271,76 @@ footer {
   }
 }
 
+.exercise__tabs {
+  margin-bottom: 54px;
+}
+
+.exercise__tabs-list {
+  font-size: 0;
+}
+
+.exercise__tabs-item {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 33.3%;
+  font-size: 18px;
+}
+.exercise__tabs-item.active .exercise__tabs-link {
+  border: 1px solid #eac731;
+  background: #eac731;
+}
+
+.exercise__tabs-link {
+  display: block;
+  padding: 8px 0;
+  text-transform: uppercase;
+  color: #686868;
+  border: 1px solid #686868;
+}
+@media screen and (max-width: 480px) {
+  .exercise__tabs-link {
+    font-size: 12px;
+  }
+}
+
+.exercise__content-item {
+  display: none;
+  text-align: left;
+}
+.exercise__content-item.active {
+  display: block;
+}
+
+.content-exercise__video-wrapp,
+.exercise__img-list {
+  margin: 0 -30px 40px;
+}
+@media screen and (max-width: 480px) {
+  .content-exercise__video-wrapp,
+  .exercise__img-list {
+    margin: 0 -15px 20px;
+  }
+}
+
+.content-exercise__video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.exercise__img-item {
+  width: 100%;
+  height: 45vw;
+  margin-bottom: 20px;
+}
+
+.exercise__img-pic {
+  max-width: 100%;
+}
+
 .header__burger,
 .header__back {
   position: absolute;
@@ -6131,6 +6201,16 @@ footer {
 }
 .logo__enter.active {
   bottom: 286px;
+}
+@media screen and (max-width: 1224px) {
+  .logo__enter {
+    left: 30px;
+    right: 30px;
+    bottom: 15px;
+  }
+  .logo__enter.active {
+    bottom: 484px;
+  }
 }
 @media screen and (max-width: 568px) {
   .logo__enter {
@@ -7711,6 +7791,21 @@ footer {
   margin-bottom: 33px;
   text-align: left;
 }
+@media screen and (max-width: 568px) {
+  .workout__item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .workout__item {
+    margin-bottom: 28px;
+  }
+}
+
+.workout__link {
+  display: block;
+  font-size: 0;
+}
 
 .workout__left,
 .workout__right {
@@ -7721,8 +7816,32 @@ footer {
   *display: inline;
 }
 
+.workout__left {
+  width: 78px;
+}
+@media screen and (max-width: 568px) {
+  .workout__left {
+    width: 68px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .workout__left {
+    width: 50px;
+  }
+}
+
 .workout__right {
-  margin-left: 38px;
+  width: calc(100% - 78px);
+}
+@media screen and (max-width: 568px) {
+  .workout__right {
+    width: calc(100% - 68px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .workout__right {
+    width: calc(100% - 50px);
+  }
 }
 
 .workout__img {
@@ -7730,10 +7849,34 @@ footer {
   height: 78px;
   background: #686868;
 }
+@media screen and (max-width: 568px) {
+  .workout__img {
+    width: 68px;
+    height: 68px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .workout__img {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 .workout__desc {
+  margin-left: 38px;
   font-size: 30px;
   color: #fff;
+}
+@media screen and (max-width: 568px) {
+  .workout__desc {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .workout__desc {
+    margin-left: 20px;
+    font-size: 18px;
+  }
 }
 
 .rewiews {

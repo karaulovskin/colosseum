@@ -40,6 +40,16 @@
 		bottom: 286px;
 	}
 
+	@include top {
+		left: 30px;
+		right: 30px;
+		bottom: 15px;
+
+		&.active {
+			bottom: 484px;
+		}
+	}
+
 	@include mid {
 		left: 30px;
 		right: 30px;

@@ -1,9 +1,23 @@
-
+.workout {
+	// background: $light;
+}
 
 .workout__item {
 	margin-bottom: 33px;
 	text-align: left;
-	// @extend %clearfix;
+	
+	@include mid {
+		margin-bottom: 30px;
+	}
+
+	@include phones {
+		margin-bottom: 28px;
+	}
+}
+
+.workout__link {
+	display: block;
+	font-size: 0;
 }
 
 .workout__left,
@@ -12,20 +26,56 @@
 }
 
 .workout__left {
+	width: 78px;
 
+	@include mid {
+		width: 68px;
+	}
+
+	@include phones {
+		width: 50px;
+	}
 }
 
 .workout__right {
-	margin-left: 38px;
+	width: calc(100% - 78px);
+
+	@include mid {
+		width: calc(100% - 68px);
+	}
+
+	@include phones {
+		width: calc(100% - 50px);
+	}
 }
 
 .workout__img {
 	width: 78px;
 	height: 78px;
 	background: $grey;
+
+	@include mid {
+		width: 68px;
+		height: 68px;
+	}
+
+	@include phones {
+		width: 50px;
+		height: 50px;
+	}
 }
 
 .workout__desc {
+	margin-left: 38px;
 	font-size: 30px;
 	color: #fff;
+
+	@include mid {
+		font-size: 26px;
+	}
+
+	@include phones {
+		margin-left: 20px;
+		font-size: 18px;
+	}
 }
