@@ -8,6 +8,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'gilroyextrabold';
+  src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"), url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'sf_ui__textlight';
   src: url("../fonts/9485-webfont.woff2") format("woff2"), url("../fonts/9485-webfont.woff") format("woff");
   font-weight: normal;
@@ -7785,6 +7791,121 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.trainer__item {
+  margin-bottom: 33px;
+  text-align: left;
+}
+@media screen and (max-width: 568px) {
+  .trainer__item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__item {
+    margin-bottom: 28px;
+  }
+}
+
+.trainer__link {
+  display: block;
+  font-size: 0;
+}
+
+.trainer__left,
+.trainer__right {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.trainer__left {
+  width: 78px;
+}
+@media screen and (max-width: 568px) {
+  .trainer__left {
+    width: 68px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__left {
+    width: 50px;
+  }
+}
+
+.trainer__right {
+  width: calc(100% - 78px);
+}
+@media screen and (max-width: 568px) {
+  .trainer__right {
+    width: calc(100% - 68px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__right {
+    width: calc(100% - 50px);
+  }
+}
+
+.trainer__square {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  background: #eac731;
+}
+@media screen and (max-width: 568px) {
+  .trainer__square {
+    width: 68px;
+    height: 68px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__square {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.trainer__value {
+  position: absolute;
+  width: 100%;
+  line-height: 78px;
+  font-size: 48px;
+  color: #2c2c2c;
+  font-family: 'gilroyextrabold';
+}
+@media screen and (max-width: 568px) {
+  .trainer__value {
+    line-height: 68px;
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__value {
+    line-height: 50px;
+    font-size: 28px;
+  }
+}
+
+.trainer__desc {
+  margin-left: 38px;
+  font-size: 30px;
+  color: #fff;
+}
+@media screen and (max-width: 568px) {
+  .trainer__desc {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .trainer__desc {
+    margin-left: 20px;
+    font-size: 18px;
+  }
 }
 
 .workout__item {

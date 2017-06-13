@@ -8,6 +8,17 @@
     font-style: normal;
 }
 
+// Gilroy ExtraBold
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 // SF UI Text Light
 @font-face {
     font-family: 'sf_ui__textlight';
@@ -15,8 +26,8 @@
          url('../fonts/9485-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
 
 
 @mixin open-sans($style: regular) {
