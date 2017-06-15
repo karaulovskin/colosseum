@@ -333,6 +333,31 @@ $(document).ready(function(){
 				.removeClass('active');
 		});
 	}());
+
+
+	// tabs tips
+	(function(){
+		$('.tips__tabs-item').on('click', function(e){
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				member = $('.tips__content-item');
+				ndx = $this.index();
+
+			// console.log(ndx);
+
+			$this
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+
+			member.eq(ndx)
+				.addClass('active')
+				.siblings()
+				.removeClass('active');
+		});
+	}());
 	
 
 	// slick-chart
@@ -662,6 +687,30 @@ $(document).ready(function(){
 			}
 		});
 	}());
+
+
+	// tips-video
+	(function(){
+		var listVideo = document.getElementById('listVideo');
+		
+	}());
+
+
+	//активные адреса на карте
+	// (function(){
+	// 	$('.contacts__link').on('click', function(e){
+	// 		e.preventDefault();
+
+	// 		var item = $('.contacts__item');
+
+	// 		if(!item.hasClass('active')) {
+	// 	  		item.addClass('active');
+	// 	  	} else {
+	// 	  		item.removeClass('active');
+	// 	  	}
+	//   	});
+	
+	// }());
 
 
 	//карта

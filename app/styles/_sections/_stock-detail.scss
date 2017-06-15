@@ -20,7 +20,8 @@
 	}
 }
 
-.stock-detail__block {
+.stock-detail__block, 
+.tips-detail__block {
 	position: absolute;
 	top: 0;
 	left: -30px;
@@ -37,7 +38,8 @@
 	}
 }
 
-.stock-detail__content {
+.stock-detail__content,
+.tips-detail__content {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -45,19 +47,20 @@
 	@include transform(translateY(-50%));
 }
 
-.stock-detail__desc {
-	margin-top: 422px;
+.stock-detail__desc,
+.tips-detail__desc {
+	margin-top: 430px;
 	padding: 42px 16px;
 	font-size: 24px;
 
 	@include mid {
-		margin-top: 340px;
+		margin-top: 346px;
 		padding: 34px 14px;
 		font-size: 18px;
 	}
 
 	@include phones {
-		margin-top: 250px;
+		margin-top: 255px;
 		padding: 20px 10px;
 		font-size: 14px;
 	}

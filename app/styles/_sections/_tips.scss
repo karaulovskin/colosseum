@@ -1,0 +1,135 @@
+
+
+.tips__tabs {
+	margin-bottom: 35px;
+}
+
+.tips__tabs-list {
+	font-size: 0;
+}
+
+.tips__tabs-item {
+	@include inline-block(top);
+	width: 50%;
+	font-size: 18px;
+
+	&.active {
+		.tips__tabs-link {
+			border: 1px solid $gold;
+			background: $gold;
+		}
+	}
+}
+
+
+.tips__tabs-link {
+	display: block;
+	padding: 8px 0;
+	text-transform: uppercase;
+	color: $grey;
+	border: 1px solid $grey;
+
+	@include phones {
+		font-size: 12px;
+	}
+}
+
+.tips__content-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.content-tips__item {
+	position: relative;
+	height: 250px;
+	margin-bottom: 35px;
+
+	@include phones {
+		height: 210px;
+		margin-bottom: 30px;
+	}
+}
+
+.content-tips__item--video {
+	height: auto;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, .6);
+	}
+}
+
+.content-tips__link {
+	position: relative;
+	display: block;
+	height: 100%;
+	color: #fff;
+
+	.content-tips__desc {
+		background: rgba(44, 44, 44, .8);
+	}	
+} 
+
+.content-tips__desc {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 16px 0;
+	font-size: 30px;
+
+	@include mid {
+		font-size: 24px;
+	}
+
+	@include phones {
+		font-size: 18px;
+	}
+}
+
+.content-tips__video {
+	display: block;
+	width: 100%;
+	height: 45vw;
+	max-height: 100%;
+}
+
+.tips__title {
+	font-size: 30px;
+
+	@include mid {
+		font-size: 24px;
+	}
+
+	@include phones {
+		font-size: 18px;
+	}
+}
+
+.tips-detail__desc {
+	text-align: left;
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	@include mid {
+		p {
+			margin-bottom: 26px;
+		}
+	}
+
+	@include phones {
+		p {
+			margin-bottom: 22px;
+		}
+	}
+}

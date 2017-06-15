@@ -58,6 +58,11 @@ a {
 	@include transition(.3s);
 }
 
+input,
+button {
+	-webkit-appearance: none;
+}
+
 footer {
 	position: relative;
 	bottom: 0;

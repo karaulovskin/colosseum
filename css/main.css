@@ -2959,6 +2959,11 @@ a {
   transition: 0.3s;
 }
 
+input,
+button {
+  -webkit-appearance: none;
+}
+
 footer {
   position: relative;
   bottom: 0;
@@ -5181,6 +5186,9 @@ footer {
 .contacts__item {
   margin-bottom: 6px;
 }
+.contacts__item.active .contacts__link {
+  color: #eb4040;
+}
 @media screen and (max-width: 480px) {
   .contacts__item {
     margin-bottom: 4px;
@@ -7123,7 +7131,8 @@ footer {
   }
 }
 
-.stock-detail__block {
+.stock-detail__block,
+.tips-detail__block {
   position: absolute;
   top: 0;
   left: -30px;
@@ -7134,17 +7143,20 @@ footer {
   box-shadow: 0 12px 15px rgba(0, 0, 0, 0.46);
 }
 @media screen and (max-width: 568px) {
-  .stock-detail__block {
+  .stock-detail__block,
+  .tips-detail__block {
     height: 440px;
   }
 }
 @media screen and (max-width: 480px) {
-  .stock-detail__block {
+  .stock-detail__block,
+  .tips-detail__block {
     height: 340px;
   }
 }
 
-.stock-detail__content {
+.stock-detail__content,
+.tips-detail__content {
   position: absolute;
   top: 50%;
   left: 0;
@@ -7156,21 +7168,24 @@ footer {
   transform: translateY(-50%);
 }
 
-.stock-detail__desc {
-  margin-top: 422px;
+.stock-detail__desc,
+.tips-detail__desc {
+  margin-top: 430px;
   padding: 42px 16px;
   font-size: 24px;
 }
 @media screen and (max-width: 568px) {
-  .stock-detail__desc {
-    margin-top: 340px;
+  .stock-detail__desc,
+  .tips-detail__desc {
+    margin-top: 346px;
     padding: 34px 14px;
     font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
-  .stock-detail__desc {
-    margin-top: 250px;
+  .stock-detail__desc,
+  .tips-detail__desc {
+    margin-top: 255px;
     padding: 20px 10px;
     font-size: 14px;
   }
@@ -7227,7 +7242,8 @@ footer {
   width: 100%;
 }
 
-.stock__img-bg {
+.stock__img-bg,
+.tips__img-bg {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -7791,6 +7807,140 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.tips__tabs {
+  margin-bottom: 35px;
+}
+
+.tips__tabs-list {
+  font-size: 0;
+}
+
+.tips__tabs-item {
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+  font-size: 18px;
+}
+.tips__tabs-item.active .tips__tabs-link {
+  border: 1px solid #eac731;
+  background: #eac731;
+}
+
+.tips__tabs-link {
+  display: block;
+  padding: 8px 0;
+  text-transform: uppercase;
+  color: #686868;
+  border: 1px solid #686868;
+}
+@media screen and (max-width: 480px) {
+  .tips__tabs-link {
+    font-size: 12px;
+  }
+}
+
+.tips__content-item {
+  display: none;
+}
+.tips__content-item.active {
+  display: block;
+}
+
+.content-tips__item {
+  position: relative;
+  height: 250px;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 480px) {
+  .content-tips__item {
+    height: 210px;
+    margin-bottom: 30px;
+  }
+}
+
+.content-tips__item--video {
+  height: auto;
+}
+.content-tips__item--video:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content-tips__link {
+  position: relative;
+  display: block;
+  height: 100%;
+  color: #fff;
+}
+.content-tips__link .content-tips__desc {
+  background: rgba(44, 44, 44, 0.8);
+}
+
+.content-tips__desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 0;
+  font-size: 30px;
+}
+@media screen and (max-width: 568px) {
+  .content-tips__desc {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content-tips__desc {
+    font-size: 18px;
+  }
+}
+
+.content-tips__video {
+  display: block;
+  width: 100%;
+  height: 45vw;
+  max-height: 100%;
+}
+
+.tips__title {
+  font-size: 30px;
+}
+@media screen and (max-width: 568px) {
+  .tips__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tips__title {
+    font-size: 18px;
+  }
+}
+
+.tips-detail__desc {
+  text-align: left;
+}
+.tips-detail__desc p {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 568px) {
+  .tips-detail__desc p {
+    margin-bottom: 26px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tips-detail__desc p {
+    margin-bottom: 22px;
+  }
 }
 
 .trainer__item {
